@@ -1,0 +1,103 @@
+////////////////// PerPixelLightingWithAlphaTemplate材质所用的shader声明 begin ///////////////
+
+vertex_program HighTechWithAlphaAmbientPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechWithAlphaAmbientPassVP
+	profiles vs_1_1 arbvp1
+}
+
+fragment_program HighTechWithAlphaAmbientPassFP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechWithAlphaAmbientPassFP
+	profiles ps_1_1 arbfp1 fp10	
+}
+
+vertex_program HighTechWithAlphaDirectionalLightingPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechWithAlphaDirectionalLightingPassVP
+	profiles vs_1_1 arbvp1
+	
+}
+
+vertex_program HighTechWithAlphaPointLightingPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechWithAlphaPointLightingPassVP
+	profiles vs_1_1 arbvp1
+	
+}
+
+fragment_program HighTechWithAlphaDirectionalLightingPassFP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechWithAlphaDirectionalLightingPassFP
+	profiles ps_2_0 arbfp1 fp20	
+}
+
+fragment_program HighTechWithAlphaPointLightingPassFP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechWithAlphaPointLightingPassFP
+	profiles ps_2_0 arbfp1 fp20
+	
+}
+
+vertex_program HighTechWithAlphaDecalPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechWithAlphaDecalPassVP
+	profiles vs_1_1 arbvp1
+}
+
+////////////////// PerPixelLightingWithAlphaTemplate材质所用的shader声明 end //////////////////
+
+////////////////// PerPixelLightingTemplate材质所用的shader声明 begin //////////////////
+
+vertex_program HighTechAmbientPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechAmbientPassVP
+	profiles vs_1_1 arbvp1
+}
+
+vertex_program HighTechDirectionalLightingPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechDirectionalLightingPassVP
+	profiles vs_1_1 arbvp1	
+}
+
+vertex_program HighTechPointLightingPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechPointLightingPassVP
+	profiles vs_1_1 arbvp1
+	
+}
+
+fragment_program HighTechDirectionalLightingPassFP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechDirectionalLightingPassFP
+	profiles ps_2_0 arbfp1 fp20	
+}
+
+fragment_program HighTechPointLightingPassFP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechPointLightingPassFP
+	profiles ps_2_0 arbfp1 fp20
+	
+}
+
+vertex_program HighTechDecalPassVP cg
+{
+	source PerPixelLighting.cg
+	entry_point HighTechDecalPassVP
+	profiles vs_1_1 arbvp1
+}
+
+////////////////// PerPixelLightingTemplate材质所用的shader声明 end //////////////////

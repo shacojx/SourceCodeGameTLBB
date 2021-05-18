@@ -1,0 +1,36 @@
+float4
+blur_fp(in float2 texCoord: TEXCOORD0,
+        in uniform sampler image
+       ) : COLOR
+{
+	static const float2 samples[8] =
+	{
+   	    {-0.326212, -0.405805},
+   	    {-0.840144, -0.073580},
+   	    {-0.695914, +0.457137},
+   	    {-0.203345, +0.620716},
+    	{+0.962340, -0.194983},
+    	{+0.473434, -0.480026},
+    	{+0.519456, +0.767022},
+    	{+0.896420, +0.412458},
+	};
+
+    float4 sum = tex2D(image, texCoord);
+    for (int i = 0; i < 8; i++)
+    {
+        sum += tex2D(image, texCoord + 0.0125 * samples[i]);
+    }
+
+    return sum / 9;
+}
+
+float4
+final_fp(in float2 texCoord : TEXCOORD0,
+         in uniform sampler RT,
+         in uniform sampler Blur
+        ) : COLOR
+{
+    float4 sharp = tex2D(RT,   texCoord);
+    float4 blur  = tex2D(Blur, texCoord);
+    return (sharp + blur * 1.8) / 2;
+}

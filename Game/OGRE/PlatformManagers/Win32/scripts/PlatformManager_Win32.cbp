@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PlatformManager_Win32" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="..\bin\Debug\OgrePlatform_d.dll" prefix_auto="0" extension_auto="0" />
+				<Option object_output="..\obj\Debug" />
+				<Option external_deps="..\..\..\OgreMain\lib\Debug\OgreMain_d.dll;" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+				<Linker>
+					<Add library="OgreMain_d" />
+					<Add library="dxguid" />
+					<Add library="dinput8" />
+					<Add library="dinput" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cmd /c copy $($(TARGET_NAME)_OUTPUT_FILE) ..\..\..\Samples\Common\bin\$(TARGET_NAME)" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="..\bin\Release\OgrePlatform.dll" prefix_auto="0" extension_auto="0" />
+				<Option object_output="..\obj\Release" />
+				<Option external_deps="..\..\..\OgreMain\lib\Release\OgreMain.dll;" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="OgreMain" />
+					<Add library="dxguid" />
+					<Add library="dinput8" />
+					<Add library="dinput" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cmd /c copy $($(TARGET_NAME)_OUTPUT_FILE) ..\..\..\Samples\Common\bin\$(TARGET_NAME)" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Debug;Release;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-mthreads" />
+			<Add option="-fmessage-length=0" />
+			<Add option="-fexceptions" />
+			<Add option="-fident" />
+			<Add option="-pipe" />
+			<Add option="-DWIN32" />
+			<Add option="-D_WINDOWS" />
+			<Add option="-D_USRDLL" />
+			<Add directory="..\include" />
+			<Add directory="..\..\..\OgreMain\include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="..\include" />
+			<Add directory="..\misc" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-Wl,--enable-auto-image-base" />
+			<Add option="-Wl,--add-stdcall-alias" />
+			<Add directory="..\..\..\Samples\Common\bin\$(TARGET_NAME)" />
+		</Linker>
+		<Unit filename="..\include\OgreWin32ConfigDialog.h" />
+		<Unit filename="..\include\OgreWin32ErrorDialog.h" />
+		<Unit filename="..\include\OgreWin32Input.h" />
+		<Unit filename="..\include\OgreWin32Input8.h" />
+		<Unit filename="..\include\OgreWin32Prerequisites.h" />
+		<Unit filename="..\include\OgreWin32Timer.h" />
+		<Unit filename="..\include\resource.h" />
+		<Unit filename="..\misc\OgreWin32Platform.def" />
+		<Unit filename="..\misc\OgreWin32Resources.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="..\misc\ogre.ico" />
+		<Unit filename="..\misc\ogrelogo.bmp" />
+		<Unit filename="..\src\OgreWin32ConfigDialog.cpp" />
+		<Unit filename="..\src\OgreWin32ErrorDialog.cpp" />
+		<Unit filename="..\src\OgreWin32Input.cpp" />
+		<Unit filename="..\src\OgreWin32Input8.cpp" />
+		<Unit filename="..\src\OgreWin32PlatformDll.cpp" />
+		<Unit filename="..\src\OgreWin32Timer.cpp" />
+		<Extensions>
+			<code_completion />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

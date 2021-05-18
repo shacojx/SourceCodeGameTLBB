@@ -1,0 +1,1041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{f7167775-2fd1-47d7-a75d-7f5b97bacacf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packets">
+      <UniqueIdentifier>{a91b4e51-455d-404e-9a05-4f08026777c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packets\City">
+      <UniqueIdentifier>{6d3674f1-c8c6-43e5-ad02-44af300d30cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{6b39d7c2-16de-440f-bce8-432ffb69a467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{e7e6e4d4-7a18-45cb-a738-7b71cec2f72a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets\City">
+      <UniqueIdentifier>{b9c3a6a6-d27a-4699-a01e-c02694cfefc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DataBase">
+      <UniqueIdentifier>{d5016001-0625-4e28-a0eb-da293c782817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Combat">
+      <UniqueIdentifier>{a2d8cacf-341b-45d9-ac00-c9a8b348b5ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Net">
+      <UniqueIdentifier>{0f6e8413-0306-4cdb-a82a-d1ee7df0dcf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldData">
+      <UniqueIdentifier>{da823d7c-94d7-48df-bc9b-c62d2a592faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SMU">
+      <UniqueIdentifier>{5591d0b2-3742-4135-94ef-ba52bc187b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{1ffbd336-687f-4f91-abfb-7334d6bc250b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\ServerBase\Config.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\File.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\IDTable.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Ini.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Log.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\StrTable.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Thread.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\TimeManager.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWAskChangeSceneHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWAskMailHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWAskSceneDataHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWAskTeamInfoHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWAskTeamMemberInfoHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWAskUserDataHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWBatchMailHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWCallOfHumanHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWChangeMenpaiHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWChannelCreateHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWChannelDismissHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWChannelInviteHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWChannelKickHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWChatHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWCommandHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWEnterTeamFollowHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWFingerHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWGuildHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWHeartBeatHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWLevelUpHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWMailHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWNotifyUserHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWRelationHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWStopTeamFollowHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWSystemMsgHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamApplyHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamAppointHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamDismissHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamInviteHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamKickHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamLeaderRetInviteHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamLeaveHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamMemberEnterSceneHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamRetApplyHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWTeamRetInviteHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWUpdateTitleHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\LWAskCharLoginHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\LWAskDeleteCharHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\SSConnectHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\SSScenePlayerCountHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\WGHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\WLHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWCityApplyNewCityHandler.cpp">
+      <Filter>Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWCityAskInitInfoHandler.cpp">
+      <Filter>Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWCityCloseHandler.cpp">
+      <Filter>Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWCityCloseSuccessHandler.cpp">
+      <Filter>Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\GWCityOptHandler.cpp">
+      <Filter>Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\Player.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\PlayerManager.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\PlayerPool.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ServerManager.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ServerPlayer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ShareMemManager.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\World.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\WorldTable.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Assertx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Chain.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DB_Struct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameDefine_Result.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameStruct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameStruct_Finger.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameStruct_Relation.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameUtil.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\PacketFactoryManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Rand.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ScriptCommandStruct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ShareMemAPI.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWAskChangeScene.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWAskMail.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWAskSceneData.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWAskTeamInfo.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWAskTeamMemberInfo.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWAskUserData.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWBatchMail.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWCallOfHuman.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWChangeMenpai.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelCreate.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelDismiss.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelInvite.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelKick.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWChat.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWCommand.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWEnterTeamFollow.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWFinger.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWGuild.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWHeartBeat.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWLevelUp.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWMail.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWNotifyUser.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWRelation.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWStopTeamFollow.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWSystemMsg.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamApply.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamAppoint.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamDismiss.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamInvite.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamKick.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamLeaderRetInvite.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamLeave.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamMemberEnterScene.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamRetApply.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamRetInvite.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWUpdateTitle.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\LWAskCharLogin.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\LWAskDeleteChar.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\SSConnect.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\SSScenePlayerCount.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGCallOfHuman.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGChannelError.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGChannelResult.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGChat.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGFinger.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGGuild.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGGuildError.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGGuildReturn.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGMail.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGNotifyMail.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGNotifyUser.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGRelation.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGRetChangeScene.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGRetSceneData.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGRetUserData.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGSystemMsg.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamAskApply.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamAskInvite.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamError.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamFollowList.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamLeaderAskInvite.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamList.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamMemberInfo.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamResult.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGWorldTime.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WLRetCharLogin.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WLRetDeleteChar.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWCityApplyNewCity.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWCityAskInitInfo.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWCityClose.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWCityCloseSuccess.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\GWCityOpt.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGCityApplyNewCity.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGCityAttr.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGCityClose.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGCityCloseSuccess.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGCityError.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WGCityInitInfo.cpp">
+      <Filter>Common\Packets\City</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DataBase\TLBB_DBC.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Combat\CampAndStand.cpp">
+      <Filter>Common\Combat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\FileAPI.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\Packet.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\ServerSocket.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\Socket.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketAPI.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketInputStream.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketOutputStream.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\AllUser.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\ChatCenter.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\City.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\CityManager.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\Guild.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\GuildManager.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\MailCenter.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\MailDefine.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\MailPool.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\OnlineUser.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\SceneInfo.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\Team.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\User.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldData\WorldTimeInfo.cpp">
+      <Filter>WorldData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GameServer\Server\SMU\ShareMemAO.cpp">
+      <Filter>SMU</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GameServer\Server\SMU\SMUManager.cpp">
+      <Filter>SMU</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\ServerBase\Config.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\File.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\FileDef.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\IDTable.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Ini.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Log.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\StrTable.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Thread.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\TimeManager.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\Player.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\PlayerManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\PlayerPool.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ServerManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ServerPlayer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ShareMemManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\World.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\WorldTable.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Assertx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\BaseType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Chain.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DB_Struct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine2.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Attr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_City.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Guild.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Item.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Result.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Scene.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_City.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Finger.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Guild.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Item.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Relation.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Skill.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameUtil.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\OResultDef.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PacketDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PacketFactory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PacketFactoryManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PlayerStatus.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Rand.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ScriptCommandStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ShareMemAPI.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Type.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWAskChangeScene.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWAskMail.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWAskSceneData.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWAskTeamInfo.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWAskTeamMemberInfo.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWAskUserData.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWBatchMail.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWCallOfHuman.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWChangeMenpai.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelCreate.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelDismiss.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelInvite.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelKick.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWChat.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWCommand.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWEnterTeamFollow.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWFinger.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWGuild.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWHeartBeat.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWLevelUp.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWMail.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWNotifyUser.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWRelation.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWStopTeamFollow.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWSystemMsg.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamApply.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamAppoint.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamDismiss.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamInvite.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamKick.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamLeaderRetInvite.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamLeave.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamMemberEnterScene.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamRetApply.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamRetInvite.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWUpdateTitle.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\LWAskCharLogin.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\LWAskDeleteChar.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\SSConnect.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\SSScenePlayerCount.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGCallOfHuman.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGChannelError.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGChannelResult.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGChat.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGFinger.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGGuild.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGGuildError.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGGuildReturn.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGMail.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGNotifyMail.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGNotifyUser.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGRelation.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGRetChangeScene.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGRetSceneData.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGRetUserData.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGSystemMsg.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamAskApply.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamAskInvite.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamError.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamFollowList.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamLeaderAskInvite.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamList.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamMemberInfo.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamResult.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGWorldTime.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WLRetCharLogin.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WLRetDeleteChar.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWCityApplyNewCity.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWCityAskInitInfo.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWCityClose.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWCityCloseSuccess.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\GWCityOpt.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGCityApplyNewCity.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGCityAttr.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGCityClose.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGCityCloseSuccess.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGCityError.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WGCityInitInfo.h">
+      <Filter>Common\Packets\City</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DataBase\TLBB_DBC.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Combat\CampAndStand.h">
+      <Filter>Common\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\FileAPI.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\Packet.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\ServerSocket.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\Socket.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketAPI.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketInputStream.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketOutputStream.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\AllUser.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\ChatCenter.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\City.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\CityManager.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\Guild.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\GuildManager.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\MailCenter.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\MailDefine.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\MailPool.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\OnlineUser.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\SceneInfo.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\Team.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\User.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldData\WorldTimeInfo.h">
+      <Filter>WorldData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameServer\Server\SMU\ShareMemAO.h">
+      <Filter>SMU</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameServer\Server\SMU\SMUManager.h">
+      <Filter>SMU</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WorldData\User.inl">
+      <Filter>WorldData</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,56 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SceneEditor", "SceneEditor.vcproj", "{B88D1BAE-60FD-41E1-89A2-67104D63A6EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0095422C-AFD6-4E81-8250-11CD8EBDA07C} = {0095422C-AFD6-4E81-8250-11CD8EBDA07C}
+		{EB54274A-E73C-4B4D-A29D-A3DE8596C605} = {EB54274A-E73C-4B4D-A29D-A3DE8596C605}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WXEditor", "FairyEditor.vcproj", "{EB54274A-E73C-4B4D-A29D-A3DE8596C605}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SndShell", "..\SndShell\SndShell.vcproj", "{0095422C-AFD6-4E81-8250-11CD8EBDA07C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XercesLib", "..\_Scripts\VC7.1\XercesLib.vcproj", "{152CE948-F659-4206-A50A-1D2B9658EF96}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Final = Final
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B88D1BAE-60FD-41E1-89A2-67104D63A6EA}.Debug.ActiveCfg = Debug|Win32
+		{B88D1BAE-60FD-41E1-89A2-67104D63A6EA}.Debug.Build.0 = Debug|Win32
+		{B88D1BAE-60FD-41E1-89A2-67104D63A6EA}.Final.ActiveCfg = Final|Win32
+		{B88D1BAE-60FD-41E1-89A2-67104D63A6EA}.Final.Build.0 = Final|Win32
+		{B88D1BAE-60FD-41E1-89A2-67104D63A6EA}.Release.ActiveCfg = Release|Win32
+		{B88D1BAE-60FD-41E1-89A2-67104D63A6EA}.Release.Build.0 = Release|Win32
+		{EB54274A-E73C-4B4D-A29D-A3DE8596C605}.Debug.ActiveCfg = Debug|Win32
+		{EB54274A-E73C-4B4D-A29D-A3DE8596C605}.Debug.Build.0 = Debug|Win32
+		{EB54274A-E73C-4B4D-A29D-A3DE8596C605}.Final.ActiveCfg = Final|Win32
+		{EB54274A-E73C-4B4D-A29D-A3DE8596C605}.Final.Build.0 = Final|Win32
+		{EB54274A-E73C-4B4D-A29D-A3DE8596C605}.Release.ActiveCfg = Release|Win32
+		{EB54274A-E73C-4B4D-A29D-A3DE8596C605}.Release.Build.0 = Release|Win32
+		{0095422C-AFD6-4E81-8250-11CD8EBDA07C}.Debug.ActiveCfg = Debug|Win32
+		{0095422C-AFD6-4E81-8250-11CD8EBDA07C}.Debug.Build.0 = Debug|Win32
+		{0095422C-AFD6-4E81-8250-11CD8EBDA07C}.Final.ActiveCfg = Release|Win32
+		{0095422C-AFD6-4E81-8250-11CD8EBDA07C}.Final.Build.0 = Release|Win32
+		{0095422C-AFD6-4E81-8250-11CD8EBDA07C}.Release.ActiveCfg = Release|Win32
+		{0095422C-AFD6-4E81-8250-11CD8EBDA07C}.Release.Build.0 = Release|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Debug.ActiveCfg = Debug|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Debug.Build.0 = Debug|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Final.ActiveCfg = Debug|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Final.Build.0 = Debug|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Release.ActiveCfg = Release|Win32
+		{152CE948-F659-4206-A50A-1D2B9658EF96}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

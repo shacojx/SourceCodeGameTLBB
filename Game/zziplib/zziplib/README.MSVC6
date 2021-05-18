@@ -1,0 +1,20 @@
+To build zziplib you need to add the path to zlib to the include directories
+search path. You find this under
+
+    Project, Settings, C/C++, Preprocessor, Additional Include Directories.
+
+Example:
+You have installed zlib to D:\zlib. You then change the edit box
+    Additional Include Directories
+from
+    ..
+to
+    ..,D:\zlib
+
+
+Included are two project files for zziplib. One that creates
+zziplib as a DLL, and one that creates zziplib as a static library.
+The DLL version is compiled with multi-threaded support. The static library
+version is currently set to link with libc(d).lib, i.e. only single-threaded
+CRT. If this does not suit your needs, you can change this under
+    Project, Settings, C/C++, Code Generation, Use run-time library.

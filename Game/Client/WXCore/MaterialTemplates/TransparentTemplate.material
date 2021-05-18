@@ -1,0 +1,98 @@
+// created:    2006/02/27
+// author:     Weiliang Xie (feiyurainy@163.com)
+// purpose:    用于普通NPC的透明材质模板（纹理图带alpha过渡）
+material TransparentTemplate
+{
+	technique
+	{
+		pass
+		{
+			scene_blend alpha_blend
+			depth_write off
+			emissive 0.5 0.5 0.5
+			
+			texture_unit
+			{
+				texture <baseTex>.jpg
+				texture_alias <baseTexture>
+			}
+		}
+	}
+}
+
+// created:    2006/03/01
+// author:     Weiliang Xie (feiyurainy@163.com)
+// purpose:    用于遮挡关系复杂的物体的透明材质（需渲染两遍，第一遍渲深度缓冲）
+//             图片带alpha通道
+material Transparent/AlphaTemplate
+{
+	technique
+    {    
+	    pass
+		{					
+			alpha_rejection greater 128
+			
+			scene_blend add
+			colour_write off			
+			
+			texture_unit
+			{
+				texture <baseTex>.jpg
+				texture_alias <baseTexture>
+			}
+		}
+		
+		pass
+		{	
+			scene_blend alpha_blend
+			
+			diffuse 0.7 0.7 0.7 0.5
+			emissive 0.5 0.5 0.5
+			
+			depth_write off
+
+			texture_unit
+			{
+				texture <baseTex>.jpg
+				texture_alias <baseTexture>
+			}
+		}	
+	}	
+}
+
+// created:    2006/03/01
+// author:     Weiliang Xie (feiyurainy@163.com)
+// purpose:    用于遮挡关系复杂的物体的透明材质（需渲染两遍，第一遍渲深度缓冲）
+//             图片不带alpha通道
+material Transparent/NoAlphaTemplate
+{
+	technique
+    {
+		pass
+		{
+			colour_write off
+			scene_blend add
+			
+			texture_unit
+			{
+				texture <baseTex>.jpg
+				texture_alias <baseTexture>
+			}
+		}
+		
+		pass
+		{
+			scene_blend alpha_blend
+			
+			diffuse 0.7 0.7 0.7 0.5
+			emissive 0.5 0.5 0.5
+			
+			depth_write off
+			texture_unit
+			{
+				texture <baseTex>.jpg
+				texture_alias <baseTexture>
+			}
+		}		
+    }	
+}

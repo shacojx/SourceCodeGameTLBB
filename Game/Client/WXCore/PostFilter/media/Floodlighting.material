@@ -1,0 +1,224 @@
+// Effect: Floodlighting
+
+vertex_program PostFilters/Floodlighting/down_sample_vp cg
+{
+	source Floodlighting.cg
+	entry_point quarter_down_sample_vp
+	profiles vs_1_1 arbvp1
+
+	default_params
+	{
+		param_named_auto worldViewProj worldviewproj_matrix
+		param_named_auto viewportSize viewport_size
+	}
+}
+
+fragment_program PostFilters/Floodlighting/down_sample_fp cg
+{
+	source Floodlighting.cg
+	entry_point quarter_down_sample_fp
+	profiles ps_2_0 arbfp1
+}
+
+vertex_program PostFilters/Floodlighting/blur_vp cg
+{
+	source Floodlighting.cg
+	entry_point blur_vp
+	profiles vs_1_1 arbvp1
+
+	default_params
+	{
+		param_named_auto worldViewProj worldviewproj_matrix
+		param_named_auto viewportSize viewport_size
+
+		param_named direction float2 0 0
+	}
+}
+
+fragment_program PostFilters/Floodlighting/blur_fp cg
+{
+	source Floodlighting.cg
+	entry_point blur_fp
+	profiles ps_2_0 arbfp1
+}
+
+vertex_program PostFilters/Floodlighting/blend_vp cg
+{
+	source Floodlighting.cg
+	entry_point blend_vp
+	profiles vs_1_1 arbvp1
+
+	default_params
+	{
+		param_named_auto worldViewProj worldviewproj_matrix
+	}
+}
+
+fragment_program PostFilters/Floodlighting/blend_fp cg
+{
+	source Floodlighting.cg
+	entry_point blend_fp
+	profiles ps_2_0 arbfp1
+
+	default_params
+	{
+		param_named blur_amount float 0
+		param_named shine_amount float 0
+	}
+}
+
+
+///////////////////////////////////
+//			 PASS 0
+//		DOWN SAMPLE PASS
+///////////////////////////////////
+
+material PostFilters/Floodlighting/DownSample
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			vertex_program_ref PostFilters/Floodlighting/down_sample_vp
+			{
+			}
+			fragment_program_ref PostFilters/Floodlighting/down_sample_fp
+			{
+			}
+
+			texture_unit
+			{
+				texture <input>
+				tex_address_mode clamp
+				filtering none
+			}
+		}
+	}
+}
+
+
+///////////////////////////////////
+//			 PASS 1
+//		HORIZONTAL BLUR PASS
+///////////////////////////////////
+
+material PostFilters/Floodlighting/BlurHorizontal
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			vertex_program_ref PostFilters/Floodlighting/blur_vp
+			{
+				param_named direction float2 1 0
+			}
+			fragment_program_ref PostFilters/Floodlighting/blur_fp
+			{
+			}
+
+			texture_unit
+			{
+				texture <input>
+				tex_address_mode clamp
+				filtering bilinear
+			}
+		}
+	}
+}
+
+
+///////////////////////////////////
+//			 PASS 2
+//		VERTICAL BLUR PASS
+///////////////////////////////////
+
+material PostFilters/Floodlighting/BlurVertical
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			vertex_program_ref PostFilters/Floodlighting/blur_vp
+			{
+				param_named direction float2 0 1
+			}
+			fragment_program_ref PostFilters/Floodlighting/blur_fp
+			{
+			}
+
+			texture_unit
+			{
+				texture <input>
+				tex_address_mode clamp
+				filtering bilinear
+			}
+		}
+	}
+}
+
+
+///////////////////////////////////
+//			 PASS 3
+//		BLEND PASS
+///////////////////////////////////
+
+material PostFilters/Floodlighting/Blend
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			vertex_program_ref PostFilters/Floodlighting/blend_vp
+			{
+			}
+			fragment_program_ref PostFilters/Floodlighting/blend_fp
+			{
+				param_named blur_amount float 0.2
+				param_named shine_amount float 0.3
+			}
+
+			texture_unit
+			{
+				texture <input0>
+				tex_address_mode clamp
+				filtering none
+			}
+
+			texture_unit
+			{
+				texture <input1>
+				tex_address_mode clamp
+				filtering bilinear
+				tex_coord_set 1
+			}
+		}
+	}
+}

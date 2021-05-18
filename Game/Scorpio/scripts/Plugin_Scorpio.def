@@ -1,0 +1,8 @@
+EXPORTS	
+	dllStartPlugin	@1
+	dllStopPlugin	@2
+
+	createCollisionManager
+	destroyCollisionManager
+
+	convertEntityToHardwareSkinning

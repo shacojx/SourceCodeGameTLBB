@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>BillingServer</ProjectName>
+    <ProjectGuid>{9F391EEF-E1C8-482E-8A53-34ADB60FB56A}</ProjectGuid>
+    <RootNamespace>World</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2020</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\Main\;.\Packets\;.\BillingData\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\Packets\;..\..\..\Common\DataBase\;..\..\..\Common\ServerBase\;..\..\..\Common\DBSystem\DataBase\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__WINDOWS__;_WINDOWS;_FOX_BILLING;_FOX_LOGIN;_FOX_WEB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)Billing.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>.\;.\Main\;.\Packets\;.\BillingData\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\Packets\;..\..\..\Common\DataBase\;..\..\..\Common\ServerBase\;..\..\..\Common\DBSystem\DataBase\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;__WINDOWS__;_WINDOWS;_FOX_BILLING;_FOX_LOGIN;_FOX_WEB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\Assertx.cpp" />
+    <ClCompile Include="..\..\..\Common\Chain.cpp" />
+    <ClCompile Include="..\..\..\Common\DB_Struct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameDefine_Result.cpp" />
+    <ClCompile Include="..\..\..\Common\GameStruct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameStruct_Relation.cpp" />
+    <ClCompile Include="..\..\..\Common\GameUtil.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\FileAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Packet.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\ServerSocket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Socket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketInputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketOutputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\PacketFactoryManager.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\BLRetAuth.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\BWConnect.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\BWValidateUser.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LBAskAuth.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\SSConnect.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\SSScenePlayerCount.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WBRetValidateUser.cpp" />
+    <ClCompile Include="..\..\..\Common\Rand.cpp" />
+    <ClCompile Include="..\..\..\Common\ScriptCommandStruct.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Config.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\File.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Ini.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Log.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\StrTable.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Thread.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\TimeManager.cpp" />
+    <ClCompile Include="Main\Billing.cpp" />
+    <ClCompile Include="Main\DBManager.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Main\ODBCInterface.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Main\Player.cpp" />
+    <ClCompile Include="Main\PlayerManager.cpp" />
+    <ClCompile Include="Main\PlayerPool.cpp" />
+    <ClCompile Include="Main\ServerManager.cpp" />
+    <ClCompile Include="Main\ServerPlayer.cpp" />
+    <ClCompile Include="Main\UserDBManager.cpp" />
+    <ClCompile Include="Main\WebPlayer.cpp" />
+    <ClCompile Include="Packets\BLRetAuthHandler.cpp" />
+    <ClCompile Include="Packets\BWConnectHandler.cpp" />
+    <ClCompile Include="Packets\BWValidateUserHandler.cpp" />
+    <ClCompile Include="Packets\LBAskAuthHandler.cpp" />
+    <ClCompile Include="Packets\SSConnectHandler.cpp" />
+    <ClCompile Include="Packets\SSScenePlayerCountHandler.cpp" />
+    <ClCompile Include="Packets\WBRetValidateUserHandler.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\Assertx.h" />
+    <ClInclude Include="..\..\..\Common\BaseType.h" />
+    <ClInclude Include="..\..\..\Common\Chain.h" />
+    <ClInclude Include="..\..\..\Common\DB_Struct.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine2.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Attr.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Guild.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Item.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Result.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Scene.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Guild.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Item.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Relation.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Skill.h" />
+    <ClInclude Include="..\..\..\Common\GameUtil.h" />
+    <ClInclude Include="..\..\..\Common\Net\FileAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\Packet.h" />
+    <ClInclude Include="..\..\..\Common\Net\ServerSocket.h" />
+    <ClInclude Include="..\..\..\Common\Net\Socket.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketInputStream.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketOutputStream.h" />
+    <ClInclude Include="..\..\..\Common\OResultDef.h" />
+    <ClInclude Include="..\..\..\Common\PacketDefine.h" />
+    <ClInclude Include="..\..\..\Common\PacketFactory.h" />
+    <ClInclude Include="..\..\..\Common\PacketFactoryManager.h" />
+    <ClInclude Include="..\..\..\Common\Packets\BLRetAuth.h" />
+    <ClInclude Include="..\..\..\Common\Packets\BWConnect.h" />
+    <ClInclude Include="..\..\..\Common\Packets\BWValidateUser.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LBAskAuth.h" />
+    <ClInclude Include="..\..\..\Common\Packets\SSConnect.h" />
+    <ClInclude Include="..\..\..\Common\Packets\SSScenePlayerCount.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WBRetValidateUser.h" />
+    <ClInclude Include="..\..\..\Common\PlayerStatus.h" />
+    <ClInclude Include="..\..\..\Common\Rand.h" />
+    <ClInclude Include="..\..\..\Common\ScriptCommandStruct.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Config.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\File.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Ini.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Log.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\StrTable.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Thread.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\TimeManager.h" />
+    <ClInclude Include="..\..\..\Common\Type.h" />
+    <ClInclude Include="Main\Billing.h" />
+    <ClInclude Include="Main\DBManager.h" />
+    <ClInclude Include="Main\DBTypes.h" />
+    <ClInclude Include="Main\ODBCInterface.h" />
+    <ClInclude Include="Main\Player.h" />
+    <ClInclude Include="Main\PlayerManager.h" />
+    <ClInclude Include="Main\PlayerPool.h" />
+    <ClInclude Include="Main\ServerManager.h" />
+    <ClInclude Include="Main\ServerPlayer.h" />
+    <ClInclude Include="Main\UserDBManager.h" />
+    <ClInclude Include="Main\WebPlayer.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

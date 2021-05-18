@@ -1,0 +1,40 @@
+/********************************************************************
+    filename:   MotionBlur.cg
+    created:    2006/02/24
+    author:     Genva Xie (genva@21cn.com)
+    
+    purpose:    Motion blur post filter
+*********************************************************************/
+
+float4
+combine_fp(
+        in float2 texCoord: TEXCOORD0,
+
+        in uniform sampler Scene : register(s0),
+        in uniform sampler Sum : register(s1),
+
+        in uniform float blur
+    ) : COLOR
+{
+   float4 scene = tex2D(Scene, texCoord);
+   float4 sum = tex2D(Sum, texCoord);
+
+   return lerp(scene, sum, blur);
+}
+
+float4
+combine_ps_1_1(
+        in float2 texCoord0: TEXCOORD0,
+        in float2 texCoord1: TEXCOORD1,
+
+        in uniform sampler Scene : register(s0),
+        in uniform sampler Sum : register(s1),
+
+        in uniform float blur
+    ) : COLOR
+{
+   float4 scene = tex2D(Scene, texCoord0);
+   float4 sum = tex2D(Sum, texCoord1);
+
+   return lerp(scene, sum, blur);
+}

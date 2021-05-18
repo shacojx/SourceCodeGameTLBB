@@ -1,0 +1,41 @@
+fragment_program PostFilters/Fade_fp cg
+{
+	source Fade.cg
+	entry_point fade_fp
+	profiles ps_2_0 arbfp1
+
+	default_params
+	{
+		param_named colour_amount float 0
+		param_named gray_amount float 1
+	}
+}
+
+// Effect: Fade
+
+material PostFilters/Fade
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			fragment_program_ref PostFilters/Fade_fp
+			{
+			}
+
+			texture_unit
+			{
+				texture <input>
+				tex_address_mode clamp
+				filtering none
+			}
+		}
+	}
+}

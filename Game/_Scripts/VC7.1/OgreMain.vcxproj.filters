@@ -1,0 +1,1978 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3f1e15e8-8b80-40e1-b566-fbaa5b1c88d6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{55c6b5b8-823a-41c0-861f-0412dcf4b415}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{369c9d79-709f-4952-894e-49a7b06c28b4}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="PlugIns">
+      <UniqueIdentifier>{3ae45319-7acf-429b-b796-fc907e16a185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\ParticleFX">
+      <UniqueIdentifier>{86d7d279-bac5-436d-b893-a1be8a7d08fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\ParticleFX\Header Files">
+      <UniqueIdentifier>{737d2111-db65-49a9-bb8c-c2940ce205c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\ParticleFX\Source Files">
+      <UniqueIdentifier>{0ad98e1d-df34-4bab-b9c8-8f247122e651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\ParticleFX2">
+      <UniqueIdentifier>{77596fe1-08d5-4af8-b60e-38350e634a25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\ParticleFX2\Header Files">
+      <UniqueIdentifier>{76a3c51a-d8ff-477d-be3d-595aaef61c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\ParticleFX2\Source Files">
+      <UniqueIdentifier>{134dc1c0-065a-41de-9510-1dc7a26070bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\OctreeSceneManager">
+      <UniqueIdentifier>{c0e8e2b9-a315-4a3d-ad01-4728a14d735e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\OctreeSceneManager\Source Files">
+      <UniqueIdentifier>{96fe877d-8fdc-44b4-b3a8-5be4c375dfdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\OctreeSceneManager\Header Files">
+      <UniqueIdentifier>{be7d9f2f-e2b5-44ca-9566-844eb4f96481}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\CgProgramManager">
+      <UniqueIdentifier>{2e2faffc-6638-4890-9c2b-da2779af9744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\CgProgramManager\Header Files">
+      <UniqueIdentifier>{17862281-d093-4b97-866e-1e312f76212e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\CgProgramManager\Source Files">
+      <UniqueIdentifier>{feca7698-9fb5-4b94-b129-ae57ac08e684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\Scorpio">
+      <UniqueIdentifier>{d008c052-6f0b-488f-aa10-820cfee78d13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\Scorpio\PhysicsSimulation">
+      <UniqueIdentifier>{3c24e03d-82a5-4d7f-9030-e8d374b410e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\Scorpio\Interface">
+      <UniqueIdentifier>{616c4af0-bceb-4fde-9f2e-f2cf1de8e87e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\OgrePlatform">
+      <UniqueIdentifier>{ce7cf0bf-e68f-4415-a87f-0e787f265d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\OgrePlatform\Source Files">
+      <UniqueIdentifier>{eebc6fc0-b7c6-476b-848a-06c755ca6d18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\OgrePlatform\Header Files">
+      <UniqueIdentifier>{e5c158c9-5206-4152-922f-9265e1f0dd1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\OgrePlatform\Resource Files">
+      <UniqueIdentifier>{0808dc5b-55f1-466a-a12a-229525a2e475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\RenderSystem_Direct3D9">
+      <UniqueIdentifier>{41c2c131-d0c0-4082-a822-31fbe1b1f71b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\RenderSystem_Direct3D9\Source Files">
+      <UniqueIdentifier>{fa5d2113-03a2-4563-b087-df8c1e8b27b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlugIns\RenderSystem_Direct3D9\Header Files">
+      <UniqueIdentifier>{d4e8ddba-66eb-45a2-9a99-ed03b30aeb3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreAlignedAllocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimationState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimationTrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreArchiveManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAutoParamDataSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAxisAlignedBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBillboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreBillboardChain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBillboardParticleRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBillboardSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBitwise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBorderPanelOverlayElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCodec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreColourValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCommon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreCompiler2Pass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositionPass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositionTargetPass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositionTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorChain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreCompositorScriptCompiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreConfigFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreConfigOptionMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreControllerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreConvexBody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCursor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDataStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDefaultHardwareBufferManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDefaultSceneQueries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDynLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDynLibManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEdgeListBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEventDispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEventProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEventQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreExternalTextureSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreExternalTextureSourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFileSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFontManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFrustum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreGpuProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreGpuProgramManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreGpuProgramUsage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareBufferManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareIndexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareOcclusionQuery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwarePixelBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareVertexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHighLevelGpuProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHighLevelGpuProgramManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreILCodecs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreILImageCodec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreILUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreInputEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreKeyEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreKeyFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreKeyTarget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreLogManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreManualObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMaterialManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreMaterialScriptCompiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMaterialSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMatrix3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMatrix4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMemoryManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMeshManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMeshSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMeshSerializerImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMouseEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMouseMotionTarget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMouseTarget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMovableObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMovablePlane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreNumerics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreOptimisedUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreOptimisedUtilGeneral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreOptimisedUtilSSE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayElementCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePanelOverlayElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleEmitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleEmitterCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleSystemManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePatchMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePatchSurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePixelFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePlane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgrePlatformInformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePlatformManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgrePolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgrePose.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePrecompiledHeaders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePredefinedControllers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreProfiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreProgressiveMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreQuaternion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRectangle2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreRenderQueueInvocation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderQueueSortingGrouping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderSystemCapabilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderTarget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResourceBackgroundQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResourceGroupManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreRibbonTrail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRoot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRotationSpline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneManagerEnumerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneQuery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSearchOps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetupFocused.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetupLiSPSM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetupPlaneOptimal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreShadowCaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreShadowVolumeExtrudeProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSimpleRenderable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSimpleSpline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSingleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeletonInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeletonManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeletonSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStaticGeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStringConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStringInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStringVector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSubEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSubMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTagPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTechnique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTextAreaOverlayElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTextureUnitState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreUserDefinedObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreVector2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreVector3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreVector4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreVertexIndexData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreViewport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreWireBoundingBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreZip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreAreaEmitter.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreBoxEmitter.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourFaderAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourFaderAffector2.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourImageAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourInterpolatorAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreCylinderEmitter.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreDeflectorPlaneAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreDirectionRandomiserAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreEllipsoidEmitter.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreHollowEllipsoidEmitter.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreLinearForceAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreParticleFX.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgrePointEmitter.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreRingEmitter.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreRotationAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreScaleAffector.cpp">
+      <Filter>PlugIns\ParticleFX\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreColourFadingAffector.cpp">
+      <Filter>PlugIns\ParticleFX2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreMovementAffector.cpp">
+      <Filter>PlugIns\ParticleFX2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreParticleFX2.cpp">
+      <Filter>PlugIns\ParticleFX2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgrePolarEmitter.cpp">
+      <Filter>PlugIns\ParticleFX2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreRevolutionAffector.cpp">
+      <Filter>PlugIns\ParticleFX2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreScaleInterpolatorAffector.cpp">
+      <Filter>PlugIns\ParticleFX2\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreHeightmapTerrainPageSource.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctree.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeCamera.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeNode.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeSceneManager.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeSceneManagerDll.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeSceneQuery.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainPage.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainPageSource.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainRenderable.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainSceneManager.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainVertexProgram.cpp">
+      <Filter>PlugIns\OctreeSceneManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\CgProgramManager\src\OgreCgProgram.cpp">
+      <Filter>PlugIns\CgProgramManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\CgProgramManager\src\OgreCgProgramFactory.cpp">
+      <Filter>PlugIns\CgProgramManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\CgProgramManager\src\OgreCgProgramManagerDll.cpp">
+      <Filter>PlugIns\CgProgramManager\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_BoxCollider.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_BucklingForceField.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_ClothModel.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_ColliderSet.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_DampingForceField.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_EulerIntegrator.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_FabricSimulator.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Force.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_GravityForceField.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Integrator.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Mass.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Math.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Matrix3x3.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Motion.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_MovableCollider.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_PlaneCollider.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK2Integrator.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK4Integrator.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Simulator.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_SphereCollider.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_StretchingForceField.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Vector3.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_VerletIntegrator.cpp">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\Scorpio.cpp">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioCloth.cpp">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioCollision.cpp">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioFabric.cpp">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioHardwareAnimation.cpp">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32ConfigDialog.cpp">
+      <Filter>PlugIns\OgrePlatform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32ErrorDialog.cpp">
+      <Filter>PlugIns\OgrePlatform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32Input.cpp">
+      <Filter>PlugIns\OgrePlatform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32Input8.cpp">
+      <Filter>PlugIns\OgrePlatform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32PlatformDll.cpp">
+      <Filter>PlugIns\OgrePlatform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32Timer.cpp">
+      <Filter>PlugIns\OgrePlatform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9Driver.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9DriverList.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9EngineDll.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9GpuProgram.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9GpuProgramManager.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareBufferManager.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareIndexBuffer.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareOcclusionQuery.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwarePixelBuffer.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareVertexBuffer.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HLSLProgram.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HLSLProgramFactory.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9Mappings.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9MultiRenderTarget.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9RenderSystem.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9RenderWindow.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9Texture.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9TextureManager.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9VertexDeclaration.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9VideoMode.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9VideoModeList.cpp">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Ogre\OgreMain\src\OgreSIMDHelper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\asm_math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\Ogre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreAlignedAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimationState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimationTrack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAny.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreArchive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreArchiveFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreArchiveManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAutoParamDataSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAxisAlignedBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBillboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreBillboardChain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBillboardParticleRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBillboardSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBitwise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBlendMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBorderPanelOverlayElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCodec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreColourValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreCompiler2Pass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositionPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositionTargetPass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositionTechnique.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorChain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreCompositorScriptCompiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfigDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfigFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfigOptionMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreControllerManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreConvexBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDataStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDefaultHardwareBufferManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDynLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDynLibManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEdgeListBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreErrorDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventDispatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventListeners.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreExternalTextureSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreExternalTextureSourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFactoryObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFontManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFrameListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFrustum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreGpuProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreGpuProgramManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreGpuProgramUsage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareBufferManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareIndexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareOcclusionQuery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwarePixelBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareVertexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHighLevelGpuProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHighLevelGpuProgramManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreILCodecs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreILImageCodec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreILUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreImageCodec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\src\OgreImageResampler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreInputEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreIteratorWrappers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreKeyEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreKeyFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreKeyTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreLogManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreManualObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMaterialManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreMaterialScriptCompiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMaterialSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMatrix3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMatrix4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMemoryMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMemoryManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshFileFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshSerializerImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMouseEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMouseMotionTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMouseTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMovableObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMovablePlane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreNoMemoryMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreNumerics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreOptimisedUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayElementCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayElementFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePanelOverlayElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleAffector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleAffectorFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleEmitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleEmitterCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleEmitterFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleSystemManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleSystemRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePatchMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePatchSurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\src\OgrePixelConversions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePixelFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlaneBoundedVolume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePlatformInformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlatformManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePolygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePoolAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePositionTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePredefinedControllers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePrerequisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreProfiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreProgressiveMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreQuaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRadixSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRectangle2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderOperation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreRenderQueueInvocation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderQueueListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderQueueSortingGrouping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderSystemCapabilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderTarget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderTargetListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResourceBackgroundQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResourceGroupManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreRibbonTrail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRoot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRotationalSpline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneManagerEnumerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneQuery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreScriptLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSearchOps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetupFocused.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetupLiSPSM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetupPlaneOptimal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreShadowCaster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreShadowVolumeExtrudeProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSharedPtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSimpleRenderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSimpleSpline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSingleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonFileFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSpotShadowFadePng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStableHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStaticFaceGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStaticGeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStdHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStringConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStringInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStringVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSubEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSubMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTagPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTargetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTechnique.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTextAreaOverlayElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTextureManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTextureUnitState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreUserDefinedObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVector4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVertexBoneAssignment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVertexIndexData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreViewport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreWireBoundingBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreZip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OGRE\OgreMain\include\stl_user_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreAreaEmitter.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreBoxEmitter.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreBoxEmitterFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffector2.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffectorFactory2.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourImageAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourImageAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourInterpolatorAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourInterpolatorAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreCylinderEmitter.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreCylinderEmitterFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDeflectorPlaneAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDeflectorPlaneAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDirectionRandomiserAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDirectionRandomiserAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreEllipsoidEmitter.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreEllipsoidEmitterFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreHollowEllipsoidEmitter.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreHollowEllipsoidEmitterFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreLinearForceAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreLinearForceAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreParticleFX.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreParticleFXPrerequisites.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgrePointEmitter.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgrePointEmitterFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRingEmitter.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRingEmitterFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRotationAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRotationAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreScaleAffector.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreScaleAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreColourFadingAffector.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreColourFadingAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreMovementAffector.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreMovementAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreParticleFX2.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreParticleFX2Prerequisites.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgrePolarEmitter.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgrePolarEmitterFactory.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreRevolutionAffector.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreRevolutionAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreScaleInterpolatorAffector.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ParticleFX2\include\OgreScaleInterpolatorAffectorFactory.h">
+      <Filter>PlugIns\ParticleFX2\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreHeightmapTerrainPageSource.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctree.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeCamera.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeNode.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeSceneManager.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeSceneManagerDll.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeSceneQuery.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainPage.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainPageSource.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainPrerequisites.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainRenderable.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainSceneManager.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainVertexProgram.h">
+      <Filter>PlugIns\OctreeSceneManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgPrerequisites.h">
+      <Filter>PlugIns\CgProgramManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgProgram.h">
+      <Filter>PlugIns\CgProgramManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgProgramFactory.h">
+      <Filter>PlugIns\CgProgramManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgProgramManagerDll.h">
+      <Filter>PlugIns\CgProgramManager\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_BoxCollider.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_BucklingForceField.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_ClothModel.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Collider.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_ColliderSet.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Common.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_DampingForceField.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_EulerIntegrator.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_FabricSimulator.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Force.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_ForceField.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_GravityForceField.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Integrator.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Mass.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Math.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Matrix3x3.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Motion.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_MovableCollider.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_PlaneCollider.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Prerequisites.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK2Integrator.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK4Integrator.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_SharedPtr.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Simulator.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_SphereCollider.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_StdHeaders.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_StretchingForceField.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Vector3.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_VerletIntegrator.h">
+      <Filter>PlugIns\Scorpio\PhysicsSimulation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\include\Scorpio.h">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\include\ScorpioCloth.h">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\include\ScorpioCollision.h">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\include\ScorpioFabric.h">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Scorpio\include\ScorpioPrerequisites.h">
+      <Filter>PlugIns\Scorpio\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32ConfigDialog.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32ErrorDialog.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Input.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Input8.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32PlatformDll.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Prerequisites.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Timer.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\resource.h">
+      <Filter>PlugIns\OgrePlatform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Driver.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9DriverList.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9EngineDll.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9GpuProgram.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9GpuProgramManager.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareBufferManager.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareIndexBuffer.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareOcclusionQuery.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwarePixelBuffer.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareVertexBuffer.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HLSLProgram.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HLSLProgramFactory.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Mappings.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9MultiRenderTarget.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Prerequisites.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9RenderSystem.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9RenderWindow.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Texture.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9TextureManager.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9VertexDeclaration.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9VideoMode.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9VideoModeList.h">
+      <Filter>PlugIns\RenderSystem_Direct3D9\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Ogre\PlatformManagers\Win32\misc\ogre.ico">
+      <Filter>PlugIns\OgrePlatform\Resource Files</Filter>
+    </None>
+    <None Include="..\..\Ogre\PlatformManagers\Win32\misc\ogrelogo.bmp">
+      <Filter>PlugIns\OgrePlatform\Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\Ogre\PlatformManagers\Win32\misc\OgreWin32Resources.rc">
+      <Filter>PlugIns\OgrePlatform\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

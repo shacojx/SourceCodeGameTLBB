@@ -1,0 +1,4 @@
+LIBRARY RenderSystem_GL
+EXPORTS	
+	dllStartPlugin @1
+	dllStopPlugin  @2

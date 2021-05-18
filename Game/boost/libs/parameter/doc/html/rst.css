@@ -1,0 +1,34 @@
+@import "../../../../rst.css";
+
+div.section div.section div.section dl {
+  margin-left: 2em;
+}
+
+td span {
+  vertical-align: text-top;
+}
+
+img {
+  border: none;
+  vertical-align: middle
+}
+
+span.vellipsis {
+  line-height: 30% ;
+  font-size: 200% ;
+}
+
+
+PRE
+{
+    FONT-FAMILY: monospace ;
+}
+
+CODE
+{
+    FONT-FAMILY: monospace;
+}
+.pre
+{
+   FONT-FAMILY: monospace;
+}

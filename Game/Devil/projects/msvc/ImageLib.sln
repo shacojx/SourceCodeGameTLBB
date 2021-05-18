@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ILU", "..\..\src-ILU\msvc\ILU.vcproj", "{98884911-2B7F-45C7-B0FD-CB909E8CB7C1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F088168-B0B4-4350-9E6A-7FB271C76D39} = {0F088168-B0B4-4350-9E6A-7FB271C76D39}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ILUT", "..\..\src-ILUT\msvc\ILUT.vcproj", "{A4563D37-173F-4459-BDC5-9F42992AEF45}"
+	ProjectSection(ProjectDependencies) = postProject
+		{98884911-2B7F-45C7-B0FD-CB909E8CB7C1} = {98884911-2B7F-45C7-B0FD-CB909E8CB7C1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IL", "..\..\src-IL\msvc\IL.vcproj", "{0F088168-B0B4-4350-9E6A-7FB271C76D39}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Dynamic = Dynamic
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{98884911-2B7F-45C7-B0FD-CB909E8CB7C1}.Debug.ActiveCfg = Debug|Win32
+		{98884911-2B7F-45C7-B0FD-CB909E8CB7C1}.Debug.Build.0 = Debug|Win32
+		{98884911-2B7F-45C7-B0FD-CB909E8CB7C1}.Dynamic.ActiveCfg = Dynamic|Win32
+		{98884911-2B7F-45C7-B0FD-CB909E8CB7C1}.Dynamic.Build.0 = Dynamic|Win32
+		{98884911-2B7F-45C7-B0FD-CB909E8CB7C1}.Release.ActiveCfg = Release|Win32
+		{98884911-2B7F-45C7-B0FD-CB909E8CB7C1}.Release.Build.0 = Release|Win32
+		{A4563D37-173F-4459-BDC5-9F42992AEF45}.Debug.ActiveCfg = Debug|Win32
+		{A4563D37-173F-4459-BDC5-9F42992AEF45}.Debug.Build.0 = Debug|Win32
+		{A4563D37-173F-4459-BDC5-9F42992AEF45}.Dynamic.ActiveCfg = Dynamic|Win32
+		{A4563D37-173F-4459-BDC5-9F42992AEF45}.Dynamic.Build.0 = Dynamic|Win32
+		{A4563D37-173F-4459-BDC5-9F42992AEF45}.Release.ActiveCfg = Release|Win32
+		{A4563D37-173F-4459-BDC5-9F42992AEF45}.Release.Build.0 = Release|Win32
+		{0F088168-B0B4-4350-9E6A-7FB271C76D39}.Debug.ActiveCfg = Debug|Win32
+		{0F088168-B0B4-4350-9E6A-7FB271C76D39}.Debug.Build.0 = Debug|Win32
+		{0F088168-B0B4-4350-9E6A-7FB271C76D39}.Dynamic.ActiveCfg = Dynamic|Win32
+		{0F088168-B0B4-4350-9E6A-7FB271C76D39}.Dynamic.Build.0 = Dynamic|Win32
+		{0F088168-B0B4-4350-9E6A-7FB271C76D39}.Release.ActiveCfg = Release|Win32
+		{0F088168-B0B4-4350-9E6A-7FB271C76D39}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

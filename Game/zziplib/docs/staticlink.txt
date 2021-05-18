@@ -1,0 +1,132 @@
+> > > Hi,
+> > >
+> > > Congratulations for zziplib. Great piece of work.
+> > >
+> > > I'd like to *static* link it with my upcoming commercial application,
+> > > mainly to protect my (obfuscated) data. You explain in the "ZZIP XOR
+> > > obfuscation" document that there is a legal way to do this. Know I won't
+> > > modify the zzpilib code in any way. And as the licence is unclear to me
+> > > (I'm not a lawyer), could you please tell me if there are things I
+> > > should do (like permissions to ask and so on) ?
+> > >
+
+> >
+> > This is mark 3 of COPYING.ZZIP
+> >
+> > If you compiled the library in a separate
+> > step from free source code and build files
+> > then there is no problem if the resulting
+> > libraryfile gets staticlinked.
+> >
+> > The inclusion of header files or the
+> > derivate of the example files (including
+> > the xor obfuscation ones) do not touch
+> > your work in strong ways - have a look
+> > at the liberal ZLIB license.
+> >
+> > The safest way is to redistribute the
+> > source code of zziplib via some media
+> > that you have in your powers - that is
+> > not required if the original library
+> > is unmodified linked from an extra place,
+> > it is just recommended.
+> >
+> > The recommendation comes from maintaince
+> > that a commercial vendor must usually
+> > provide to his customers - any patch in
+> > the library part would constitute a
+> > derivative work and makes for a need to
+> > publish the derivate work under mark 3.
+> >
+> > For some special cases this is unlikely
+> > to happen - as for your case with some
+> > data files. You will surely test your
+> > dat-files with the specific instance
+> > of zziplib that you are going to link
+> > into the binary. If it works then it is
+> > very unlikely to need a patch later on.
+> >
+> > Be reminded that the LGPL/ZZIP portion
+> > is only put on the zzip core routines,
+> > none of your obfuscation routines are
+> > affected including the examples that
+> > are distributed along with the zziplib.
+> >
+> > Be also hinted that if you just find a
+> > bug in the zziplib then you can just
+> > send me the patch for inclusion so that
+> > you won't become maintainer of a derivate
+> > work since you can fetch the updated
+> > original from my side - and
+> >
+> > - and that's the whole purpose of this
+> > legal construction to enforce you to
+> > contribute back. If you do not make any
+> > extras in the core part then I am not
+> > out to prevent you from any use including
+> > commercial use.
+> >
+> > The scheme behind it: the LGPL wants to
+> > give the final recipient of *your*
+> > software to be able to modify it
+> > atleast for the part covered by the
+> > LGPL. The ZZIP exception *removes* this
+> > extra right. You can staticlink but
+> > any modifications that *you* did to *my*
+> > software must be *published* or better
+> > just send back to me. You do not need
+> > even to tell the user you used the zzip
+> > library. And if you do not have any
+> > patches, you are in no requirements to
+> > me either - it's all in the license.
+> >
+> > Does that clear things up? Does it hurt
+> > your commercial endavour? Remember that
+> > I am the sole owner of the software and
+> > I am all in favour of commercial stuff
+> > to pick the code even when there is a
+> > need to make up an extra agreement.
+> >
+>
+> Thank you very much for these explanations.
+> Maybe you could just copy/paste them to the zziplib homepage, in a kind of
+> license FAQ document.
+>
+> I don't think I will modify your code, just because I think it does allready
+> everything I want : hide my data from users/hackers without changing too
+> much the existing code (fopen, fread, fclose), and without running into
+> complex encryption scheme.
+> I wanted to know more about the static link with zziplib because I don't
+> want to ease the hacking of my files. In fact, I don't want hackers to know
+> that my data file is an obfuscated zip file, and having zzliplib.dll just
+> beside the exe would have given them a terrible clue !
+
+Yes, the staticlink with a following stripsymbols (don't forget that!)
+is a nice form to make up an extra obfuscation level for an attacker
+to break in. And it does not touch the actual code of zziplib itself.
+
+> Finaly, when I use "foreign code", free or LGPL, I like to drop a line to
+> the author, just to thank him/her. So, thanks again !
+
+That's great - I love to hear more of people who pick up the library,
+commercial or not. Just to reiterate for the reader on zziplib.sf.net: 
+the LGPL-exception for such binary-only distribution is *only* valid 
+for the non-modified sources - this is the usual case when using the
+routines for dat-obfuscation. This is a dozen of magnitudes different
+when using it for functional zip-file access where one does not have 
+control over the data files being feeded to the routines and the 
+commercial vendor would be bound to maintain the *functional* part 
+instead of just the *data* part. Just using a tested pair of 
+obfuscation routines with zziplib and a specific set of tested dat-file 
+that should bring you on the safe side of making a binary-only package 
+where the use of zziplib is hidden itself.
+
+2002-09-24 
+
+diclaimer:
+ this file may change without notice or removed and may not be 
+ treated as a legal document on a word-by-word basis - it's been
+ written too quickly under the impression of a specific case to
+ give some personal impression on interpretation of the license
+ text which holds as the only valid document that is not being 
+ extended (implictly or explictly) by the treatment given above.

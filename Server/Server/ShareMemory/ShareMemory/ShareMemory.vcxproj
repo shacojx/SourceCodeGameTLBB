@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AEC66C3E-BE76-4B37-88EA-D4DF64F75C82}</ProjectGuid>
+    <RootNamespace>ShareMemory</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2020</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\DB\;.\Main\;.\ShareData\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\ServerBase\;..\..\..\Common\DBSystem\DataBase\;..\..\..\Common\DBSystem\Mysql\include\;..\..\GameServer\Server\Other\;..\..\GameServer\Server\SMU\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__WINDOWS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)ShareMemory.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>.\;.\DB\;.\Main\;.\ShareData\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\ServerBase\;..\..\..\Common\DBSystem\DataBase\;..\..\..\Common\DBSystem\Mysql\include\;..\..\GameServer\Server\Other\;..\..\GameServer\Server\SMU\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;__WINDOWS__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\Assertx.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBAbilityList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCharFullData.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCharList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCoolDownInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCreateCharOp.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBDeleteCharOp.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBEquipBaseList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBGuildInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBImpactList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBItemList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBItemSerial.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBMailInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBManager.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBPetList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBPrivateInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBRelationList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBSkillList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBTaskList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBTitleInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBWebShopInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBXinFaList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\ODBCBase.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\ODBCInterface.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\SqlTemplate.cpp" />
+    <ClCompile Include="..\..\..\Common\DB_Struct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameStruct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameUtil.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\FileAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Packet.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\ServerSocket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Socket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketInputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketOutputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\Rand.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Config.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Ini.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Log.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Thread.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\TimeManager.cpp" />
+    <ClCompile Include="..\..\..\Common\ShareMemAPI.cpp" />
+    <ClCompile Include="..\..\GameServer\Server\Other\BBS.cpp" />
+    <ClCompile Include="..\..\GameServer\Server\SMU\ShareMemAO.cpp" />
+    <ClCompile Include="..\..\GameServer\Server\SMU\SMUManager.cpp" />
+    <ClCompile Include="DB\ShareDBManager.cpp" />
+    <ClCompile Include="Main\CommandThread.cpp" />
+    <ClCompile Include="Main\ShareMemory.cpp" />
+    <ClCompile Include="ShareData\SMULogicManager.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\Assertx.h" />
+    <ClInclude Include="..\..\..\Common\BaseType.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBAbilityList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCharFullData.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCharList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCoolDownInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCreateCharOp.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBDeleteCharOp.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBEquipBaseList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBGuildInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBImpactList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBItemList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBItemSerial.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBMailInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBManager.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBPetList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBPrivateInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBRelationList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBSkillList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTaskList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTitleInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTypes.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBWebShopInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBXinFaList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\ODBCBase.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\ODBCInterface.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\SqlTemplate.h" />
+    <ClInclude Include="..\..\..\Common\DB_Struct.h" />
+    <ClInclude Include="..\..\..\Common\FileAPI.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine2.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Attr.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Item.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Result.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Scene.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Impact.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Item.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Scene.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Skill.h" />
+    <ClInclude Include="..\..\..\Common\GameUtil.h" />
+    <ClInclude Include="..\..\..\Common\Net\FileAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\Packet.h" />
+    <ClInclude Include="..\..\..\Common\Net\ServerSocket.h" />
+    <ClInclude Include="..\..\..\Common\Net\Socket.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketInputStream.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketOutputStream.h" />
+    <ClInclude Include="..\..\..\Common\Rand.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Config.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Ini.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Log.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Thread.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\TimeManager.h" />
+    <ClInclude Include="..\..\..\Common\ServerSocket.h" />
+    <ClInclude Include="..\..\..\Common\ShareMemAPI.h" />
+    <ClInclude Include="..\..\..\Common\Socket.h" />
+    <ClInclude Include="..\..\..\Common\SocketAPI.h" />
+    <ClInclude Include="..\..\..\Common\SocketInputStream.h" />
+    <ClInclude Include="..\..\..\Common\SocketOutputStream.h" />
+    <ClInclude Include="..\..\..\Common\Type.h" />
+    <ClInclude Include="..\..\GameServer\Server\Other\BBS.h" />
+    <ClInclude Include="..\..\GameServer\Server\SMU\ShareMemAO.h" />
+    <ClInclude Include="..\..\GameServer\Server\SMU\SMUManager.h" />
+    <ClInclude Include="..\..\Server\Server\Other\PlayerShopDefine.h" />
+    <ClInclude Include="DB\ShareDBManager.h" />
+    <ClInclude Include="Main\CommandThread.h" />
+    <ClInclude Include="Main\ShareMemory.h" />
+    <ClInclude Include="ShareData\SMULogicManager.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

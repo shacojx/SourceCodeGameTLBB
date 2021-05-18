@@ -1,0 +1,204 @@
+///////////////////////////////////
+//			 PASS 0
+//		HEAT CASTERS PASS
+///////////////////////////////////
+
+vertex_program PostFilters/HeatVision/HeatCaster_vp cg
+{
+	source HeatVision.cg
+	entry_point HeatCaster_vp
+	profiles vs_1_1 arbvp1
+
+	default_params
+	{
+		param_named_auto eyePosition camera_position_object_space
+		param_named_auto worldViewProj worldviewproj_matrix
+	}
+}
+
+fragment_program PostFilters/HeatVision/HeatCaster_fp cg
+{
+   source HeatVision.cg
+   entry_point HeatCaster_fp
+   profiles ps_2_0 arbfp1
+}
+
+material PostFilters/HeatVision/HeatCaster
+{
+    technique
+    {
+        pass
+        {
+            vertex_program_ref PostFilters/HeatVision/HeatCaster_vp
+            {
+            }
+            fragment_program_ref PostFilters/HeatVision/HeatCaster_fp
+            {
+            }
+        }
+    }
+}
+
+///////////////////////////////////
+//			 PASS 0
+//		COLD CASTERS PASS
+///////////////////////////////////
+
+vertex_program PostFilters/HeatVision/ColdCaster_vp cg
+{
+	source HeatVision.cg
+	entry_point ColdCaster_vp
+	profiles vs_1_1 arbvp1
+
+	default_params
+	{
+		param_named_auto eyePosition camera_position_object_space
+		param_named_auto worldViewProj worldviewproj_matrix
+	}
+}
+
+fragment_program PostFilters/HeatVision/ColdCaster_fp cg
+{
+   source HeatVision.cg
+   entry_point ColdCaster_fp
+   profiles ps_2_0 arbfp1
+}
+
+material PostFilters/HeatVision/ColdCaster
+{
+    technique
+    {
+        pass
+        {
+            vertex_program_ref PostFilters/HeatVision/ColdCaster_vp
+            {
+            }
+            fragment_program_ref PostFilters/HeatVision/ColdCaster_fp
+            {
+            }
+        }
+    }
+}
+
+///////////////////////////////////
+//			  PASS 1
+//  LIGHT TO HEAT CONVERSION PASS
+///////////////////////////////////
+
+fragment_program PostFilters/HeatVision/LightToHeat_fp cg
+{
+	source HeatVision.cg
+	entry_point LightToHeat_fp
+	profiles ps_2_0 arbfp1
+
+	default_params
+	{
+		// these should be *really* random!
+		param_named random_fractions float4 0.3 0.7 0 0
+
+		param_named depth_modulator float4 0.6 0 0 0
+
+		// this one can be fixed
+		param_named heatBiasScale float4 0.0 1.0 0 0
+	}
+}
+
+material PostFilters/HeatVision/LightToHeat
+{
+    technique
+    {
+        // pass 1
+        pass
+        {
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+            vertex_program_ref PostFilters/std_quad_vs
+            {
+            }
+            fragment_program_ref PostFilters/HeatVision/LightToHeat_fp
+            {
+            }
+
+            // INPUT (from scene, where entities has "PostFilters/HeatVision/Caster" material for heat emanation)
+            texture_unit
+            {
+                texture <input>
+                tex_address_mode clamp
+                filtering none
+            }
+
+            // Noise map
+            texture_unit
+            {
+                texture HeatNoise.tga
+                filtering bilinear
+                tex_coord_set 1
+            }
+
+            // heat conversion texture
+            texture_unit
+            {
+                texture HeatLookup.tga
+                tex_address_mode clamp
+                filtering none
+                tex_coord_set 2
+            }
+        }
+    }
+
+}
+
+
+///////////////////////////////////
+//			  PASS 2
+//			 BLUR PASS
+///////////////////////////////////
+
+fragment_program PostFilters/HeatVision/Blur_fp cg
+{
+	source HeatVision.cg
+	entry_point Blur_fp
+	profiles ps_2_0 arbfp1
+
+	default_params
+	{
+		param_named blurAmount float4 0.5 0 0 0
+	}
+}
+
+material PostFilters/HeatVision/Blur
+{
+    technique
+    {
+        // pass 1
+        pass
+        {
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+            vertex_program_ref PostFilters/std_quad_vs
+            {
+            }
+            fragment_program_ref PostFilters/HeatVision/Blur_fp
+            {
+            }
+
+            // INPUT (from previous)
+            texture_unit
+            {
+                texture <input>
+                tex_address_mode clamp
+                filtering bilinear
+            }
+        }
+    }
+}

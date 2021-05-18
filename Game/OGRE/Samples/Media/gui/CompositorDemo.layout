@@ -1,0 +1,182 @@
+<?xml version="1.0" ?>
+<GUILayout>
+<Window Type="DefaultGUISheet" Name="root">
+
+	<Window Type="DefaultGUISheet" Name="debug_overlay">
+		<Property Name="AlwaysOnTop" Value="True" />
+		<Property Name="Disabled" Value="True" />
+		
+		<Window Type="TaharezLook/StaticText" Name="Panel 1">
+			<Property Name="Position" Value="x:0 y:0.83" />
+			<Property Name="Size" Value="w:0.23 h:0.17" />
+			<Property Name="TopLeftFrameImage" Value="set:OgreGuiImagery image:BoxTopLeft" />
+			<Property Name="TopRightFrameImage" Value="set:OgreGuiImagery image:BoxTopRight" />
+			<Property Name="BottomLeftFrameImage" Value="set:OgreGuiImagery image:BoxBottomLeft" />
+			<Property Name="BottomRightFrameImage" Value="set:OgreGuiImagery image:BoxBottomRight" />
+			<Property Name="LeftFrameImage" Value="set:OgreGuiImagery image:BoxLeft" />
+			<Property Name="TopFrameImage" Value="set:OgreGuiImagery image:BoxTop" />
+			<Property Name="RightFrameImage" Value="set:OgreGuiImagery image:BoxRight" />
+			<Property Name="BottomFrameImage" Value="set:OgreGuiImagery image:BoxBottom" />
+			<Property Name="BackgroundImage" Value="set:OgreGuiImagery image:BoxBack" />
+			<Property Name="Alpha" Value="0.9" />
+			<Property Name="InheritsAlpha" Value="False" />
+	
+			<Window Type="TaharezLook/StaticText" Name="OPCurrentFPS">
+				<Property Name="FrameEnabled" Value="False" />
+				<Property Name="BackgroundEnabled" Value="False" />
+				<Property Name="Font" Value="BlueHighway-10" />
+				<Property Name="Position" Value="x:0.075 y:0.12" />
+				<Property Name="Size" Value="w:0.85 h:0.25" />
+				<Property Name="TextColours" Value="tl:FF4FF06F tr:FF4FF06F bl:FF4FF06F br:FF4FF06F" />
+				<Property Name="HorzFormatting" Value="HorzCentred" />
+				<Property Name="Text" Value="Current FPS: " />
+			</Window>
+
+			<Window Type="TaharezLook/StaticImage" Name="OPBar1">
+				<Property Name="FrameEnabled" Value="False" />
+				<Property Name="BackgroundEnabled" Value="False" />
+				<Property Name="Position" Value="x:0.2 y:0.27" />
+				<Property Name="Size" Value="w:0.6 h:0.025" />
+				<Property Name="Image" Value="set:OgreGuiImagery image:Bar" />
+			</Window>
+
+			<Window Type="TaharezLook/StaticText" Name="OPAverageFPS">
+				<Property Name="FrameEnabled" Value="False" />
+				<Property Name="BackgroundEnabled" Value="False" />
+				<Property Name="Font" Value="BlueHighway-10" />
+				<Property Name="Position" Value="x:0.075 y:0.32" />
+				<Property Name="Size" Value="w:1.0 h:0.25" />
+				<Property Name="TextColours" Value="tl:FFFFF5F0 tr:FFFFF5F0 bl:FFFFF510 br:FFFFF5F0" />
+				<Property Name="Text" Value="Average FPS: " />
+			</Window>
+
+			<Window Type="TaharezLook/StaticText" Name="OPWorstFPS">
+				<Property Name="FrameEnabled" Value="False" />
+				<Property Name="BackgroundEnabled" Value="False" />
+				<Property Name="Font" Value="BlueHighway-10" />
+				<Property Name="Position" Value="x:0.075 y:0.45" />
+				<Property Name="Size" Value="w:1.0 h:0.25" />
+				<Property Name="TextColours" Value="tl:FFFFF5F0 tr:FFFFF5F0 bl:FFFFF510 br:FFFFF5F0" />
+				<Property Name="Text" Value="Worst FPS: " />
+			</Window>
+
+			<Window Type="TaharezLook/StaticText" Name="OPBestFPS">
+				<Property Name="FrameEnabled" Value="False" />
+				<Property Name="BackgroundEnabled" Value="False" />
+				<Property Name="Font" Value="BlueHighway-10" />
+				<Property Name="Position" Value="x:0.075 y:0.58" />
+				<Property Name="Size" Value="w:1.0 h:0.25" />
+				<Property Name="TextColours" Value="tl:FFFFF5F0 tr:FFFFF5F0 bl:FFFFF510 br:FFFFF5F0" />
+				<Property Name="Text" Value="Best FPS: " />
+			</Window>
+
+			<Window Type="TaharezLook/StaticText" Name="OPTriCount">
+				<Property Name="FrameEnabled" Value="False" />
+				<Property Name="BackgroundEnabled" Value="False" />
+				<Property Name="Font" Value="BlueHighway-10" />
+				<Property Name="Position" Value="x:0.075 y:0.71" />
+				<Property Name="Size" Value="w:1.0 h:0.25" />
+				<Property Name="TextColours" Value="tl:FFFFF5F0 tr:FFFFF5F0 bl:FFFFF510 br:FFFFF5F0" />
+				<Property Name="Text" Value="Triangle Count: " />
+			</Window>
+
+		</Window>
+
+		<Window Type="TaharezLook/StaticText" Name="OPDebugMsg">
+			<Property Name="FrameEnabled" Value="False" />
+			<Property Name="BackgroundEnabled" Value="False" />
+			<Property Name="Font" Value="BlueHighway-10" />
+			<Property Name="Position" Value="x:0.25 y:0.93" />
+			<Property Name="Size" Value="w:0.65 h:0.07" />
+			<Property Name="TextColours" Value="tl:A0FFFFFF tr:A0FFFFFF bl:A0FFFFFF br:A0FFFFFF" />
+			<Property Name="InheritsAlpha" Value="False" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+			<Property Name="HorzFormatting" Value="WordWrapCentred" />
+		</Window>
+
+		<Window Type="TaharezLook/StaticImage" Name="OgreLogo">
+			<Property Name="FrameEnabled" Value="False" />
+			<Property Name="BackgroundEnabled" Value="False" />
+			<Property Name="Position" Value="x:0.9 y:0.95" />
+			<Property Name="Size" Value="w:0.1 h:0.05" />
+			<Property Name="Image" Value="set:OgreGuiImagery image:OgreLogo" />
+			<Property Name="Alpha" Value="0.75" />
+			<Property Name="InheritsAlpha" Value="False" />
+		</Window>
+
+		<Window Type="TaharezLook/StaticImage" Name="CeguiLogo">
+			<Property Name="FrameEnabled" Value="False" />
+			<Property Name="BackgroundEnabled" Value="False" />
+			<Property Name="Position" Value="x:0.9125 y:0.9115" />
+			<Property Name="Size" Value="w:0.075 h:0.0385" />
+			<Property Name="Image" Value="set:OgreGuiImagery image:CeguiLogo" />
+			<Property Name="Alpha" Value="0.75" />
+			<Property Name="InheritsAlpha" Value="False" />
+		</Window>
+
+	</Window>
+
+	<Window Type="DefaultGUISheet" Name="CompositorDemo">
+
+		<Property Name="RelativeMaxSize" Value="w:1 h:2" />
+		<Property Name="Size" Value="w:1 h:2" />
+
+
+		<Window Type="TaharezLook/StaticText" Name="HelpTxt">
+			<Property Name="Position" Value="x:0.6 y:0.8" />
+			<Property Name="RelativeMinSize" Value="w:0.5 h:0.3" />
+			<Property Name="Size" Value="w:0.5 h:0.3" />
+			<Property Name="Text" Value="Use the Combo boxes to select a shader and a model" />
+			<Property Name="InheritsAlpha" Value="False" />
+		</Window>
+		
+		<Window Type="TaharezLook/FrameWindow" Name="CompositorSelectorWin">
+			<Property Name="Position" Value="x:0 y:0" />
+			<Property Name="RelativeMinSize" Value="w:0.16 h:0.22" />
+			<Property Name="RelativeMaxSize" Value="w:0.16 h:0.75" />
+			<Property Name="Size" Value="w:0.16 h:0.3" />
+			<Property Name="Text" Value="Compositors" />
+			<Property Name="Alpha" Value="0.75" />
+			<Property Name="CloseButtonEnabled" Value="False" />
+
+			<Window Type="TaharezLook/Button" Name="ExitDemoBtn">
+				<Property Name="VerticalAlignment" Value="Bottom" />
+				<Property Name="HorizontalAlignment" Value="Centre" />
+				<Property Name="Position" Value="x:0 y:0" />
+				<Property Name="RelativeMaxSize" Value="w:0.12 h:0.03" />
+				<Property Name="RelativeMinSize" Value="w:0.12 h:0.03" />
+				<Property Name="Size" Value="w:0.33 h:0.03" />
+				<Property Name="Text" Value="Exit Demo" />
+				<Property Name="InheritsAlpha" Value="False" />
+			</Window>
+
+		</Window>
+		<Window Type="TaharezLook/FrameWindow" Name="DebugRTTs">
+			<Property Name="RollUpState" Value="True" />
+			<Property Name="Position" Value="x:0.70 y:0" />
+			<Property Name="RelativeMinSize" Value="w:0.3 h:0.3" />
+			<Property Name="RelativeMaxSize" Value="w:0.3 h:0.3" />
+			<Property Name="Size" Value="w:0.3 h:0.3" />
+			<Property Name="Text" Value="Debug RTTs" />
+			<Property Name="Alpha" Value="0.75" />
+			<Property Name="CloseButtonEnabled" Value="False" />
+
+			<Window Type="TaharezLook/Listbox" Name="DebugRTTListbox">
+				<Property Name="Position" Value="x:0.02 y:0.1" />
+				<Property Name="RelativeMinSize" Value="w:0.1 h:0.25" />
+				<Property Name="RelativeMaxSize" Value="w:0.1 h:0.25" />
+				<Property Name="Size" Value="w:0.1 h:0.25" />
+			</Window>
+			<Window Type="TaharezLook/StaticImage" Name="DebugRTTImage">
+				<Property Name="Position" Value="x:0.36 y:0.1" />
+				<Property Name="RelativeMinSize" Value="w:0.2 h:0.25" />
+				<Property Name="RelativeMaxSize" Value="w:0.2 h:0.25" />
+				<Property Name="Size" Value="w:0.2 h:0.25" />
+			</Window>
+		</Window>
+	</Window>
+
+
+</Window>
+
+</GUILayout>

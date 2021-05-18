@@ -1,0 +1,125 @@
+//
+//  filename:   MotionBlur.material
+//  created:    2006/02/24
+//  author:     Genva Xie (genva@21cn.com)
+//
+//  purpose:    Motion blur post filter
+//
+
+fragment_program PostFilters/MotionBlur/combine_fp cg
+{
+	source MotionBlur.cg
+	profiles ps_2_0 arbfp1
+	entry_point combine_fp
+
+	default_params
+	{
+		param_named blur float 0.8
+	}
+}
+
+fragment_program PostFilters/MotionBlur/combine_ps_1_1 cg
+{
+	source MotionBlur.cg
+	profiles ps_1_1
+	entry_point combine_ps_1_1
+
+	default_params
+	{
+		param_named blur float 0.8
+	}
+}
+
+material PostFilters/MotionBlur/Combine
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			fragment_program_ref PostFilters/MotionBlur/combine_fp
+			{
+			}
+
+			texture_unit
+			{
+				texture <scene>
+				tex_address_mode clamp
+				filtering linear linear none
+                tex_coord_set 0
+			}
+
+			texture_unit
+			{
+				texture <sum>
+				tex_address_mode clamp
+				filtering linear linear none
+                tex_coord_set 0
+			}
+		}
+	}
+
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			fragment_program_ref PostFilters/MotionBlur/combine_ps_1_1
+			{
+			}
+
+			texture_unit
+			{
+				texture <scene>
+				tex_address_mode clamp
+				filtering linear linear none
+                tex_coord_set 0
+			}
+
+			texture_unit
+			{
+				texture <sum>
+				tex_address_mode clamp
+				filtering linear linear none
+                tex_coord_set 0
+			}
+		}
+	}
+}
+
+material PostFilters/MotionBlur/Copy
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			fog_override true
+			cull_hardware none
+			cull_software none
+			depth_check off
+			depth_write off
+
+			texture_unit
+			{
+				texture <source>
+				tex_address_mode clamp
+				filtering linear linear none
+                tex_coord_set 0
+				colour_op replace
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+vertex_program PostFilters/std_quad_vs cg
+{
+	source std_quad.cg
+	entry_point std_quad_vs
+	profiles vs_1_1 arbvp1
+
+	default_params
+	{
+		param_named_auto worldViewProj worldviewproj_matrix
+	}
+}

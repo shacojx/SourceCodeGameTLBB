@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A1B4BF17-94BC-4AF8-8160-BF4D1D2BE963}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\_Scripts\VC7.1\Debug/WXEngine\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\_Scripts\VC7.1\Debug/WXEngine\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\_Scripts\VC7.1\Release/WXEngine\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\_Scripts\VC7.1\Release/WXEngine\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\Common;..\..\Common\DataBase;..\Client\Common;..\Xerces\Projects\Win32\BCB6\Xerces-all\XercesLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;TENGDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\..\_Scripts\VC7.1\Debug/$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>.;..\Common;..\..\Common\DataBase;..\Client\Common;..\Xerces\Projects\Win32\BCB6\Xerces-all\XercesLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;TENGDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\..\_Scripts\VC7.1\Release/$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\AxTrace.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WXEngine.cpp" />
+    <ClCompile Include="Kernel\TDClass.cpp" />
+    <ClCompile Include="Kernel\TDKernel.cpp" />
+    <ClCompile Include="Kernel\TDNode.cpp" />
+    <ClCompile Include="Exception\TDCrashReport.cpp" />
+    <ClCompile Include="Exception\TDException.cpp" />
+    <ClCompile Include="Exception\XZip.cpp" />
+    <ClCompile Include="Util\TDUtil.cpp" />
+    <ClCompile Include="Gfx\TDGfxSystem.cpp" />
+    <ClCompile Include="Game\World\TDWorldSystem.cpp" />
+    <ClCompile Include="Game\Object\TDObjectSystem.cpp" />
+    <ClCompile Include="Game\Interface\TDGameInterface.cpp" />
+    <ClCompile Include="Game\Event\TDEventSystem.cpp" />
+    <ClCompile Include="Game\DataPool\TDUIDataPool.cpp" />
+    <ClCompile Include="Game\DataPool\TDDataPool.cpp" />
+    <ClCompile Include="Game\Action\TDActionSystem.cpp" />
+    <ClCompile Include="Input\TDInputSystem.cpp" />
+    <ClCompile Include="Time\TDTimeSystem.cpp" />
+    <ClCompile Include="Ui\TDUISystem.cpp" />
+    <ClCompile Include="Math\TDMath.cpp" />
+    <ClCompile Include="Sound\TDSound.cpp" />
+    <ClCompile Include="Dbc\TDDataBase.cpp" />
+    <ClCompile Include="Variable\TDVariable.cpp" />
+    <ClCompile Include="debuger\TDDebuge.cpp" />
+    <ClCompile Include="Cursor\TDCursorSystem.cpp" />
+    <ClCompile Include="Script\TDScriptSystm.cpp" />
+    <ClCompile Include="Profile\TDProfile.cpp" />
+    <ClCompile Include="FakeObject\TDFakeObjSystem.cpp" />
+    <ClCompile Include="Helper\TDHelperSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\AxTrace.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\Common\TDBasicType.h" />
+    <ClInclude Include="..\Common\TDClass.h" />
+    <ClInclude Include="..\Common\TDKernel.h" />
+    <ClInclude Include="..\Common\TDNode.h" />
+    <ClInclude Include="Exception\TDCrashReport.h" />
+    <ClInclude Include="..\Common\TDException.h" />
+    <ClInclude Include="Exception\XZip.h" />
+    <ClInclude Include="..\Common\TDUtil.h" />
+    <ClInclude Include="..\Common\TDGfxSystem.h" />
+    <ClInclude Include="..\Common\TDWorldSystem.h" />
+    <ClInclude Include="..\Common\TDObjectSystem.h" />
+    <ClInclude Include="..\Common\TDGameInterface.h" />
+    <ClInclude Include="..\Common\TDEventSystem.h" />
+    <ClInclude Include="..\Common\TDUIDataPool.h" />
+    <ClInclude Include="..\Common\TDDataPool.h" />
+    <ClInclude Include="..\Common\TDActionSystem.h" />
+    <ClInclude Include="..\Common\TDInputSystem.h" />
+    <ClInclude Include="..\Common\TDTimeSystem.h" />
+    <ClInclude Include="..\Common\TDUISystem.h" />
+    <ClInclude Include="..\Common\TDMath.h" />
+    <ClInclude Include="..\Common\TDSound.h" />
+    <ClInclude Include="..\Common\TDDataBase.h" />
+    <ClInclude Include="..\Common\TDDBC_Struct.h" />
+    <ClInclude Include="..\Common\TDVariable.h" />
+    <ClInclude Include="..\Common\TDDebuger.h" />
+    <ClInclude Include="..\Common\TDCursorSystem.h" />
+    <ClInclude Include="..\Common\TDScriptSystem.h" />
+    <ClInclude Include="..\Common\TDProfile.h" />
+    <ClInclude Include="..\Common\TDFakeObjSystem.h" />
+    <ClInclude Include="..\Common\TDHelperSystem.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

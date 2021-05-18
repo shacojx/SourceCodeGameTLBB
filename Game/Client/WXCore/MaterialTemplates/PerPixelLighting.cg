@@ -1,0 +1,447 @@
+/****************** 公共函数 begin *************************/
+
+/** 把从normal贴图中得到的向量的范围从(0,1)转成(-1,1)
+*/
+float3 expand(float3 v)
+{
+	return (v - 0.5) * 2;
+}
+
+/****************** 公共函数 end *************************/
+
+/****************** PerPixelLightingWithAlphaTemplate材质所用的函数	begin *****/
+
+/** 计算环境光颜色的pass的vp
+*/
+void HighTechWithAlphaAmbientPassVP
+(
+	float4 position					: POSITION,
+	float2 uv						    : TEXCOORD0,
+					  
+	out float4 oPosition			    : POSITION,
+  out float4 oColour				: COLOR0,
+  out float4 oColour1       : COLOR1,  // 为了兼容性问题而进行的输出 
+    
+	out float2 oUv					: TEXCOORD0,
+
+	uniform float4x4 worldViewProj,
+	uniform float4 ambient,
+	uniform float4 ambientMat,
+	uniform float4 emissiveColor
+)
+{
+	oPosition = mul(worldViewProj, position);
+	oColour = ambientMat * ambient + emissiveColor;
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);	
+	oUv = uv;
+}
+
+/** 计算环境光颜色的pass的fp
+*/
+void HighTechWithAlphaAmbientPassFP
+(
+	out float4 oColour	: COLOR,
+	
+	float4 colour        : COLOR0,
+	float4 colour1       : COLOR1, // 为了兼容性问题而进行的输入 
+	float2 uv            : TEXCOORD0,	
+	
+	uniform sampler2D baseTex
+)
+{
+	// vp中得到的环境光颜色
+	oColour.xyz = colour.xyz;
+	
+	// 用纹理的alpha值做为输出的alpha值，用于alpha_rejection
+	oColour.w = tex2D(baseTex,uv).w;
+}
+
+/** 计算方向性光源颜色的pass的vp
+*/
+void HighTechWithAlphaDirectionalLightingPassVP
+(
+	float4 position			: POSITION,
+	float3 normal			: NORMAL,
+	float2 uv                : TEXCOORD0,
+
+	out float4 oPosition	    : POSITION,
+	
+	out float2 oUv           : TEXCOORD0,	
+	out float3 oNormal     	: TEXCOORD1,	
+	out float3 oLightDir	    : TEXCOORD2,
+	out float3 oHalfwayDir   : TEXCOORD3,
+	
+	out float4 oColour		: COLOR0,
+	out float4 oColour1       : COLOR1,  // 为了兼容性问题而进行的输出 
+	
+	uniform float4x4 worldViewProj,
+	uniform float4 lightPosition,
+	uniform float4 eyePosition,
+	
+	uniform float4 diffuseMat,
+	uniform float3 diffuseColor
+)
+{
+	oPosition = mul(worldViewProj, position);	
+	oNormal = normal;	
+	
+	float3 eyeDir = normalize(eyePosition - position).xyz;	
+	
+	oLightDir = lightPosition.xyz;
+	
+	oHalfwayDir = normalize(eyeDir + oLightDir);
+	
+	float diffuseLight = max(dot(normal, oLightDir), 0);
+	float3 diffuse = diffuseMat.xyz * diffuseColor * diffuseLight;
+	
+	oColour.xyz = min( diffuse, 1.0 );
+	oColour.w = diffuseMat.w;
+	
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);
+	
+	oUv = uv;
+}
+
+/** 计算点光源颜色的pass的vp
+*/
+void HighTechWithAlphaPointLightingPassVP
+(
+	float4 position			: POSITION,
+	float3 normal			: NORMAL,
+	float2 uv                : TEXCOORD0,
+	
+	out float4 oPosition  	: POSITION,
+	
+	out float2 oUv           : TEXCOORD0,	
+	out float3 oNormal     	: TEXCOORD1,	
+	out float3 oLightDir	    : TEXCOORD2,
+	out float3 oHalfwayDir   : TEXCOORD3,
+	out float  oAttenuation  : TEXCOORD4,
+	
+	out float4 oColour		: COLOR0,
+	out float4 oColour1       : COLOR1,  // 为了兼容性问题而进行的输出 
+	
+	uniform float4x4 worldViewProj,
+	uniform float4 lightPosition,
+	uniform float4 eyePosition,
+	
+	uniform float4 diffuseMat,
+	uniform float3 diffuseColor,
+	uniform float4 attenuation
+)
+{
+	oPosition = mul(worldViewProj, position);	
+	oNormal = normal;	
+	
+	float3 eyeDir = normalize(eyePosition - position).xyz;	
+	
+	float3 lightDir = lightPosition.xyz - position.xyz;
+	oLightDir = normalize( lightDir );
+	
+	float d = length( lightDir );
+	
+	oHalfwayDir = normalize(eyeDir + oLightDir);
+	
+	oAttenuation = 1.0 / ( attenuation.y + attenuation.z * d + attenuation.w * d * d );
+
+	float diffuseLight = max(dot(normal, oLightDir), 0);
+	float3 diffuse = diffuseMat.xyz * diffuseColor * diffuseLight;
+	
+	oColour.xyz = min( diffuse, 1.0 );
+	oColour.w = diffuseMat.w;
+	
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);
+	
+	oUv = uv;
+}
+
+/** 计算方向性光源颜色的pass的fp
+*/
+void HighTechWithAlphaDirectionalLightingPassFP
+(
+	float2 uv            : TEXCOORD0,
+	float3 normal	    : TEXCOORD1,
+	float3 lightDir		: TEXCOORD2,		
+	float3 halfwayDir	: TEXCOORD3,
+	float4 colour		: COLOR0,
+	float4 colour1  : COLOR1,	 // 为了兼容性问题而进行的输入
+	
+	out float4 oColour	: COLOR,		
+
+	uniform samplerCUBE normalCubeMap,
+	uniform sampler2D baseTex,
+	
+	uniform float4 specularLuminance
+)
+{			
+	normal = expand( texCUBE(normalCubeMap, normal).xyz );
+	lightDir = expand( texCUBE(normalCubeMap, lightDir).xyz );
+	halfwayDir = expand( texCUBE(normalCubeMap, halfwayDir).xyz );
+	
+	float specularLight = pow(max(dot(normal, halfwayDir), 0),specularLuminance.w);
+	
+	float3 specular = specularLuminance.xyz * specularLight;	
+
+	oColour.xyz = colour.xyz + specular;
+	
+	oColour.w = colour.w * tex2D(baseTex,uv).w;
+}
+
+/** 计算点光源颜色的pass的fp
+*/
+void HighTechWithAlphaPointLightingPassFP
+(
+	float2 uv            : TEXCOORD0,
+	float3 normal	    : TEXCOORD1,
+	float3 lightDir		: TEXCOORD2,		
+	float3 halfwayDir	: TEXCOORD3,
+	float  attenuation   : TEXCOORD4,
+	
+	float4 colour		: COLOR0,
+	float4 colour1  : COLOR1,	 // 为了兼容性问题而进行的输入 
+		
+	out float4 color  	: COLOR,		
+
+	uniform samplerCUBE normalCubeMap,
+	uniform sampler2D baseTex,
+	 
+	uniform float4 specularLuminance
+)
+{			
+	normal = expand( texCUBE(normalCubeMap, normal).xyz );
+	lightDir = expand( texCUBE(normalCubeMap, lightDir).xyz );
+	halfwayDir = expand( texCUBE(normalCubeMap, halfwayDir).xyz );
+	
+	float specularLight = pow(max(dot(normal, halfwayDir), 0),specularLuminance.w);
+	
+	float3 specular = specularLuminance.xyz * specularLight;	
+
+	color.xyz = ( colour.xyz + specular ) * attenuation;
+	
+	color.w = colour.w * tex2D(baseTex,uv).w;
+}
+
+/** 计算纹理颜色的pass的vp
+*/
+void HighTechWithAlphaDecalPassVP
+(
+	float4 position			: POSITION,
+	float2 uv				: TEXCOORD0,
+	
+	out float4 oColor		: COLOR0,
+	out float4 oColour1       : COLOR1,  // 为了兼容性问题而进行的输出 
+	
+	out float4 oPosition	    : POSITION,
+	out float2 oUv			: TEXCOORD0,
+	
+	uniform float4x4 worldViewProj						  
+)
+{
+	oPosition = mul(worldViewProj, position);
+	oUv = uv;
+	oColor = float4(1.0,1.0,1.0,1.0);
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);
+}
+
+/****************** PerPixelLightingWithAlphaTemplate材质所用的函数	end *****/
+
+/****************** PerPixelLightingTemplate材质所用的函数 begin *************/
+
+/** 计算环境光颜色的pass的vp
+*/
+void HighTechAmbientPassVP
+(
+	float4 position       : POSITION,
+					  
+	out float4 oPosition	 : POSITION,
+	out float4 oColour	 : COLOR0,
+  out float4 oColour1       : COLOR1,  // 为了兼容性问题而进行的输出 
+
+	uniform float4x4 worldViewProj,
+	uniform float4 ambient,
+	uniform float4 ambientMat,
+	uniform float4 emissiveColor
+)
+{
+	oPosition = mul(worldViewProj, position);
+	oColour = ambientMat * ambient + emissiveColor;
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);
+}
+
+/** 计算方向性光源颜色的pass的vp
+*/
+void HighTechDirectionalLightingPassVP
+(
+	float4 position			: POSITION,
+	float3 normal			: NORMAL,
+	
+	out float4 oPosition 	: POSITION,
+	
+	out float3 oNormal     	: TEXCOORD0,	
+	out float3 oLightDir 	: TEXCOORD1,
+	out float3 oHalfwayDir   : TEXCOORD2,
+	
+	out float4 oColour		: COLOR0,
+	out float4 oColour1		: COLOR1,  // 为了兼容性问题而进行的输出 
+	
+	uniform float4x4 worldViewProj,
+	uniform float4 lightPosition,
+	uniform float4 eyePosition,
+	
+	uniform float4 diffuseMat,
+	uniform float3 diffuseColor
+)
+{
+	oPosition = mul(worldViewProj, position);	
+	oNormal = normal;	
+	
+	float3 eyeDir = normalize(eyePosition - position).xyz;	
+	
+	oLightDir = lightPosition.xyz;
+	
+	oHalfwayDir = normalize(eyeDir + oLightDir);
+	
+	float diffuseLight = max(dot(normal, oLightDir), 0);
+	float3 diffuse = diffuseMat.xyz * diffuseColor * diffuseLight;
+	
+	oColour.xyz = min( diffuse, 1.0 );
+	oColour.w = diffuseMat.w;	
+	
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);
+}
+
+/** 计算点光源颜色的pass的vp
+*/
+void HighTechPointLightingPassVP
+(
+	float4 position			: POSITION,
+	float3 normal			: NORMAL,
+	
+	out float4 oPosition	    : POSITION,
+	
+	out float3 oNormal     	: TEXCOORD0,	
+	out float3 oLightDir	    : TEXCOORD1,
+	out float3 oHalfwayDir   : TEXCOORD2,
+	out float  oAttenuation  : TEXCOORD3,
+
+	out float4 oColour		: COLOR0,
+	out float4 oColour1   : COLOR1,  // 为了兼容性问题而进行的输出 
+	
+	uniform float4x4 worldViewProj,
+	uniform float4 lightPosition,
+	uniform float4 eyePosition,
+	
+	uniform float4 diffuseMat,
+	uniform float3 diffuseColor,
+	uniform float4 attenuation
+)
+{
+	oPosition = mul(worldViewProj, position);	
+	oNormal = normal;	
+	
+	float3 eyeDir = normalize(eyePosition - position).xyz;	
+	
+	float3 lightDir = lightPosition.xyz - position.xyz;
+	oLightDir = normalize( lightDir );
+	
+	float d = length( lightDir );
+	
+	oHalfwayDir = normalize(eyeDir + oLightDir);
+	
+	oAttenuation = 1.0 / ( attenuation.y + attenuation.z * d + attenuation.w * d * d );
+
+	float diffuseLight = max(dot(normal, oLightDir), 0);
+	float3 diffuse = diffuseMat.xyz * diffuseColor * diffuseLight;
+	
+	oColour.xyz = min( diffuse, 1.0 );
+	oColour.w = diffuseMat.w;	
+	
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);
+}
+
+/** 计算方向性光源颜色的pass的fp
+*/
+void HighTechDirectionalLightingPassFP
+(
+	float3 normal	    : TEXCOORD0,
+	float3 lightDir		: TEXCOORD1,		
+	float3 halfwayDir	: TEXCOORD2,
+	
+	float4 colour		: COLOR0,
+	float4 colour1  : COLOR1,	  // 为了兼容性问题而进行的输入
+	
+	out float4 oColour	: COLOR,		
+
+	uniform samplerCUBE normalCubeMap,
+	
+	uniform float4 specularLuminance
+)
+{			
+	normal = expand( texCUBE(normalCubeMap, normal).xyz );
+	lightDir = expand( texCUBE(normalCubeMap, lightDir).xyz );
+	halfwayDir = expand( texCUBE(normalCubeMap, halfwayDir).xyz );
+	
+	float specularLight = pow(max(dot(normal, halfwayDir), 0),specularLuminance.w);
+	
+	float3 specular = specularLuminance.xyz * specularLight;	
+
+	oColour.xyz = colour.xyz + specular;
+	
+	oColour.w = colour.w;
+}
+
+/** 计算点光源颜色的pass的fp
+*/
+void HighTechPointLightingPassFP
+(
+	float3 normal	    : TEXCOORD0,
+	float3 lightDir		: TEXCOORD1,		
+	float3 halfwayDir	: TEXCOORD2,
+	float  attenuation   : TEXCOORD3,
+
+	float4 colour		: COLOR0,
+	float4 colour1  : COLOR1,	// 为了兼容性问题而进行的输入
+	
+	out float4 oColour	: COLOR,		
+
+	uniform samplerCUBE normalCubeMap,
+	
+	uniform float4 specularLuminance
+)
+{			
+	normal = expand( texCUBE(normalCubeMap, normal).xyz );
+	lightDir = expand( texCUBE(normalCubeMap, lightDir).xyz );
+	halfwayDir = expand( texCUBE(normalCubeMap, halfwayDir).xyz );
+	
+	float specularLight = pow(max(dot(normal, halfwayDir), 0),specularLuminance.w);
+	
+	float3 specular = specularLuminance.xyz * specularLight;	
+
+	oColour.xyz = ( colour.xyz + specular ) * attenuation;
+	
+	oColour.w = colour.w;
+}
+
+/** 计算纹理颜色的pass的vp
+*/
+void HighTechDecalPassVP
+(
+	float4 position      : POSITION,
+	float2 uv		    : TEXCOORD0,
+	
+	out float4 oColor    : COLOR0,
+	out float4 oColour1  : COLOR1,	// 为了兼容性问题而进行的输出
+	
+	out float4 oPosition : POSITION,
+	out float2 oUv	    : TEXCOORD0,
+	
+	uniform float4x4 worldViewProj
+)
+{
+	oPosition = mul(worldViewProj, position);
+	oUv = uv;
+	oColor = float4(1.0,1.0,1.0,1.0);
+	oColour1 = float4(0.0, 0.0, 0.0, 0.0);
+}
+
+/****************** PerPixelLightingTemplate材质所用的函数 end *************/

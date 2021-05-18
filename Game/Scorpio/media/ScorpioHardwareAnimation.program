@@ -1,0 +1,1036 @@
+
+//==============================================================================
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//------------------------------------------------------------------------------
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//==============================================================================
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//------------------------------------------------------------------------------
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//==============================================================================
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//------------------------------------------------------------------------------
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//==============================================================================
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=0;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//------------------------------------------------------------------------------
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_OneLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=1;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_Unlit_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_AmbientOnly_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_DirectionalLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=DIRECTIONAL_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_PointLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines NUM_LIGHTS=1;ENABLE_SPECULAR=1;LIGHT_TYPE=POINT_LIGHT;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto lightPosition			light_position					0
+		param_named_auto lightAttenuation		light_attenuation				0
+		param_named_auto diffuseColour			derived_light_diffuse_colour	0
+		param_named_auto specularColour			derived_light_specular_colour	0
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//==============================================================================
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_TwoLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=2;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_TwoLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=2;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_TwoLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=2;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_TwoLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=2;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+//==============================================================================
+
+vertex_program Scorpio/HardwareAnimation/Skinning/OneWeight_ThreeLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=3;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=1
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto lightPosition[2]		light_position					2
+		param_named_auto lightAttenuation[2]	light_attenuation				2
+		param_named_auto diffuseColour[2]		derived_light_diffuse_colour	2
+		param_named_auto specularColour[2]		derived_light_specular_colour	2
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/TwoWeight_ThreeLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=3;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=2
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto lightPosition[2]		light_position					2
+		param_named_auto lightAttenuation[2]	light_attenuation				2
+		param_named_auto diffuseColour[2]		derived_light_diffuse_colour	2
+		param_named_auto specularColour[2]		derived_light_specular_colour	2
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/ThreeWeight_ThreeLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=3;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=3
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto lightPosition[2]		light_position					2
+		param_named_auto lightAttenuation[2]	light_attenuation				2
+		param_named_auto diffuseColour[2]		derived_light_diffuse_colour	2
+		param_named_auto specularColour[2]		derived_light_specular_colour	2
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}
+
+vertex_program Scorpio/HardwareAnimation/Skinning/FourWeight_ThreeLight_hlsl hlsl
+{
+	source ScorpioHardwareSkinning.cg
+	includes_skeletal_animation true
+	entry_point main
+	target vs_1_1
+	column_major_matrices false
+	preprocessor_defines LIGHTING_AMBIENT=1;NUM_LIGHTS=3;ENABLE_SPECULAR=1;NUM_TEXCOORDS=1;MAX_BLEND_WEIGHTS=4
+
+	default_params
+	{
+		param_named_auto worldMatrix3x4Array[0]	world_matrix_array_3x4
+		param_named_auto viewProjectionMatrix	viewproj_matrix
+		param_named_auto ambient				derived_scene_colour
+		param_named_auto lightPosition[0]		light_position					0
+		param_named_auto lightAttenuation[0]	light_attenuation				0
+		param_named_auto diffuseColour[0]		derived_light_diffuse_colour	0
+		param_named_auto specularColour[0]		derived_light_specular_colour	0
+		param_named_auto lightPosition[1]		light_position					1
+		param_named_auto lightAttenuation[1]	light_attenuation				1
+		param_named_auto diffuseColour[1]		derived_light_diffuse_colour	1
+		param_named_auto specularColour[1]		derived_light_specular_colour	1
+		param_named_auto lightPosition[2]		light_position					2
+		param_named_auto lightAttenuation[2]	light_attenuation				2
+		param_named_auto diffuseColour[2]		derived_light_diffuse_colour	2
+		param_named_auto specularColour[2]		derived_light_specular_colour	2
+		param_named_auto specularShininess		surface_shininess
+		param_named_auto cameraPos				camera_position
+	}
+}

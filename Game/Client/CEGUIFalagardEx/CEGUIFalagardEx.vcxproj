@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{311B69CF-7381-4D57-A540-778D24D95C60}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\_Scripts\VC7.1\Debug\CEGUIFalagardEx\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\_Scripts\VC7.1\Debug\CEGUIFalagardEx\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\_Scripts\VC7.1\Release\CEGUIFalagardEx\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\_Scripts\VC7.1\Release\CEGUIFalagardEx\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../CEGUI/CEGUI/WidgetSets/Falagard/include;../CEGUI/CEGUI/include;../CEGUI/CEGUIRenderer/include;..\..\ogre\OgreMain\include;..\..\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;FALAGARDBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4001;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ErrorReporting>None</ErrorReporting>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\..\_Scripts\VC7.1\Debug\CEGUIFalagardEx.lib</OutputFile>
+    </Lib>
+    <Xdcmake>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+    </Xdcmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>../CEGUI/CEGUI/WidgetSets/Falagard/include;../CEGUI/CEGUI/include;../CEGUI/CEGUIRenderer/include;..\..\ogre\OgreMain\include;..\..\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;FALAGARDBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4001;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ErrorReporting>None</ErrorReporting>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\..\_Scripts\VC7.1\Release\CEGUIFalagardEx.lib</OutputFile>
+    </Lib>
+    <Xdcmake>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+    </Xdcmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\AxTrace.cpp" />
+    <ClCompile Include="FalActionButton.cpp" />
+    <ClCompile Include="FalActionButtonProperties.cpp" />
+    <ClCompile Include="FalagardAnimate.cpp" />
+    <ClCompile Include="FalagardBeHitBoard.cpp" />
+    <ClCompile Include="FalagardCheckButton.cpp" />
+    <ClCompile Include="FalagardComplexWindow.cpp" />
+    <ClCompile Include="FalagardComplexWindowProperties.cpp" />
+    <ClCompile Include="FalagardInfoList.cpp" />
+    <ClCompile Include="FalagardMeshWindow.cpp" />
+    <ClCompile Include="FalagardMeshWindowProperties.cpp" />
+    <ClCompile Include="FalagardPaoPao.cpp" />
+    <ClCompile Include="FalagardResizeText.cpp" />
+    <ClCompile Include="FalagardRewardItem.cpp" />
+    <ClCompile Include="FalagardSelfFitWindow.cpp" />
+    <ClCompile Include="FalagardSoftKeyBoard.cpp" />
+    <ClCompile Include="FalagardSuperProgress.cpp" />
+    <ClCompile Include="FalAnimateProperties.cpp" />
+    <ClCompile Include="FalBoundWindow.cpp" />
+    <ClCompile Include="FalBoundWindowProperties.cpp" />
+    <ClCompile Include="FalChatBoard.cpp" />
+    <ClCompile Include="FalChatBoardProperties.cpp" />
+    <ClCompile Include="FalChatChannel.cpp" />
+    <ClCompile Include="FalChatChannelProperties.cpp" />
+    <ClCompile Include="FalChatHistory.cpp" />
+    <ClCompile Include="FalChatHistoryProperties.cpp" />
+    <ClCompile Include="FalCreatureBoard.cpp" />
+    <ClCompile Include="FalCreatureBoardProperties.cpp" />
+    <ClCompile Include="FalDragTitle.cpp" />
+    <ClCompile Include="FalDragTitleProperties.cpp" />
+    <ClCompile Include="FalIMEEditBox.cpp" />
+    <ClCompile Include="FalIMEEditBoxProperties.cpp" />
+    <ClCompile Include="FalMoney.cpp" />
+    <ClCompile Include="FalMoneyProperties.cpp" />
+    <ClCompile Include="FalMultiIMEEditBox.cpp" />
+    <ClCompile Include="FalMultiIMEEditBoxProperties.cpp" />
+    <ClCompile Include="FalSimpleText.cpp" />
+    <ClCompile Include="FalSimpleTextProperties.cpp" />
+    <ClCompile Include="FalStopWatch.cpp" />
+    <ClCompile Include="FalStopWatchProperties.cpp" />
+    <ClCompile Include="FalSuperTooltip.cpp" />
+    <ClCompile Include="FalSuperTooltipProperties.cpp" />
+    <ClCompile Include="FalagardMiniMap.cpp" />
+    <ClCompile Include="FalagardRadar.cpp" />
+    <ClCompile Include="FalagardSceneMap.cpp" />
+    <ClCompile Include="FalagardWorldMap.cpp" />
+    <ClCompile Include="FalagardWorldMapProperties.cpp" />
+    <ClCompile Include="FalMinimapProperties.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\AxTrace.h" />
+    <ClInclude Include="FalActionButton.h" />
+    <ClInclude Include="FalActionButtonProperties.h" />
+    <ClInclude Include="FalagardAnimate.h" />
+    <ClInclude Include="FalagardBeHitBoard.h" />
+    <ClInclude Include="FalagardCheckButton.h" />
+    <ClInclude Include="FalagardComplexWindow.h" />
+    <ClInclude Include="FalagardComplexWindowProperties.h" />
+    <ClInclude Include="FalagardInfoList.h" />
+    <ClInclude Include="FalagardMeshWindow.h" />
+    <ClInclude Include="FalagardMeshWindowProperties.h" />
+    <ClInclude Include="FalagardPaoPao.h" />
+    <ClInclude Include="FalagardResizeText.h" />
+    <ClInclude Include="FalagardSelfFitWindow.h" />
+    <ClInclude Include="FalagardSoftKeyBoard.h" />
+    <ClInclude Include="FalagardSuperProgress.h" />
+    <ClInclude Include="FalAnimateProperties.h" />
+    <ClInclude Include="FalBoundWindow.h" />
+    <ClInclude Include="FalBoundWindowProperties.h" />
+    <ClInclude Include="FalChatBoard.h" />
+    <ClInclude Include="FalChatBoardProperties.h" />
+    <ClInclude Include="FalChatChannel.h" />
+    <ClInclude Include="FalChatChannelProperties.h" />
+    <ClInclude Include="FalChatHistory.h" />
+    <ClInclude Include="FalChatHistoryProperties.h" />
+    <ClInclude Include="FalCreatureBoard.h" />
+    <ClInclude Include="FalCreatureBoardProperties.h" />
+    <ClInclude Include="FalDragTitle.h" />
+    <ClInclude Include="FalDragTitleProperties.h" />
+    <ClInclude Include="FalIMEEditBox.h" />
+    <ClInclude Include="FalIMEEditBoxProperties.h" />
+    <ClInclude Include="FalMoney.h" />
+    <ClInclude Include="FalMoneyProperties.h" />
+    <ClInclude Include="FalMultiIMEEditBox.h" />
+    <ClInclude Include="FalMultiIMEEditBoxProperties.h" />
+    <ClInclude Include="FalSimpleText.h" />
+    <ClInclude Include="FalSimpleTextProperties.h" />
+    <ClInclude Include="FalStopWatch.h" />
+    <ClInclude Include="FalStopWatchProperties.h" />
+    <ClInclude Include="FalSuperTooltip.h" />
+    <ClInclude Include="FalSuperTooltipProperties.h" />
+    <ClInclude Include="IFalagardActionButton.h" />
+    <ClInclude Include="IFalagardAnimate.h" />
+    <ClInclude Include="IFalagardBeHitBoard.h" />
+    <ClInclude Include="IFalagardComplexWindow.h" />
+    <ClInclude Include="IFalagardMeshWindow.h" />
+    <ClInclude Include="IFalagardMinimapWindow.h" />
+    <ClInclude Include="IFalagardSceneMapWindow.h" />
+    <ClInclude Include="IFalagardSelfFitWindow.h" />
+    <ClInclude Include="IFalagardSoftKeyBoard.h" />
+    <ClInclude Include="IFalagardWorldMap.h" />
+    <ClInclude Include="IFalChatChannel.h" />
+    <ClInclude Include="IFalChatHistory.h" />
+    <ClInclude Include="IFalSuperTooltip.h" />
+    <ClInclude Include="FalagardMiniMap.h" />
+    <ClInclude Include="FalagardRadar.h" />
+    <ClInclude Include="FalagardSceneMap.h" />
+    <ClInclude Include="FalagardWorldMap.h" />
+    <ClInclude Include="FalagardWorldMapProperties.h" />
+    <ClInclude Include="FalMinimapProperties.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

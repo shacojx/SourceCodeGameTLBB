@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CrashReport", "CrashReport.vcproj", "{3B86B325-DF98-413D-8E68-778DFF3B4165}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3B86B325-DF98-413D-8E68-778DFF3B4165}.Debug.ActiveCfg = Debug|Win32
+		{3B86B325-DF98-413D-8E68-778DFF3B4165}.Debug.Build.0 = Debug|Win32
+		{3B86B325-DF98-413D-8E68-778DFF3B4165}.Release.ActiveCfg = Release|Win32
+		{3B86B325-DF98-413D-8E68-778DFF3B4165}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

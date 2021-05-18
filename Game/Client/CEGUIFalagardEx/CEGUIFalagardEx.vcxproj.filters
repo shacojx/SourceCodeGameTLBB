@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{f59719bf-f216-4048-a667-3b280a61f102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="newradar">
+      <UniqueIdentifier>{d292805d-cceb-41dd-9ae5-81f2768412fa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\AxTrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalActionButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalActionButtonProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardAnimate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardBeHitBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardCheckButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardComplexWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardComplexWindowProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardInfoList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardMeshWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardMeshWindowProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardPaoPao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardResizeText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardRewardItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardSelfFitWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardSoftKeyBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardSuperProgress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalAnimateProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalBoundWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalBoundWindowProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalChatBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalChatBoardProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalChatChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalChatChannelProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalChatHistory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalChatHistoryProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalCreatureBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalCreatureBoardProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalDragTitle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalDragTitleProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalIMEEditBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalIMEEditBoxProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalMoney.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalMoneyProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalMultiIMEEditBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalMultiIMEEditBoxProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalSimpleText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalSimpleTextProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalStopWatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalStopWatchProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalSuperTooltip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalSuperTooltipProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardMiniMap.cpp">
+      <Filter>newradar</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardRadar.cpp">
+      <Filter>newradar</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardSceneMap.cpp">
+      <Filter>newradar</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardWorldMap.cpp">
+      <Filter>newradar</Filter>
+    </ClCompile>
+    <ClCompile Include="FalagardWorldMapProperties.cpp">
+      <Filter>newradar</Filter>
+    </ClCompile>
+    <ClCompile Include="FalMinimapProperties.cpp">
+      <Filter>newradar</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\AxTrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalActionButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalActionButtonProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardAnimate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardBeHitBoard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardCheckButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardComplexWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardComplexWindowProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardInfoList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardMeshWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardMeshWindowProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardPaoPao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardResizeText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardSelfFitWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardSoftKeyBoard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardSuperProgress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalAnimateProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalBoundWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalBoundWindowProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalChatBoard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalChatBoardProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalChatChannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalChatChannelProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalChatHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalChatHistoryProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalCreatureBoard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalCreatureBoardProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalDragTitle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalDragTitleProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalIMEEditBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalIMEEditBoxProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalMoney.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalMoneyProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalMultiIMEEditBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalMultiIMEEditBoxProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalSimpleText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalSimpleTextProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalStopWatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalStopWatchProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalSuperTooltip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FalSuperTooltipProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardActionButton.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardAnimate.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardBeHitBoard.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardComplexWindow.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardMeshWindow.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardMinimapWindow.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardSceneMapWindow.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardSelfFitWindow.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardSoftKeyBoard.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalagardWorldMap.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalChatChannel.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalChatHistory.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFalSuperTooltip.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardMiniMap.h">
+      <Filter>newradar</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardRadar.h">
+      <Filter>newradar</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardSceneMap.h">
+      <Filter>newradar</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardWorldMap.h">
+      <Filter>newradar</Filter>
+    </ClInclude>
+    <ClInclude Include="FalagardWorldMapProperties.h">
+      <Filter>newradar</Filter>
+    </ClInclude>
+    <ClInclude Include="FalMinimapProperties.h">
+      <Filter>newradar</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

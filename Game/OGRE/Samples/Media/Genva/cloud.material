@@ -1,0 +1,43 @@
+
+material cloud/1024
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			alpha_rejection greater 16
+
+			texture_unit
+			{
+				texture cloud_1024.png
+				tex_address_mode clamp
+				colour_op_ex source1 src_current src_texture
+			}
+		}
+	}
+}
+
+
+material cloud/512
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			alpha_rejection greater 16
+
+			texture_unit
+			{
+				texture cloud_512.png
+				tex_address_mode clamp
+				colour_op_ex source1 src_current src_texture
+			}
+		}
+	}
+}

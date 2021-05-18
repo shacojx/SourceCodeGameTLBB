@@ -1,0 +1,1096 @@
+!<arch>
+index.html/     1059500280  500   0     100664  3743      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Manual Pages</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="next" href="rn01re01.html" title="zzip_rewinddir"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Manual Pages</th></tr><tr><td width="20%" align="left"> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re01.html">Next</a></td></tr></table><hr></div><div class="reference" lang="en"><a name="id2759368"></a><div class="titlepage"><div><div><h1 class="title"><a name="id2759368"></a>Manual Pages</h1></div></div><div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><a href="rn01re01.html">zzip_rewinddir</a> - (zzip/dir.c) </dt><dt><a href="rn01re02.html">zzip_readdir</a> - (zzip/dir.c) </dt><dt><a href="rn01re03.html">zzip_opendir</a> - (zzip/dir.c) </dt><dt><a href="rn01re04.html">zzip_closedir</a> - (zzip/dir.c) </dt><dt><a href="rn01re05.html">zzip_strerror</a> - (zzip/err.c) </dt><dt><a href="rn01re06.html">zzip_errno</a> - (zzip/err.c) </dt><dt><a href="rn01re07.html">zzip_file_close</a> - (zzip/file.c) </dt><dt><a href="rn01re08.html">zzip_file_open</a> - (zzip/file.c) </dt><dt><a href="rn01re09.html">zzip_inflate_init</a> - (zzip/file.c) </dt><dt><a href="rn01re10.html">zzip_fclose</a> - (zzip/file.c) </dt><dt><a href="rn01re11.html">zzip_file_read</a> - (zzip/file.c) </dt><dt><a href="rn01re12.html">zzip_read</a> - (zzip/file.c) </dt><dt><a href="rn01re13.html">zzip_fopen</a> - (zzip/file.c) </dt><dt><a href="rn01re14.html">zzip_open</a> - (zzip/file.c) </dt><dt><a href="rn01re15.html">zzip_rewind</a> - (zzip/file.c) </dt><dt><a href="rn01re16.html">zzip_seek</a> - (zzip/file.c) </dt><dt><a href="rn01re17.html">zzip_tell</a> - (zzip/file.c) </dt><dt><a href="rn01re18.html">zzip_error</a> - (zzip/info.c) </dt><dt><a href="rn01re19.html">zzip_dirhandle</a> - (zzip/info.c) </dt><dt><a href="rn01re20.html">zzip_compr_str</a> - (zzip/info.c) </dt><dt><a href="rn01re21.html">zzip_file_real</a> - (zzip/info.c) </dt><dt><a href="rn01re22.html">zzip_init_io</a> - (zzip/plugin.c) </dt><dt><a href="rn01re23.html">zzip_dir_stat</a> - (zzip/stat.c) </dt><dt><a href="rn01re24.html">__zzip_get32</a> - (zzip/zip.c) </dt><dt><a href="rn01re25.html">__zzip_find_disk_trailer</a> - (zzip/zip.c) </dt><dt><a href="rn01re26.html">__zzip_parse_root_directory</a> - (zzip/zip.c) </dt><dt><a href="rn01re27.html">zzip_dir_alloc_ext_io</a> - (zzip/zip.c) </dt><dt><a href="rn01re28.html">zzip_dir_free</a> - (zzip/zip.c) </dt><dt><a href="rn01re29.html">zzip_dir_close</a> - (zzip/zip.c) </dt><dt><a href="rn01re30.html">zzip_dir_fdopen</a> - (zzip/zip.c) </dt><dt><a href="rn01re31.html">__zzip_try_open</a> - (zzip/zip.c) </dt><dt><a href="rn01re32.html">zzip_dir_open</a> - (zzip/zip.c) </dt><dt><a href="rn01re33.html">zzip_dir_read</a> - (zzip/zip.c) </dt><dt><a href="rn01re34.html">zzip/zzip.h</a> -  library </dt></dl></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="rn01re01.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top"> </td><td width="20%" align="center"> </td><td width="40%" align="right" valign="top"> zzip_rewinddir</td></tr></table></div></body></html>
+
+rn01re01.html/  1059500280  500   0     100664  3868      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_rewinddir</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="index.html" title="Manual Pages"><link rel="next" href="rn01re02.html" title="zzip_readdir"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_rewinddir</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re02.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_rewinddir"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/dir.c) zzip_rewinddir, zzip_telldir, zzip_seekdir</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">void 
+ <b class="fsfunc">zzip_rewinddir</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p><p><code class="funcdef">zzip_off_t 
+ <b class="fsfunc">zzip_telldir</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">void
+ <b class="fsfunc">zzip_seekdir</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_rewinddir</tt> function is the equivalent of a <tt class="function">rewinddir</tt>(2) for a realdir or 
+   the zipfile in place of a directory. The ZZIP_DIR handle returned from 
+   <tt class="function">zzip_opendir</tt> has a flag saying realdir or zipfile. As for a zipfile, 
+   the filenames will include the filesubpath, so take care. 
+ 
+</p><p>
+   The <tt class="function">zzip_telldir</tt> function is the equivalent of <tt class="function">telldir</tt>(2) for a realdir or zipfile. 
+ 
+</p><p>
+   The <tt class="function">zzip_seekdir</tt> function is the equivalent of <tt class="function">seekdir</tt>(2) for a realdir or zipfile. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+  	    All rights reserved, 
+ 	    use under the restrictions of the 
+ 	    Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Manual Pages </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_readdir</td></tr></table></div></body></html>
+rn01re02.html/  1059500280  500   0     100664  3429      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_readdir</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re01.html" title="zzip_rewinddir"><link rel="next" href="rn01re03.html" title="zzip_opendir"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_readdir</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re01.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re03.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_readdir"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/dir.c) zzip_readdir</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIRENT* 
+ <b class="fsfunc">zzip_readdir</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_readdir</tt> function is the equivalent of a <tt class="function">readdir</tt>(2) for a realdir  
+   or a zipfile referenced by the ZZIP_DIR returned from <tt class="function">zzip_opendir</tt>. 
+ 
+</p><p>
+ 
+   The ZZIP_DIR handle (as returned by <tt class="function">zzip_opendir</tt>) contains a few more  
+   entries than being copied into the ZZIP_DIRENT. The only valid fields in 
+   a ZZIP_DIRENT are d_name (the file name), d_compr (compression), d_csize 
+   (compressed size), st_size (uncompressed size). 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+  	    All rights reserved, 
+ 	    use under the restrictions of the 
+ 	    Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re01.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_rewinddir </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_opendir</td></tr></table></div></body></html>
+
+rn01re03.html/  1059500280  500   0     100664  4320      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_opendir</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re02.html" title="zzip_readdir"><link rel="next" href="rn01re04.html" title="zzip_closedir"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_opendir</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re02.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re04.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_opendir"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/dir.c) zzip_opendir, zzip_opendir_ext_io</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_opendir</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_opendir_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_opendir</tt> function is the equivalent of <tt class="function">opendir</tt>(3) for a realdir or zipfile. 
+   
+</p><p>
+ 
+   The <tt class="function">zzip_opendir</tt> function has some magic - if the given argument-path 
+   is a directory, it will wrap a real <tt class="function">opendir</tt>(3) into the ZZIP_DIR 
+   structure. Otherwise it will divert to <tt class="function">zzip_dir_open</tt> which  
+   can also attach a &quot;.zip&quot; extension if needed to find the archive. 
+   
+</p><p>
+ 
+   the error-code is mapped to <tt class="function">errno</tt>(3). 
+ 
+</p><p>
+   The <tt class="function">zzip_opendir_ext_io</tt> function uses explicit ext and io instead of the internal  
+   defaults, setting them to zero is equivalent to <tt class="function">zzip_opendir</tt> 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+  	    All rights reserved, 
+ 	    use under the restrictions of the 
+ 	    Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re02.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_readdir </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_closedir</td></tr></table></div></body></html>
+rn01re04.html/  1059500280  500   0     100664  3124      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_closedir</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re03.html" title="zzip_opendir"><link rel="next" href="rn01re05.html" title="zzip_strerror"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_closedir</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re03.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re05.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_closedir"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/dir.c) zzip_closedir</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int
+ <b class="fsfunc">zzip_closedir</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_closedir</tt> function is the equivalent of <tt class="function">closedir</tt>(3) for a realdir or zipfile. 
+   
+</p><p>
+ 
+   The <tt class="function">zzip_closedir</tt> function is magic - if the given arg-ZZIP_DIR 
+   is a real directory, it will call the real <tt class="function">closedir</tt>(3) and then 
+   free the wrapping ZZIP_DIR structure. Otherwise it will divert  
+   to <tt class="function">zzip_dir_close</tt> which will free the ZZIP_DIR structure. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+  	    All rights reserved, 
+ 	    use under the restrictions of the 
+ 	    Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re03.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_opendir </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_strerror</td></tr></table></div></body></html>
+rn01re05.html/  1059500280  500   0     100664  3829      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_strerror</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re04.html" title="zzip_closedir"><link rel="next" href="rn01re06.html" title="zzip_errno"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_strerror</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re04.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re06.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_strerror"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/err.c) zzip_strerror, zzip_strerror_of</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">zzip_char_t* 
+ <b class="fsfunc">zzip_strerror</b>(</code><code>)</code>;<br>int errcode;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_char_t* 
+ <b class="fsfunc">zzip_strerror_of</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   returns the static string for the given error code. The
+ 
+   error code can be either a normal system error (a
+ 
+   positive error code will flag this), it can be <tt class="function">libz</tt>
+ 
+   error code (a small negative error code will flag this)
+ 
+   or it can be an error code from <tt class="function">libzzip</tt>, which is an
+ 
+   negative value lower than <tt class="function">ZZIP_ERROR</tt>
+ 
+ 
+</p><p>
+   The <tt class="function">zzip_strerror_of</tt> function fetches the errorcode from the <tt class="function">DIR</tt>-handle and 
+ 
+   runs it through <tt class="function">zzip_strerror</tt> to obtain the static string
+ 
+   describing the error.
+ 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim
+ 
+           All rights reserved,
+ 
+           use under the restrictions of the
+ 
+           Lesser GNU General Public License
+ 
+           note the additional license information 
+ 
+           that can be found in COPYING.ZZIP
+ 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re04.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_closedir </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_errno</td></tr></table></div></body></html>
+
+rn01re06.html/  1059500280  500   0     100664  3068      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_errno</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re05.html" title="zzip_strerror"><link rel="next" href="rn01re07.html" title="zzip_file_close"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_errno</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re05.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re07.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_errno"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/err.c) zzip_errno</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int
+ <b class="fsfunc">zzip_errno</b>(</code><code>)</code>;<br>int errcode;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   map the error code to a system error code. This is used
+ 
+   for the drop-in replacement functions to return a value
+ 
+   that can be interpreted correctly by code sections that
+ 
+   are unaware of the fact they their <tt class="function">open</tt>(2) call had been
+ 
+   diverted to a file inside a zip-archive.
+ 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim
+ 
+           All rights reserved,
+ 
+           use under the restrictions of the
+ 
+           Lesser GNU General Public License
+ 
+           note the additional license information 
+ 
+           that can be found in COPYING.ZZIP
+ 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re05.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_strerror </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_file_close</td></tr></table></div></body></html>
+rn01re07.html/  1059500280  500   0     100664  3161      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_file_close</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re06.html" title="zzip_errno"><link rel="next" href="rn01re08.html" title="zzip_file_open"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_file_close</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re06.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re08.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_file_close"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_file_close</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_file_close</b>(</code><code>)</code>;<br>ZZIP_FILE * fp;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   the direct function of <tt class="function">zzip_close</tt>(fp). it will cleanup the 
+   inflate-portion of <tt class="function">zlib</tt> and free the structure given. 
+ 
+</p><p>
+ 
+   it is called quite from the error-cleanup parts 
+   of the various <tt class="function">_open</tt> functions.  
+ 
+</p><p>
+ 
+   the .refcount is decreased and if zero the fp-&gt;dir is closed just as well. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re06.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re08.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_errno </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_file_open</td></tr></table></div></body></html>
+
+rn01re08.html/  1059500280  500   0     100664  3595      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_file_open</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re07.html" title="zzip_file_close"><link rel="next" href="rn01re09.html" title="zzip_inflate_init"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_file_open</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re07.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re09.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_file_open"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_file_open</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE * 
+ <b class="fsfunc">zzip_file_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   open an <tt class="function">ZZIP_FILE</tt> from an already open <tt class="function">ZZIP_DIR</tt> handle. Since 
+   we have a chance to reuse a cached <tt class="function">buf32k</tt> and <tt class="function">ZZIP_FILE</tt> memchunk 
+   this is the best choice to unpack multiple files. 
+ 
+</p><p>
+ 
+   Note: the zlib supports 2..15 bit windowsize, hence we provide a 32k 
+         memchunk here... just to be safe. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re07.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re09.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_file_close </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_inflate_init</td></tr></table></div></body></html>
+
+rn01re09.html/  1059500280  500   0     100664  3253      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_inflate_init</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re08.html" title="zzip_file_open"><link rel="next" href="rn01re10.html" title="zzip_fclose"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_inflate_init</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re08.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re10.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_inflate_init"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_inflate_init</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">static int 
+ <b class="fsfunc">zzip_inflate_init</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+    call <tt class="function">inflateInit</tt> and setup fp's iterator variables,  
+    used by lowlevel <tt class="function">_open</tt> functions. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re08.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re10.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_file_open </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_fclose</td></tr></table></div></body></html>
+
+rn01re10.html/  1059500280  500   0     100664  3138      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_fclose</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re09.html" title="zzip_inflate_init"><link rel="next" href="rn01re11.html" title="zzip_file_read"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_fclose</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re09.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re11.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_fclose"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_fclose, zzip_close</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_fclose</b>(</code><code>)</code>;<br>ZZIP_FILE * fp;</p><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_close</b>(</code><code>)</code>;<br>ZZIP_FILE* fp;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_fclose</tt> function closes the given ZZIP_FILE handle.  
+ 
+</p><p>
+ 
+   If the ZZIP_FILE wraps a normal stat'fd then it is just that int'fd  
+   that is being closed and the otherwise empty ZZIP_FILE gets freed. 
+ 
+</p><p>
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re09.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re11.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_inflate_init </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_file_read</td></tr></table></div></body></html>
+rn01re11.html/  1059500280  500   0     100664  3904      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_file_read</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re10.html" title="zzip_fclose"><link rel="next" href="rn01re12.html" title="zzip_read"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_file_read</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re10.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re12.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_file_read"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_file_read</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_ssize_t 
+ <b class="fsfunc">zzip_file_read</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_file_read</tt> functions read data from zip-contained file. 
+ 
+</p><p>
+ 
+   It works like <tt class="function">read</tt>(2) and will fill the given buffer with bytes from 
+   the opened file. It will return the number of bytes read, so if the <tt class="function">EOF</tt> 
+   is encountered you will be prompted with the number of bytes actually read. 
+ 
+</p><p>
+ 
+   This is the routines that needs the <tt class="function">buf32k</tt> buffer, and it would have 
+   need for much more polishing but it does already work quite well. 
+ 
+</p><p>
+ 
+   Note: the 32K buffer is rather big. The original inflate-algorithm 
+         required just that but the latest zlib would work just fine with 
+         a smaller buffer. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re10.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re12.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_fclose </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_read</td></tr></table></div></body></html>
+rn01re12.html/  1059500280  500   0     100664  4429      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_read</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re11.html" title="zzip_file_read"><link rel="next" href="rn01re13.html" title="zzip_fopen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_read</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re11.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re13.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_read"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_read, zzip_fread</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_ssize_t
+ <b class="fsfunc">zzip_read</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_size_t
+ <b class="fsfunc">zzip_fread</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_read</tt> function will read(2) data from a real/zipped file. 
+ 
+</p><p>
+ 
+   the replacement for <tt class="function">read</tt>(2) will fill the given buffer with bytes from 
+   the opened file. It will return the number of bytes read, so if the EOF 
+   is encountered you will be prompted with the number of bytes actually read. 
+ 
+</p><p>
+ 
+   If the file-handle is wrapping a stat'able file then it will actually just 
+   perform a normal <tt class="function">read</tt>(2)-call, otherwise <tt class="function">zzip_file_read</tt> is called 
+   to decompress the data stream and any error is mapped to <tt class="function">errno</tt>(3). 
+ 
+</p><p>
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re11.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re13.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_file_read </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_fopen</td></tr></table></div></body></html>
+
+rn01re13.html/  1059500280  500   0     100664  7823      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_fopen</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re12.html" title="zzip_read"><link rel="next" href="rn01re14.html" title="zzip_open"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_fopen</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re12.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re14.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_fopen"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_fopen, zzip_freopen</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_fopen</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_freopen</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_fopen</tt> function will <tt class="function">fopen</tt>(3) a real/zipped file. 
+ 
+</p><p>
+ 
+   It has some magic functionality builtin - it will first try to open 
+   the given <span class="emphasis"><em>filename</em></span> as a normal file. If it does not 
+   exist, the given path to the filename (if any) is split into 
+   its directory-part and the file-part. A &quot;.zip&quot; extension is 
+   then added to the directory-part to create the name of a 
+   zip-archive. That zip-archive (if it exists) is being searched 
+   for the file-part, and if found a zzip-handle is returned.  
+ 
+</p><p>
+ 
+   Note that if the file is found in the normal fs-directory the 
+   returned structure is mostly empty and the <tt class="function">zzip_read</tt> call will 
+   use the libc <tt class="function">read</tt> to obtain data. Otherwise a <tt class="function">zzip_file_open</tt>  
+   is performed and any error mapped to <tt class="function">errno</tt>(3). 
+ 
+</p><p>
+ 
+   unlike the posix-wrapper <tt class="function">zzip_open</tt> the mode-argument is 
+   a string which allows for more freedom to support the extra 
+   zzip modes called ZZIP_CASEINSENSITIVE and ZZIP_IGNOREPATH. 
+   Currently, this <tt class="function">zzip_fopen</tt> call will convert the following 
+   characters in the mode-string into their corrsponding mode-bits:  
+    </p><pre class="programlisting">
+<b class="userinput"><tt> &quot;r&quot; : O_RDONLY : </tt></b> read-only 
+   <b class="userinput"><tt> &quot;b&quot; : O_BINARY : </tt></b> binary (win32 specific) 
+   <b class="userinput"><tt> &quot;f&quot; : O_NOCTTY : </tt></b> no char device (unix) 
+   <b class="userinput"><tt> &quot;i&quot; : ZZIP_CASELESS : </tt></b> inside zip file 
+   <b class="userinput"><tt> &quot;*&quot; : ZZIP_NOPATHS : </tt></b> inside zip file only 
+   </pre><p> all other modes will be ignored for zip-contained entries 
+   but they are transferred for compatibility and portability, 
+   including these extra sugar bits: 
+    </p><pre class="programlisting">
+<b class="userinput"><tt> &quot;x&quot; : O_EXCL :</tt></b> fail if file did exist 
+   <b class="userinput"><tt> &quot;s&quot; : O_SYNC :</tt></b> synchronized access 
+   <b class="userinput"><tt> &quot;n&quot; : O_NONBLOCK :</tt></b> nonblocking access 
+   <b class="userinput"><tt> &quot;z#&quot; : compression level :</tt></b> for zlib 
+   <b class="userinput"><tt> &quot;g#&quot; : group access :</tt></b> unix access bits 
+   <b class="userinput"><tt> &quot;u#&quot; : owner access :</tt></b> unix access bits 
+   <b class="userinput"><tt> &quot;o#&quot; : world access :</tt></b> unix access bits 
+   </pre><p>... the access bits are in traditional unix bit format 
+   with 7 = read/write/execute, 6 = read/write, 4 = read-only. 
+ 
+</p><p>
+ 
+   The default access mode is 0664, and the compression level 
+   is ignored since the lib can not yet write zip files, otherwise 
+   it would be the initialisation value for the zlib deflateInit 
+   where 0 = no-compression, 1 = best-speed, 9 = best-compression. 
+ 
+</p><p>
+ 
+</p><p>
+ 
+   The <tt class="function">zzip_freopen</tt> function receives an additional argument pointing to 
+   a ZZIP_FILE* being already in use. If this extra argument is 
+   null then the <tt class="function">zzip_freopen</tt> function is identical with calling <tt class="function">zzip_fopen</tt> 
+ 
+</p><p>
+ 
+   Per default, the old file stream is closed and only the internal 
+   structures associated with it are kept. These internal structures 
+   may be reused for the return value, and this is a lot quicker when 
+   the filename matches a zipped file that is incidently in the very 
+   same zip arch as the old filename wrapped in the stream struct. 
+ 
+</p><p>
+ 
+   That's simply because the zip arch's central directory does not  
+   need to be read again. As an extension for the <tt class="function">zzip_freopen</tt> function, if the  
+   mode-string contains a &quot;q&quot; then the old stream is not closed but 
+   left untouched, instead it is only given as a hint that a new 
+   file handle may share/copy the zip arch structures of the old file 
+   handle if that is possible, i.e when they are in the same zip arch. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re12.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re14.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_read </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_open</td></tr></table></div></body></html>
+
+rn01re14.html/  1059500280  500   0     100664  7940      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_open</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re13.html" title="zzip_fopen"><link rel="next" href="rn01re15.html" title="zzip_rewind"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_open</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re13.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re15.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_open"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_open, zzip_open_ext_io, zzip_open_shared_io</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_open_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_open_shared_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_open</tt> function will <tt class="function">open</tt>(2) a real/zipped file 
+ 
+</p><p>
+ 
+   It has some magic functionality builtin - it will first try to open 
+   the given <span class="emphasis"><em>filename</em></span> as a normal file. If it does not 
+   exist, the given path to the filename (if any) is split into 
+   its directory-part and the file-part. A &quot;.zip&quot; extension is 
+   then added to the directory-part to create the name of a 
+   zip-archive. That zip-archive (if it exists) is being searched 
+   for the file-part, and if found a zzip-handle is returned.  
+ 
+</p><p>
+ 
+   Note that if the file is found in the normal fs-directory the 
+   returned structure is mostly empty and the <tt class="function">zzip_read</tt> call will 
+   use the libc <tt class="function">read</tt> to obtain data. Otherwise a <tt class="function">zzip_file_open</tt>  
+   is performed and any error mapped to <tt class="function">errno</tt>(3). 
+ 
+</p><p>
+ 
+   There was a possibility to transfer zziplib-specific openmodes 
+   through o_flags but you should please not use them anymore and 
+   look into <tt class="function">zzip_open_ext_io</tt> to submit them down. The <tt class="function">zzip_open</tt> function 
+   is shallow in that it just extracts the zzipflags and calls </p><pre class="programlisting">
+<b class="userinput"><tt> 
+   zzip_open_ext_io(filename, o_flags, zzipflags|0664, 0, 0) </tt></b></pre><p> 
+   you must stop using this extra functionality (not well known 
+   anyway) since zzip_open might be later usable to open files 
+   for writing in which case the _EXTRAFLAGS will get in conflict. 
+ 
+</p><p>
+ 
+   compare with  <tt class="function">open</tt>(2) and <tt class="function">zzip_fopen</tt> 
+ 
+</p><p>
+ 
+</p><p>
+ 
+   The <tt class="function">zzip_open_ext_io</tt> function uses explicit ext and io instead of the internal  
+   defaults, setting them to zero is equivalent to <tt class="function">zzip_open</tt> 
+ 
+</p><p>
+ 
+   note that the two flag types have been split into an o_flags 
+   (for fcntl-like openflags) and o_modes where the latter shall 
+   carry the zzip_flags and possibly accessmodes for unix filesystems. 
+   Since this version of zziplib can not write zipfiles, it is not 
+   yet used for anything else than zzip-specific modeflags. 
+ 
+</p><p>
+ 
+</p><p>
+ 
+   The <tt class="function">zzip_open_shared_io</tt> function takes an extra stream argument - if a handle has been 
+   then ext/io can be left null and the new stream handle will pick up  
+   the ext/io. This should be used only in specific environment however  
+   since <tt class="function">zzip_file_real</tt> does not store any ext-sequence. 
+ 
+</p><p>
+ 
+   The benefit for the <tt class="function">zzip_open_shared_io</tt> function comes in when the old file handle 
+   was openened from a file within a zip archive. When the new file 
+   is in the same zip archive then the internal zzip_dir structures 
+   will be shared. It is even quicker, as no check needs to be done 
+   anymore trying to guess the zip archive place in the filesystem, 
+   here we just check whether the zip archive's filepath is a prefix 
+   part of the filename to be opened.  
+ 
+</p><p>
+ 
+   Note that the <tt class="function">zzip_open_shared_io</tt> function is also used by <tt class="function">zzip_freopen</tt> that 
+   will unshare the old handle, thereby possibly closing the handle. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re13.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re15.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_fopen </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_rewind</td></tr></table></div></body></html>
+rn01re15.html/  1059500280  500   0     100664  2944      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_rewind</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re14.html" title="zzip_open"><link rel="next" href="rn01re16.html" title="zzip_seek"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_rewind</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re14.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re16.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_rewind"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_rewind</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int
+ <b class="fsfunc">zzip_rewind</b>(</code><code>)</code>;<br>ZZIP_FILE *fp;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_rewind</tt> function will rewind a real/zipped file.  
+ 
+</p><p>
+ 
+   It seeks to the beginning of this file's data in the zip,  
+   or the beginning of the file for a stat'fd. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re14.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re16.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_open </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_seek</td></tr></table></div></body></html>
+rn01re16.html/  1059500280  500   0     100664  3908      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_seek</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re15.html" title="zzip_rewind"><link rel="next" href="rn01re17.html" title="zzip_tell"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_seek</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re15.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re17.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_seek"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_seek</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_off_t
+ <b class="fsfunc">zzip_seek</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_seek</tt> function will perform a <tt class="function">lseek</tt>(2) operation on a real/zipped file 
+ 
+</p><p>
+ 
+   It will try to seek to the offset specified by offset, relative to whence,  
+   which is one of SEEK_SET, SEEK_CUR or SEEK_END. 
+ 
+</p><p>
+ 
+   If the file-handle is wrapping a stat'able file then it will actually just 
+   perform a normal <tt class="function">lseek</tt>(2)-call. Otherwise the relative offset 
+   is calculated, negative offsets are transformed into positive ones 
+   by rewinding the file, and then data is read until the offset is 
+   reached.  This can make the function terribly slow, but this is 
+   how gzio implements it, so I'm not sure there is a better way 
+   without using the internals of the algorithm. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re15.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re17.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_rewind </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_tell</td></tr></table></div></body></html>
+rn01re17.html/  1059500280  500   0     100664  3266      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_tell</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re16.html" title="zzip_seek"><link rel="next" href="rn01re18.html" title="zzip_error"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_tell</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re16.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re18.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_tell"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/file.c) zzip_tell</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">zzip_off_t
+ <b class="fsfunc">zzip_tell</b>(</code><code>)</code>;<br>ZZIP_FILE * fp;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_tell</tt> function will <tt class="function">tell</tt>(2) the current position in a real/zipped file 
+ 
+</p><p>
+ 
+   It will return the current offset within the real/zipped file,  
+   measured in uncompressed bytes for the zipped-file case. 
+ 
+</p><p>
+ 
+   If the file-handle is wrapping a stat'able file then it will actually just 
+   perform a normal <tt class="function">tell</tt>(2)-call, otherwise the offset is 
+   calculated from the amount of data left and the total uncompressed 
+   size; 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re16.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re18.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_seek </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_error</td></tr></table></div></body></html>
+rn01re18.html/  1059500280  500   0     100664  3397      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_error</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re17.html" title="zzip_tell"><link rel="next" href="rn01re19.html" title="zzip_dirhandle"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_error</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re17.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re19.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_error"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/info.c) zzip_error, zzip_seterror</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_error</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">void 
+ <b class="fsfunc">zzip_seterror</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+    just returns dir-&gt;errcode of the ZZIP_DIR handle  
+    see: <tt class="function">zzip_dir_open</tt>, <tt class="function">zzip_diropen</tt>, <tt class="function">zzip_readdir</tt>, <tt class="function">zzip_dir_read</tt> 
+ 
+</p><p>
+    The <tt class="function">zzip_seterror</tt> function just does dir-&gt;errcode = errcode  
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re17.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re19.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_tell </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dirhandle</td></tr></table></div></body></html>
+
+rn01re19.html/  1059500280  500   0     100664  3617      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dirhandle</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re18.html" title="zzip_error"><link rel="next" href="rn01re20.html" title="zzip_compr_str"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dirhandle</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re18.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re20.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dirhandle"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/info.c) zzip_dirhandle, zzip_dirfd</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR * 
+ <b class="fsfunc">zzip_dirhandle</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_dirfd</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_dirhandle</tt> function will just return fp-&gt;dir  
+ 
+</p><p>
+ 
+   If a ZZIP_FILE is contained within a zip-file that one will be a valid 
+   pointer, otherwise a NULL is returned and the ZZIP_FILE wraps a real file. 
+ 
+</p><p>
+    The <tt class="function">zzip_dirfd</tt> function will just return dir-&gt;fd  
+ 
+</p><p>
+ 
+   If a ZZIP_DIR does point to a zipfile then the file-descriptor of that 
+   zipfile is returned, otherwise a NULL is returned and the ZZIP_DIR wraps  
+   a real directory DIR (if you have dirent on your system). 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re18.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re20.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_error </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_compr_str</td></tr></table></div></body></html>
+
+rn01re20.html/  1059500280  500   0     100664  2766      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_compr_str</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re19.html" title="zzip_dirhandle"><link rel="next" href="rn01re21.html" title="zzip_file_real"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_compr_str</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re19.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re21.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_compr_str"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/info.c) zzip_compr_str</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">zzip_char_t*
+ <b class="fsfunc">zzip_compr_str</b>(</code><code>)</code>;<br>int compr;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   return static const string of the known compression methods,  
+   otherwise just &quot;zipped&quot; is returned 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re19.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re21.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_dirhandle </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_file_real</td></tr></table></div></body></html>
+rn01re21.html/  1059500280  500   0     100664  3911      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_file_real</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re20.html" title="zzip_compr_str"><link rel="next" href="rn01re22.html" title="zzip_init_io"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_file_real</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re20.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re22.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_file_real"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/info.c) zzip_file_real, zzip_dir_real, zzip_realdir, zzip_realfd</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int
+ <b class="fsfunc">zzip_file_real</b>(</code><code>)</code>;<br>ZZIP_FILE* fp;</p><p><code class="funcdef">int
+ <b class="fsfunc">zzip_dir_real</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><p><code class="funcdef">void*
+ <b class="fsfunc">zzip_realdir</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><p><code class="funcdef">int
+ <b class="fsfunc">zzip_realfd</b>(</code><code>)</code>;<br>ZZIP_FILE* fp;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_file_real</tt> function checks if the ZZIP_FILE-handle is wrapping  
+   a real file or a zip-contained file.  
+   Returns 1 for a stat'able file, and 0 for a file inside a zip-archive. 
+ 
+</p><p>
+   The <tt class="function">zzip_dir_real</tt> function checks if the ZZIP_DIR-handle is wrapping  
+   a real directory or a zip-archive.  
+   Returns 1 for a stat'able directory, and 0 for a handle to zip-archive. 
+ 
+</p><p>
+   The <tt class="function">zzip_realdir</tt> function returns the posix DIR* handle (if one exists). 
+   Check before with <tt class="function">zzip_dir_real</tt> if the 
+   the ZZIP_DIR points to a real directory. 
+ 
+</p><p>
+   The <tt class="function">zzip_realfd</tt> function returns the posix file descriptor (if one exists). 
+   Check before with <tt class="function">zzip_file_real</tt> if the 
+   the ZZIP_FILE points to a real file. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the 
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re20.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re22.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_compr_str </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_init_io</td></tr></table></div></body></html>
+
+rn01re22.html/  1059500280  500   0     100664  3560      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_init_io</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re21.html" title="zzip_file_real"><link rel="next" href="rn01re23.html" title="zzip_dir_stat"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_init_io</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re21.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re23.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_init_io"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/plugin.c) zzip_init_io, zzip_get_default_io</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int  <b class="fsfunc">zzip_init_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">zzip_plugin_io_t
+ <b class="fsfunc">zzip_get_default_io</b>(</code><code>)</code>;<br>;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">zzip_init_io</tt> function initializes the users handler struct to default values  
+   being the posix io functions in default configured environments. 
+ 
+</p><p>
+   The <tt class="function">zzip_get_default_io</tt> function returns a zzip_plugin_io_t handle to static defaults 
+   wrapping the posix io file functions for actual file access. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Mike Nordell  <tt class="email">&lt;<a href="mailto:tamlin@algonet.se">tamlin@algonet.se</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 2002 Guido Draheim 
+  	    All rights reserved, 
+ 	    use under the restrictions of the 
+ 	    Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re21.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re23.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_file_real </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dir_stat</td></tr></table></div></body></html>
+rn01re23.html/  1059500280  500   0     100664  3428      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dir_stat</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re22.html" title="zzip_init_io"><link rel="next" href="rn01re24.html" title="__zzip_get32"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dir_stat</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re22.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re24.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dir_stat"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/stat.c) zzip_dir_stat</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+#include &lt;zzip/zzip.h&gt; // or &lt;zziplib.h&gt;
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int 
+ <b class="fsfunc">zzip_dir_stat</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   obtain information about a filename in an opened zip-archive without  
+   opening that file first. Mostly used to obtain the uncompressed  
+   size of a file inside a zip-archive. see <tt class="function">zzip_dir_open</tt>. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:Tomi.Ollila@iki.fi">Tomi.Ollila@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+  	    All rights reserved, 
+ 	    use under the restrictions of the 
+ 	    Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re22.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re24.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_init_io </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> __zzip_get32</td></tr></table></div></body></html>
+rn01re24.html/  1059500280  500   0     100664  2957      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>__zzip_get32</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re23.html" title="zzip_dir_stat"><link rel="next" href="rn01re25.html" title="__zzip_find_disk_trailer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">__zzip_get32</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re23.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re25.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="__zzip_get32"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) __zzip_get32</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">uint32_t  <b class="fsfunc">__zzip_get32</b>(</code><code>)</code>;<br>unsigned char * s;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   Make 32 bit value in host byteorder from little-endian mapped octet-data 
+   (works also on machines which SIGBUS on misaligned data access (eg. 68000)) 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re23.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re25.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_dir_stat </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> __zzip_find_disk_trailer</td></tr></table></div></body></html>
+
+rn01re25.html/  1059500280  500   0     100664  3545      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>__zzip_find_disk_trailer</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re24.html" title="__zzip_get32"><link rel="next" href="rn01re26.html" title="__zzip_parse_root_directory"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">__zzip_find_disk_trailer</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re24.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re26.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="__zzip_find_disk_trailer"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) __zzip_find_disk_trailer</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int 
+ <b class="fsfunc">__zzip_find_disk_trailer</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">__zzip_find_disk_trailer</tt> function is used by <tt class="function">zzip_file_open</tt>. It tries to find 
+   the zip's central directory info that is usually a few 
+   bytes off the end of the file. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re24.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re26.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">__zzip_get32 </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> __zzip_parse_root_directory</td></tr></table></div></body></html>
+
+rn01re26.html/  1059500280  500   0     100664  3665      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>__zzip_parse_root_directory</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re25.html" title="__zzip_find_disk_trailer"><link rel="next" href="rn01re27.html" title="zzip_dir_alloc_ext_io"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">__zzip_parse_root_directory</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re25.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re27.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="__zzip_parse_root_directory"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) __zzip_parse_root_directory</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int 
+ <b class="fsfunc">__zzip_parse_root_directory</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   The <tt class="function">__zzip_parse_root_directory</tt> function is used by <tt class="function">zzip_file_open</tt>, it is usually called after 
+   <tt class="function">__zzip_find_disk_trailer</tt>. It will parse the zip's central directory 
+   information and create a zziplib private directory table in 
+   memory. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re25.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re27.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">__zzip_find_disk_trailer </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dir_alloc_ext_io</td></tr></table></div></body></html>
+
+rn01re27.html/  1059500280  500   0     100664  4317      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dir_alloc_ext_io</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re26.html" title="__zzip_parse_root_directory"><link rel="next" href="rn01re28.html" title="zzip_dir_free"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dir_alloc_ext_io</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re26.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re28.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dir_alloc_ext_io"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) zzip_dir_alloc_ext_io, zzip_dir_alloc</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR*
+ <b class="fsfunc">zzip_dir_alloc_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR*
+ <b class="fsfunc">zzip_dir_alloc</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   allocate a new ZZIP_DIR handle and do basic  
+   initializations before usage by <tt class="function">zzip_dir_fdopen</tt> 
+   <tt class="function">zzip_dir_open</tt> <tt class="function">zzip_file_open</tt> or through 
+   <tt class="function">zzip_open</tt> 
+   (ext==null flags uses { &quot;.zip&quot; , &quot;.ZIP&quot; } ) 
+   (io ==null flags use of posix io defaults) 
+ 
+</p><p>
+   the <tt class="function">zzip_dir_alloc</tt> function is obsolete - it was generally used for implementation 
+   and exported to let other code build on it. It is now advised to 
+   use <tt class="function">zzip_dir_alloc_ext_io</tt> now on explicitly, just set that second 
+   argument to zero to achieve the same functionality as the old style. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re26.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re28.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">__zzip_parse_root_directory </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dir_free</td></tr></table></div></body></html>
+
+rn01re28.html/  1059500280  500   0     100664  3201      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dir_free</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re27.html" title="zzip_dir_alloc_ext_io"><link rel="next" href="rn01re29.html" title="zzip_dir_close"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dir_free</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re27.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re29.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dir_free"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) zzip_dir_free</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_dir_free</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   will free the zzip_dir handle unless there are still  
+   zzip_files attached (that may use its cache buffer). 
+   This is the inverse of <tt class="function">zzip_dir_alloc</tt> , and both 
+   are helper functions used implicitly in other zzipcalls 
+   e.g. <tt class="function">zzip_dir_close</tt> = zzip_close  
+ 
+</p><p>
+ 
+   returns zero on sucess 
+   returns the refcount when files are attached. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re27.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re29.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_dir_alloc_ext_io </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dir_close</td></tr></table></div></body></html>
+
+rn01re29.html/  1059500280  500   0     100664  3007      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dir_close</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re28.html" title="zzip_dir_free"><link rel="next" href="rn01re30.html" title="zzip_dir_fdopen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dir_close</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re28.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re30.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dir_close"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) zzip_dir_close</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_dir_close</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   It will also <tt class="function">free</tt>(2) the <tt class="function">ZZIP_DIR</tt>-handle given.  
+   the counterpart for <tt class="function">zzip_dir_open</tt> 
+   see also <tt class="function">zzip_dir_free</tt> 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re28.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re30.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_dir_free </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dir_fdopen</td></tr></table></div></body></html>
+
+rn01re30.html/  1059500280  500   0     100664  4374      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dir_fdopen</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re29.html" title="zzip_dir_close"><link rel="next" href="rn01re31.html" title="__zzip_try_open"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dir_fdopen</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re29.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re31.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dir_fdopen"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) zzip_dir_fdopen, zzip_dir_fdopen_ext_io</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR * 
+ <b class="fsfunc">zzip_dir_fdopen</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR * 
+ <b class="fsfunc">zzip_dir_fdopen_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   used by the <tt class="function">zzip_dir_open</tt> and zzip_opendir(2) call. Opens the 
+   zip-archive as specified with the fd which points to an 
+   already openend file. The <tt class="function">zzip_dir_fdopen</tt> function then search and parse 
+   the zip's central directory. 
+   
+</p><p>
+  
+   NOTE: refcount is zero, so an _open/_close pair will also delete  
+         this _dirhandle  
+ 
+</p><p>
+   the <tt class="function">zzip_dir_fdopen_ext_io</tt> function uses explicit ext and io instead of the internal  
+   defaults, setting these to zero is equivalent to <tt class="function">zzip_dir_fdopen</tt> 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re29.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re31.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_dir_close </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> __zzip_try_open</td></tr></table></div></body></html>
+rn01re31.html/  1059500280  500   0     100664  3502      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>__zzip_try_open</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re30.html" title="zzip_dir_fdopen"><link rel="next" href="rn01re32.html" title="zzip_dir_open"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">__zzip_try_open</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re30.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re32.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="__zzip_try_open"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) __zzip_try_open</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int
+ <b class="fsfunc">__zzip_try_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   will attach a .zip extension and tries to open it 
+   the with <tt class="function">open</tt>(2). This is a helper function for 
+   <tt class="function">zzip_dir_open</tt>, <tt class="function">zzip_opendir</tt> and <tt class="function">zzip_open</tt>. 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re30.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re32.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_dir_fdopen </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dir_open</td></tr></table></div></body></html>
+rn01re32.html/  1059500280  500   0     100664  4124      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dir_open</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re31.html" title="__zzip_try_open"><link rel="next" href="rn01re33.html" title="zzip_dir_read"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dir_open</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re31.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re33.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dir_open"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) zzip_dir_open, zzip_dir_open_ext_io</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_dir_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_dir_open_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   Opens the zip-archive (if available). 
+   the two ext_io arguments will default to use posix io and  
+   a set of default fileext that can atleast add .zip ext itself. 
+ 
+</p><p>
+   the <tt class="function">zzip_dir_open_ext_io</tt> function uses explicit ext and io instead of the internal  
+   defaults. Setting these to zero is equivalent to <tt class="function">zzip_dir_open</tt> 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re31.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re33.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">__zzip_try_open </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip_dir_read</td></tr></table></div></body></html>
+rn01re33.html/  1059500280  500   0     100664  3250      `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip_dir_read</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re32.html" title="zzip_dir_open"><link rel="next" href="rn01re34.html" title="zzip/zzip.h"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip_dir_read</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re32.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="rn01re34.html">Next</a></td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip_dir_read"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212; (zzip/zip.c) zzip_dir_read</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><pre class="funcsynopsisinfo">
+
+
+#include &lt;zzip/lib.h&gt;                                  // archive handling 
+
+</pre><div class="funcsynopsis"><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int
+ <b class="fsfunc">zzip_dir_read</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2><p>
+   fills the dirent-argument with the values and  
+   increments the read-pointer of the dir-argument. 
+   
+</p><p>
+ 
+   returns 0 if there no entry (anymore). 
+ 
+</p></div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li><li><p>Tomi Ollila  <tt class="email">&lt;<a href="mailto:too@iki.fi">too@iki.fi</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+           All rights reserved, 
+           use under the restrictions of the  
+           Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re32.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="rn01re34.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">zzip_dir_open </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> zzip/zzip.h</td></tr></table></div></body></html>
+rn01re34.html/  1059500280  500   0     100664  20229     `
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>zzip/zzip.h</title><meta name="generator" content="DocBook XSL Stylesheets V1.60.1"><link rel="home" href="index.html" title="Manual Pages"><link rel="up" href="index.html" title="Manual Pages"><link rel="previous" href="rn01re33.html" title="zzip_dir_read"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">zzip/zzip.h</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="rn01re33.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> </td></tr></table><hr></div><div class="refentry" lang="en"><a name="zzip-zzip.h"></a><div class="titlepage"><div></div><div></div></div><div class="refnamediv"><h2>Name</h2><p> &#8212;  library zzip-zzip.h</p></div><div class="refsynopsisdiv"><h2>Synopsis</h2><div class="funcsynopsis"><p><code class="funcdef">void 
+ <b class="fsfunc">zzip_rewinddir</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p><p><code class="funcdef">zzip_off_t 
+ <b class="fsfunc">zzip_telldir</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">void
+ <b class="fsfunc">zzip_seekdir</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIRENT* 
+ <b class="fsfunc">zzip_readdir</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_opendir</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_opendir_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">int
+ <b class="fsfunc">zzip_closedir</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><p><code class="funcdef">zzip_char_t* 
+ <b class="fsfunc">zzip_strerror</b>(</code><code>)</code>;<br>int errcode;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_char_t* 
+ <b class="fsfunc">zzip_strerror_of</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">int
+ <b class="fsfunc">zzip_errno</b>(</code><code>)</code>;<br>int errcode;</p><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_file_close</b>(</code><code>)</code>;<br>ZZIP_FILE * fp;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE * 
+ <b class="fsfunc">zzip_file_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">static int 
+ <b class="fsfunc">zzip_inflate_init</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_fclose</b>(</code><code>)</code>;<br>ZZIP_FILE * fp;</p><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_close</b>(</code><code>)</code>;<br>ZZIP_FILE* fp;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_ssize_t 
+ <b class="fsfunc">zzip_file_read</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_ssize_t
+ <b class="fsfunc">zzip_read</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_size_t
+ <b class="fsfunc">zzip_fread</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_fopen</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_freopen</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_open_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_FILE*
+ <b class="fsfunc">zzip_open_shared_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">int
+ <b class="fsfunc">zzip_rewind</b>(</code><code>)</code>;<br>ZZIP_FILE *fp;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">zzip_off_t
+ <b class="fsfunc">zzip_seek</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">zzip_off_t
+ <b class="fsfunc">zzip_tell</b>(</code><code>)</code>;<br>ZZIP_FILE * fp;</p><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_error</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">void 
+ <b class="fsfunc">zzip_seterror</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR * 
+ <b class="fsfunc">zzip_dirhandle</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_dirfd</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><p><code class="funcdef">zzip_char_t*
+ <b class="fsfunc">zzip_compr_str</b>(</code><code>)</code>;<br>int compr;</p><p><code class="funcdef">int
+ <b class="fsfunc">zzip_file_real</b>(</code><code>)</code>;<br>ZZIP_FILE* fp;</p><p><code class="funcdef">int
+ <b class="fsfunc">zzip_dir_real</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><p><code class="funcdef">void*
+ <b class="fsfunc">zzip_realdir</b>(</code><code>)</code>;<br>ZZIP_DIR* dir;</p><p><code class="funcdef">int
+ <b class="fsfunc">zzip_realfd</b>(</code><code>)</code>;<br>ZZIP_FILE* fp;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int  <b class="fsfunc">zzip_init_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">zzip_plugin_io_t
+ <b class="fsfunc">zzip_get_default_io</b>(</code><code>)</code>;<br>;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int 
+ <b class="fsfunc">zzip_dir_stat</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">uint32_t  <b class="fsfunc">__zzip_get32</b>(</code><code>)</code>;<br>unsigned char * s;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int 
+ <b class="fsfunc">__zzip_find_disk_trailer</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int 
+ <b class="fsfunc">__zzip_parse_root_directory</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR*
+ <b class="fsfunc">zzip_dir_alloc_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR*
+ <b class="fsfunc">zzip_dir_alloc</b>(</code></td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr></table><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_dir_free</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p><p><code class="funcdef">int 
+ <b class="fsfunc">zzip_dir_close</b>(</code><code>)</code>;<br>ZZIP_DIR * dir;</p><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR * 
+ <b class="fsfunc">zzip_dir_fdopen</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR * 
+ <b class="fsfunc">zzip_dir_fdopen_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int
+ <b class="fsfunc">__zzip_try_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_dir_open</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">ZZIP_DIR* 
+ <b class="fsfunc">zzip_dir_open_ext_io</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table><table border="0" summary="Function synopsis" cellspacing="0" cellpadding="0" style="padding-bottom: 1em"><tr><td><code class="funcdef">int
+ <b class="fsfunc">zzip_dir_read</b>(</code></td><td>, </td><td> </td></tr><tr><td> </td><td><code>)</code>;</td><td> </td></tr></table><table border="0" summary="Function argument synopsis" cellspacing="0" cellpadding="0"><tr><td> </td><td>;</td></tr><tr><td> </td><td>;</td></tr></table></div></div><div class="refsect1" lang="en"><h2>Description</h2>
+ : zziplib provides read access to zipped files in a zip-archive,
+ : using compression based solely on free algorithms provided by zlib.
+
+
+</div><div class="refsect1" lang="en"><h2>Author</h2><div class="itemizedlist"><ul type="disc"><li><p>Guido Draheim  <tt class="email">&lt;<a href="mailto:guidod@gmx.de">guidod@gmx.de</a>&gt;</tt></p></li></ul></div></div><div class="refsect1" lang="en"><h2>Copyright</h2><pre class="screen">
+(c) 1999,2000,2001,2002 Guido Draheim 
+  	    All rights reserved, 
+ 	    use under the restrictions of the 
+ 	    Lesser GNU General Public License 
+           note the additional license information  
+           that can be found in COPYING.ZZIP 
+ </pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="rn01re33.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td><td width="40%" align="right"> </td></tr><tr><td width="40%" align="left" valign="top">zzip_dir_read </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> </td></tr></table></div></body></html>
+
+written.lst/    1059500272  500   0     100664  0         `

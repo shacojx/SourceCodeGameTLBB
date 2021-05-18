@@ -1,0 +1,27 @@
+Begin3
+Title: ZZIPLIB Library
+Version: 0.10.5
+Entered-Date: 01-JUN-2000
+Description: 
+	provide read access to zipped file in a zip-archive.
+	based solely on free algorithms provided by zlib.
+	can transparently access files being either real files
+	or zipped files with the same filepath argument.
+Keywords: zip zlib inflate tar.gz
+Author: 
+	too@iki.fi (Tomi Ollila)
+	guidod@gmx.de (Guido Draheim)
+Maintained-by:
+	guidod@gmx.de (Guido Draheim)
+	too@iki.fi (Tomi Ollila)
+Primary-site:
+	pfe.sourceforge.net/pub
+	135K zziplib-0.10.5.tar.gz
+Home-page:
+	http://zzlib.sourceforge.net
+Platforms:
+	zlib posix
+Copying-Policy: 
+	Lesser GPL Version 2
+End
+

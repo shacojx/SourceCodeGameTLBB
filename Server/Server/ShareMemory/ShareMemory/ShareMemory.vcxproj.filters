@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{2275a3bf-c031-4922-81a2-737abd9587d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{5aadf5ba-357a-4be3-864c-918077f351c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DataBase">
+      <UniqueIdentifier>{1e970be1-1d93-449c-9508-f33a20d92865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Net">
+      <UniqueIdentifier>{0a902cb0-5411-47ec-984e-bcaf60fbe07e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ShareData">
+      <UniqueIdentifier>{23139087-6853-42f6-a306-04dc5b25df97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataBase">
+      <UniqueIdentifier>{835ea68d-e3fc-4df7-98e9-274b80df9d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{154aceef-2775-49e7-9dd7-5cb47a5708d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{9d04116c-8664-4bc6-a87b-df0bafd2a93f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\ServerBase\Config.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Ini.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Log.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Thread.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\TimeManager.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\CommandThread.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ShareMemory.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Assertx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DB_Struct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameStruct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameUtil.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Rand.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ShareMemAPI.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBAbilityList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCharFullData.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCharList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCoolDownInfo.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCreateCharOp.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBDeleteCharOp.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBEquipBaseList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBGuildInfo.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBImpactList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBItemList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBItemSerial.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBMailInfo.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBManager.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBPetList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBPrivateInfo.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBRelationList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBSkillList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBTaskList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBTitleInfo.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBWebShopInfo.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBXinFaList.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\ODBCBase.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\ODBCInterface.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\SqlTemplate.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\FileAPI.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\Packet.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\ServerSocket.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\Socket.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketAPI.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketInputStream.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketOutputStream.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GameServer\Server\SMU\ShareMemAO.cpp">
+      <Filter>ShareData</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareData\SMULogicManager.cpp">
+      <Filter>ShareData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GameServer\Server\SMU\SMUManager.cpp">
+      <Filter>ShareData</Filter>
+    </ClCompile>
+    <ClCompile Include="DB\ShareDBManager.cpp">
+      <Filter>DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GameServer\Server\Other\BBS.cpp">
+      <Filter>Other</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\ServerBase\Config.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Ini.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Log.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Thread.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\TimeManager.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\CommandThread.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ShareMemory.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Assertx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\BaseType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DB_Struct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\FileAPI.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine2.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Attr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Item.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Result.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Scene.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Impact.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Item.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Scene.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Skill.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameUtil.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Rand.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerSocket.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ShareMemAPI.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Socket.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\SocketAPI.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\SocketInputStream.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\SocketOutputStream.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Type.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBAbilityList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCharFullData.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCharList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCoolDownInfo.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCreateCharOp.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBDeleteCharOp.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBEquipBaseList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBGuildInfo.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBImpactList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBItemList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBItemSerial.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBMailInfo.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBManager.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBPetList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBPrivateInfo.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBRelationList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBSkillList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTaskList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTitleInfo.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBWebShopInfo.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBXinFaList.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\ODBCBase.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\ODBCInterface.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\SqlTemplate.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\FileAPI.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\Packet.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\ServerSocket.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\Socket.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketAPI.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketInputStream.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketOutputStream.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameServer\Server\SMU\ShareMemAO.h">
+      <Filter>ShareData</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareData\SMULogicManager.h">
+      <Filter>ShareData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameServer\Server\SMU\SMUManager.h">
+      <Filter>ShareData</Filter>
+    </ClInclude>
+    <ClInclude Include="DB\ShareDBManager.h">
+      <Filter>DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameServer\Server\Other\BBS.h">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Server\Server\Other\PlayerShopDefine.h">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

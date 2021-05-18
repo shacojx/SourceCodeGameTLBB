@@ -1,0 +1,194 @@
+// Microsoft Visual C++ 生成的资源脚本。
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// 从 TEXTINCLUDE 2 资源生成。
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE  
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE  
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE  
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+	"\r\n"
+	"#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+	"LANGUAGE 4, 2\r\n"
+	"#pragma code_page(936)\r\n"
+	"#include ""res\\CrashReport.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+	"#include ""afxres.rc""  	// 标准组件\r\n"
+	"#endif\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 图标
+//
+
+// ID 值最低的图标放在最前面，以确保应用程序图标
+// 在所有系统中保持一致。
+IDR_MAINFRAME           ICON         "res\\CrashReport.ico"
+
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 对话框
+//
+
+IDD_ABOUTBOX DIALOGEX   0, 0, 235, 55
+STYLE DS_MODALFRAME | DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 CrashReport"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CrashReport Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7, 50,16,WS_GROUP
+END
+IDD_CRASHREPORT_DIALOG DIALOGEX  0, 0, 320, 200 
+STYLE DS_SHELLFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION
+ | DS_MODALFRAME
+ | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CrashReport"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,263,7,50,16
+    PUSHBUTTON      "取消",IDCANCEL,263,25,50,16
+	CTEXT           "TODO: 在此放置对话框控件。",IDC_STATIC,10,96,300,8
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 版本
+//
+
+VS_VERSION_INFO     VERSIONINFO
+  FILEVERSION       1,0,0,1
+  PRODUCTVERSION    1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+        BLOCK "080403a8"
+		BEGIN 
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+			VALUE "FileVersion",     "1.0.0.1"
+			VALUE "InternalName",    "CrashReport.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+			VALUE "OriginalFilename","CrashReport.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+			VALUE "ProductVersion",  "1.0.0.1"
+		END
+	END
+	BLOCK "VarFileInfo" 
+	BEGIN 
+		VALUE "翻译", 0x0804, 936
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO  
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+    IDD_CRASHREPORT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193 
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 字符串表
+//
+
+STRINGTABLE  
+BEGIN
+    IDS_ABOUTBOX            "关于 CrashReport(&A)..."
+END
+
+
+#endif
+#ifdef _UNICODE
+IDR_MANIFEST	RT_MANIFEST	"res\\CrashReport.manifest"
+#endif
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// 从 TEXTINCLUDE 3 资源中生成。
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\\CrashReport.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"  	// 标准组件
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

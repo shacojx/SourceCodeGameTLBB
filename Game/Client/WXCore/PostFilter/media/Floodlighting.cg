@@ -1,0 +1,104 @@
+void quarter_down_sample_vp(
+        in float4 pos : POSITION,
+        in float2 texCoord : TEXCOORD0,
+
+        out float4 oPos : POSITION,
+        out float2 oTexCoord0 : TEXCOORD0,
+        out float2 oTexCoord1 : TEXCOORD1,
+        out float2 oTexCoord2 : TEXCOORD2,
+        out float2 oTexCoord3 : TEXCOORD3,
+
+        in uniform float4 viewportSize,
+        in uniform float4x4 worldViewProj
+        )
+{
+    oPos = mul(worldViewProj, pos);
+
+    oTexCoord0 = texCoord + viewportSize.zw * float2(0, 0);
+    oTexCoord1 = texCoord + viewportSize.zw * float2(1, 0);
+    oTexCoord2 = texCoord + viewportSize.zw * float2(0, 1);
+    oTexCoord3 = texCoord + viewportSize.zw * float2(1, 1);
+}
+
+float4 quarter_down_sample_fp(
+        in float2 uv0 : TEXCOORD0,
+        in float2 uv1 : TEXCOORD1,
+        in float2 uv2 : TEXCOORD2,
+        in float2 uv3 : TEXCOORD3,
+        in uniform sampler image
+        ) : COLOR
+{
+    float4 sum = tex2D(image, uv0) +
+                 tex2D(image, uv1) +
+                 tex2D(image, uv2) +
+                 tex2D(image, uv3);
+
+    return sum / 4;
+}
+
+void blur_vp(
+        in float4 pos : POSITION,
+        in float2 texCoord : TEXCOORD0,
+
+        out float4 oPos : POSITION,
+        out float2 oTexCoord0 : TEXCOORD0,
+        out float2 oTexCoord1 : TEXCOORD1,
+        out float2 oTexCoord2 : TEXCOORD2,
+        out float2 oTexCoord3 : TEXCOORD3,
+
+        // blur direction: (1, 0) for horizontal, (0, 1) for vertical
+        in uniform float2 direction,
+        in uniform float4 viewportSize,
+        in uniform float4x4 worldViewProj
+        )
+{
+    oPos = mul(worldViewProj, pos);
+
+    oTexCoord0 = texCoord + viewportSize.zw * -direction;
+    oTexCoord1 = texCoord + viewportSize.zw * -direction / 2;
+    oTexCoord2 = texCoord + viewportSize.zw * +direction / 2;
+    oTexCoord3 = texCoord + viewportSize.zw * +direction;
+}
+
+float4 blur_fp(
+        in float2 uv0 : TEXCOORD0,
+        in float2 uv1 : TEXCOORD1,
+        in float2 uv2 : TEXCOORD2,
+        in float2 uv3 : TEXCOORD3,
+        in uniform sampler image
+        ) : COLOR
+{
+    return ((tex2D(image, uv0) + tex2D(image, uv3)) + 3 * (tex2D(image, uv1) + tex2D(image, uv2))) / 8;
+}
+
+void blend_vp(
+        in float4 pos : POSITION,
+        in float2 texCoord : TEXCOORD0,
+
+        out float4 oPos : POSITION,
+        out float2 oBaseTexCoord : TEXCOORD0,
+        out float2 oBlurTexCoord : TEXCOORD1,
+
+        in uniform float4x4 worldViewProj
+        )
+{
+    oPos = mul(worldViewProj, pos);
+
+    oBaseTexCoord = texCoord;
+    oBlurTexCoord = texCoord;
+}
+
+float4 blend_fp(
+        in float2 baseTexCoord : TEXCOORD0,
+        in float2 blurTexCoord : TEXCOORD1,
+        in uniform sampler baseImage,
+        in uniform sampler blurImage,
+        in uniform float blur_amount,
+        in uniform float shine_amount
+        ) : COLOR
+{
+    float4 baseColor = tex2D(baseImage, baseTexCoord);
+    float4 blurColor = tex2D(blurImage, blurTexCoord);
+
+    return lerp(baseColor, blurColor, blur_amount) + blurColor * blurColor * shine_amount;
+}

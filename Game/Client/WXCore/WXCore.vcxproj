@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60D1A2F1-DBC1-4C6D-8274-25C73E81DD5C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../_Scripts/VC7.1/Debug/$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../_Scripts/VC7.1/Debug/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../_Scripts/VC7.1/Release/$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../_Scripts/VC7.1/Release/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">$(BuildOut)/$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">$(OutDir)$(ProjectName)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\OGRE\OgreMain\include;..\..\boost;..\..\Opcode;..\..\Scorpio\include;..\..\tinyxml;..\..\Xerces\src;..\..\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>../../_Scripts/VC7.1/Debug/WXCore.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\..\OGRE\OgreMain\include;..\..\boost;..\..\Opcode;..\..\Scorpio\include;..\..\tinyxml;..\..\Xerces\src;..\..\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>../../_Scripts/VC7.1/Release/WXCore.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>.;..\..\OGRE\OgreMain\include;..\..\boost;..\..\Opcode;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\BasicRenderable.cpp" />
+    <ClCompile Include="Core\FrameStatsListener.cpp" />
+    <ClCompile Include="Core\SceneNodeSwitcher.cpp" />
+    <ClCompile Include="Core\SerializerUtil.cpp" />
+    <ClCompile Include="Core\Terrain.cpp" />
+    <ClCompile Include="Core\TerrainData.cpp" />
+    <ClCompile Include="Core\TerrainDataSerializer.cpp" />
+    <ClCompile Include="Core\TerrainTile.cpp" />
+    <ClCompile Include="Core\TerrainTileEditable.cpp" />
+    <ClCompile Include="Core\TerrainTileOptimized.cpp" />
+    <ClCompile Include="Core\TerrainTileRenderable.cpp" />
+    <ClCompile Include="Core\TerrainTypeInfos.cpp" />
+    <ClCompile Include="Core\utf.cpp" />
+    <ClCompile Include="Core\WXActor.cpp" />
+    <ClCompile Include="Core\WXActorObject.cpp" />
+    <ClCompile Include="Core\WXEffectObject.cpp" />
+    <ClCompile Include="Core\WXEnviromentObject.cpp" />
+    <ClCompile Include="Core\WXExpatParser.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\expat\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="Core\WXFactory.cpp" />
+    <ClCompile Include="Core\WXLightObject.cpp" />
+    <ClCompile Include="Core\WXLogicModelObject.cpp" />
+    <ClCompile Include="Core\WXMaterialInstance.cpp" />
+    <ClCompile Include="Core\WXMaterialScriptSolver.cpp" />
+    <ClCompile Include="Core\WXModel.cpp" />
+    <ClCompile Include="Core\WXModelObject.cpp" />
+    <ClCompile Include="Core\WXObject.cpp" />
+    <ClCompile Include="Core\WXObjectFactory.cpp" />
+    <ClCompile Include="Core\WXObjectFactoryManager.cpp" />
+    <ClCompile Include="Core\WXObjectProxy.cpp" />
+    <ClCompile Include="Core\WXParticleSystemObject.cpp" />
+    <ClCompile Include="Core\WXPlacementObject.cpp" />
+    <ClCompile Include="Core\WXPropertyHelper.cpp" />
+    <ClCompile Include="Core\WXPropertyInterface.cpp" />
+    <ClCompile Include="Core\WXResources.cpp" />
+    <ClCompile Include="Core\WXResourceSolver.cpp" />
+    <ClCompile Include="Core\WXResourceSolverHelper.cpp" />
+    <ClCompile Include="Core\WXScene.cpp" />
+    <ClCompile Include="Core\WXSceneInfo.cpp" />
+    <ClCompile Include="Core\WXSceneSerializer.cpp" />
+    <ClCompile Include="Core\WXSceneSolver.cpp" />
+    <ClCompile Include="Core\WXSkyBoxObject.cpp" />
+    <ClCompile Include="Core\WXSkyDomeObject.cpp" />
+    <ClCompile Include="Core\WXSkyPlaneObject.cpp" />
+    <ClCompile Include="Core\WXStaticEntityObject.cpp" />
+    <ClCompile Include="Core\WXSystem.cpp" />
+    <ClCompile Include="Core\WXTerrainLiquid.cpp" />
+    <ClCompile Include="Core\WXTerrainLiquidObject.cpp" />
+    <ClCompile Include="Core\WXTerrainProjector.cpp" />
+    <ClCompile Include="Core\WXTerrainSolver.cpp" />
+    <ClCompile Include="Core\WXTransform.cpp" />
+    <ClCompile Include="Core\WXTransparentor.cpp" />
+    <ClCompile Include="Core\WXUtils.cpp" />
+    <ClCompile Include="Core\WXXercesHelper.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="Core\WXXercesParser.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="Core\WXXercesWriter.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Xerces\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="Core\WXXMLAttributes.cpp" />
+    <ClCompile Include="Core\WXXMLHandler.cpp" />
+    <ClCompile Include="Core\WXXMLNode.cpp" />
+    <ClCompile Include="Core\WXXMLParser.cpp" />
+    <ClCompile Include="Core\WXXMLWriter.cpp" />
+    <ClCompile Include="PostFilter\WXPostFilter.cpp" />
+    <ClCompile Include="PostFilter\WXPostFilterManager.cpp" />
+    <ClCompile Include="PostFilter\WXBloomPostFilter.cpp" />
+    <ClCompile Include="PostFilter\WXFadePostFilter.cpp" />
+    <ClCompile Include="PostFilter\WXFloodlightingPostFilter.cpp" />
+    <ClCompile Include="PostFilter\WXHeatVisionPostFilter.cpp" />
+    <ClCompile Include="PostFilter\WXMotionBlurPostFilter.cpp" />
+    <ClCompile Include="PostFilter\WXPostFilters.cpp" />
+    <ClCompile Include="OgreExt\OgreAutoAnimationEntity.cpp" />
+    <ClCompile Include="OgreExt\OgreBillboardChain.cpp" />
+    <ClCompile Include="OgreExt\OgreMeshAnimationAffector.cpp" />
+    <ClCompile Include="OgreExt\OgreMeshParticleRenderer.cpp" />
+    <ClCompile Include="OgreExt\OgreMeshParticleVisualData.cpp" />
+    <ClCompile Include="OgreExt\OgreMeshRotationAffector.cpp" />
+    <ClCompile Include="OgreExt\OgreRibbonRenderer.cpp" />
+    <ClCompile Include="OgreExt\OgreRibbonSet.cpp" />
+    <ClCompile Include="OgreExt\OgreTexCoordBillboardParticleRenderer.cpp" />
+    <ClCompile Include="Core\WXCollisionModel.cpp" />
+    <ClCompile Include="Core\WXCollisionModelManager.cpp" />
+    <ClCompile Include="Core\WXMeshInformer.cpp" />
+    <ClCompile Include="Core\WXProjector.cpp" />
+    <ClCompile Include="Core\WXRayCollide.cpp" />
+    <ClCompile Include="ModelSystem\SkeletonMesh.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\SkeletonMeshEditable.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\SkeletonMeshUtil.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MODELSYSTEM_STATIC_LINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\WXLogicModel.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Scorpio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\Scorpio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Scorpio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\WXLogicModelManager.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Scorpio\include;..\tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\inc\Scorpio;..\inc\TinyXML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Scorpio\include;..\tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BufferSecurityCheck>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXAnimationEffectInfo.cpp" />
+    <ClCompile Include="EffectSystem\WXAnimationRibbon.cpp" />
+    <ClCompile Include="EffectSystem\WXAnimationSceneLightInfo.cpp" />
+    <ClCompile Include="EffectSystem\WXAnimationSound.cpp" />
+    <ClCompile Include="EffectSystem\WXBeamElement.cpp" />
+    <ClCompile Include="EffectSystem\WXBillboardSetElement.cpp" />
+    <ClCompile Include="EffectSystem\WXEffect.cpp" />
+    <ClCompile Include="EffectSystem\WXEffectBasic.cpp" />
+    <ClCompile Include="EffectSystem\WXEffectElement.cpp" />
+    <ClCompile Include="EffectSystem\WXEffectElementFactory.cpp" />
+    <ClCompile Include="EffectSystem\WXEffectManager.cpp" />
+    <ClCompile Include="EffectSystem\WXMainSceneLight.cpp" />
+    <ClCompile Include="EffectSystem\WXMeshElement.cpp" />
+    <ClCompile Include="EffectSystem\WXParticleElement.cpp" />
+    <ClCompile Include="EffectSystem\WXPointLightElement.cpp" />
+    <ClCompile Include="EffectSystem\WXProjectorElement.cpp" />
+    <ClCompile Include="EffectSystem\WXSkill.cpp" />
+    <ClCompile Include="ResourceSystem\WXPakFileSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\BasicRenderable.h" />
+    <ClInclude Include="Core\FrameStatsListener.h" />
+    <ClInclude Include="Core\ieee.h" />
+    <ClInclude Include="Core\inttypes.h" />
+    <ClInclude Include="Core\SceneNodeSwitcher.h" />
+    <ClInclude Include="Core\SerializerUtil.h" />
+    <ClInclude Include="Core\Terrain.h" />
+    <ClInclude Include="Core\TerrainData.h" />
+    <ClInclude Include="Core\TerrainTile.h" />
+    <ClInclude Include="Core\TerrainTileEditable.h" />
+    <ClInclude Include="Core\TerrainTileOptimized.h" />
+    <ClInclude Include="Core\TerrainTileRenderable.h" />
+    <ClInclude Include="Core\TerrainTypeInfos.h" />
+    <ClInclude Include="Core\utf.h" />
+    <ClInclude Include="Core\WXActor.h" />
+    <ClInclude Include="Core\WXActorObject.h" />
+    <ClInclude Include="Core\WXEffectObject.h" />
+    <ClInclude Include="Core\WXEnviromentObject.h" />
+    <ClInclude Include="Core\WXExpatParser.h" />
+    <ClInclude Include="Core\WXFactory.h" />
+    <ClInclude Include="Core\WXFlags.h" />
+    <ClInclude Include="Core\WXLightObject.h" />
+    <ClInclude Include="Core\WXLogicModelObject.h" />
+    <ClInclude Include="Core\WXMaterialInstance.h" />
+    <ClInclude Include="Core\WXMaterialScriptSolver.h" />
+    <ClInclude Include="Core\WXModel.h" />
+    <ClInclude Include="Core\WXModelObject.h" />
+    <ClInclude Include="Core\WXObject.h" />
+    <ClInclude Include="Core\WXObjectFactory.h" />
+    <ClInclude Include="Core\WXObjectFactoryManager.h" />
+    <ClInclude Include="Core\WXObjectProxy.h" />
+    <ClInclude Include="Core\WXParticleSystemObject.h" />
+    <ClInclude Include="Core\WXPlacementObject.h" />
+    <ClInclude Include="Core\WXPrerequisites.h" />
+    <ClInclude Include="Core\WXPropertyHelper.h" />
+    <ClInclude Include="Core\WXPropertyInterface.h" />
+    <ClInclude Include="Core\WXResourceCollection.h" />
+    <ClInclude Include="Core\WXResources.h" />
+    <ClInclude Include="Core\WXResourceSolver.h" />
+    <ClInclude Include="Core\WXResourceSolverHelper.h" />
+    <ClInclude Include="Core\WXScene.h" />
+    <ClInclude Include="Core\WXSceneInfo.h" />
+    <ClInclude Include="Core\WXSceneSerializer.h" />
+    <ClInclude Include="Core\WXSceneSolver.h" />
+    <ClInclude Include="Core\WXSkyBoxObject.h" />
+    <ClInclude Include="Core\WXSkyDomeObject.h" />
+    <ClInclude Include="Core\WXSkyPlaneObject.h" />
+    <ClInclude Include="Core\WXStaticEntityObject.h" />
+    <ClInclude Include="Core\WXSystem.h" />
+    <ClInclude Include="Core\WXTerrainLiquid.h" />
+    <ClInclude Include="Core\WXTerrainLiquidObject.h" />
+    <ClInclude Include="Core\WXTerrainProjector.h" />
+    <ClInclude Include="Core\WXTerrainSolver.h" />
+    <ClInclude Include="Core\WXTransform.h" />
+    <ClInclude Include="Core\WXTransparentor.h" />
+    <ClInclude Include="Core\WXUtils.h" />
+    <ClInclude Include="Core\WXVariant.h" />
+    <ClInclude Include="Core\WXXercesHelper.h" />
+    <ClInclude Include="Core\WXXercesParser.h" />
+    <ClInclude Include="Core\WXXercesWriter.h" />
+    <ClInclude Include="Core\WXXMLAttributes.h" />
+    <ClInclude Include="Core\WXXMLHandler.h" />
+    <ClInclude Include="Core\WXXMLNode.h" />
+    <ClInclude Include="Core\WXXMLParser.h" />
+    <ClInclude Include="Core\WXXMLWriter.h" />
+    <ClInclude Include="PostFilter\WXPostFilter.h" />
+    <ClInclude Include="PostFilter\WXPostFilterFactory.h" />
+    <ClInclude Include="PostFilter\WXPostFilterManager.h" />
+    <ClInclude Include="PostFilter\WXPostFilterPrerequisites.h" />
+    <ClInclude Include="PostFilter\WXPostFilters.h" />
+    <ClInclude Include="OgreExt\OgreAutoAnimationEntity.h" />
+    <ClInclude Include="OgreExt\OgreBillboardChain.h" />
+    <ClInclude Include="OgreExt\OgreMeshAnimationAffector.h" />
+    <ClInclude Include="OgreExt\OgreMeshAnimationAffectorFactory.h" />
+    <ClInclude Include="OgreExt\OgreMeshParticleRenderer.h" />
+    <ClInclude Include="OgreExt\OgreMeshParticleVisualData.h" />
+    <ClInclude Include="OgreExt\OgreMeshRotationAffector.h" />
+    <ClInclude Include="OgreExt\OgreMeshRotationAffectorFactory.h" />
+    <ClInclude Include="OgreExt\OgreRibbonRenderer.h" />
+    <ClInclude Include="OgreExt\OgreRibbonSet.h" />
+    <ClInclude Include="OgreExt\OgreTexCoordBillboardParticleRenderer.h" />
+    <ClInclude Include="Core\WXCollisionModel.h" />
+    <ClInclude Include="Core\WXCollisionModelManager.h" />
+    <ClInclude Include="Core\WXMeshInformer.h" />
+    <ClInclude Include="Core\WXOpcode.h" />
+    <ClInclude Include="Core\WXProjector.h" />
+    <ClInclude Include="Core\WXRayCollide.h" />
+    <ClInclude Include="ModelSystem\ModelTypes.h" />
+    <ClInclude Include="ModelSystem\SkeletonMesh.h" />
+    <ClInclude Include="ModelSystem\SkeletonMeshEditable.h" />
+    <ClInclude Include="ModelSystem\SkeletonMeshUtil.h" />
+    <ClInclude Include="ModelSystem\WXLogicModel.h" />
+    <ClInclude Include="ModelSystem\WXLogicModelManager.h" />
+    <ClInclude Include="EffectSystem\WXAnimationEffectInfo.h" />
+    <ClInclude Include="EffectSystem\WXAnimationRibbon.h" />
+    <ClInclude Include="EffectSystem\WXAnimationSceneLightInfo.h" />
+    <ClInclude Include="EffectSystem\WXAnimationSound.h" />
+    <ClInclude Include="EffectSystem\WXBeamElement.h" />
+    <ClInclude Include="EffectSystem\WXBillboardSetElement.h" />
+    <ClInclude Include="EffectSystem\WXEffect.h" />
+    <ClInclude Include="EffectSystem\WXEffectBasic.h" />
+    <ClInclude Include="EffectSystem\WXEffectElement.h" />
+    <ClInclude Include="EffectSystem\WXEffectElementFactory.h" />
+    <ClInclude Include="EffectSystem\WXEffectManager.h" />
+    <ClInclude Include="EffectSystem\WXMainSceneLight.h" />
+    <ClInclude Include="EffectSystem\WXMeshElement.h" />
+    <ClInclude Include="EffectSystem\WXParticleElement.h" />
+    <ClInclude Include="EffectSystem\WXPointLightElement.h" />
+    <ClInclude Include="EffectSystem\WXProjectorElement.h" />
+    <ClInclude Include="EffectSystem\WXSkill.h" />
+    <ClInclude Include="ResourceSystem\WXPakFileSystem.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

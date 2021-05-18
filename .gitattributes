@@ -1,0 +1,8 @@
+*.cpp eol=lf
+*.h eol=lf
+*.hpp eol=lf
+*.m eol=lf
+*.txt eol=lf
+*.lua eol=lf
+*.nib eol=lf
+

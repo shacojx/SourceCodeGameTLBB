@@ -1,0 +1,19 @@
+
+material 逍遥真龙棋局
+{
+	technique
+	{
+		pass
+		{
+			scene_blend alpha_blend
+			alpha_rejection greater 128
+
+			texture_unit
+			{
+				texture 逍遥真龙棋局.tga
+			}
+		}
+
+	}
+
+}

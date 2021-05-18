@@ -1,0 +1,226 @@
+#ifndef MAX_WORLD_MATRICES
+#define MAX_WORLD_MATRICES	25
+#endif
+
+#ifndef MAX_BLEND_WEIGHTS
+#define MAX_BLEND_WEIGHTS	1
+#endif
+
+#ifndef USE_LAST_WEIGHT
+#if MAX_BLEND_WEIGHTS != 3
+#define USE_LAST_WEIGHT     1
+#else
+#define USE_LAST_WEIGHT     0
+#endif
+#endif
+
+#ifndef NUM_TEXCOORDS
+#define NUM_TEXCOORDS       0
+#endif
+
+#if NUM_TEXCOORDS > 0
+    #define ORIGINAL_TEXCOORD   0
+    #define SINGLE_TEXCOORD     1
+    #define PROJECTION_TEXCOORD 2
+    #ifndef TEXCOORD_SOURCE
+    #define TEXCOORD_SOURCE     ORIGINAL_TEXCOORD
+    #endif
+#endif
+
+#ifndef LIGHTING_AMBIENT
+#define LIGHTING_AMBIENT    0
+#endif
+#ifndef NUM_LIGHTS
+#define NUM_LIGHTS          0
+#endif
+
+#if NUM_LIGHTS > 0
+    #ifndef ENABLE_SPECULAR
+    #define ENABLE_SPECULAR     1
+    #endif
+
+    #define ARBITRARY_LIGHT     0
+    #define DIRECTIONAL_LIGHT   1
+    #define POINT_LIGHT         2
+    #ifndef LIGHT_TYPE
+    #define LIGHT_TYPE          ARBITRARY_LIGHT
+    #endif
+#endif
+
+float3 lightingDiffuse(
+            const float3 position, const float3 normal,
+            const float4 lightPosition, const float3 diffuseColour)
+{
+    float3 lightDir = normalize(lightPosition.xyz - (position * lightPosition.w));
+    float ndotl = dot(normal, lightDir);
+    return max(ndotl, 0) * diffuseColour;
+}
+
+float3 lightingDiffuseAndSpecular(
+            const float3 position, const float3 normal,
+            const float4 lightPosition, const float3 diffuseColour,
+            const float4 cameraPosition, const float3 specularColour, const float shininess)
+{
+    float3 lightDir = normalize(lightPosition.xyz - (position * lightPosition.w));
+    float3 cameraDir = normalize(cameraPosition.xyz - (position * cameraPosition.w));
+    float3 halfVec = normalize(cameraDir + lightDir);
+    float ndotl = dot(normal, lightDir);
+    float ndoth = dot(normal, halfVec);
+    float4 lighting = lit(ndotl, ndoth, shininess);
+    return lighting.y * diffuseColour + lighting.z * specularColour;
+}
+
+void main(
+            in float4 position : POSITION,
+            in int4 blendIndex : BLENDINDICES,
+#if MAX_BLEND_WEIGHTS > 1
+            in float4 blendWeight : BLENDWEIGHT,
+#endif
+            out float4 oPosition : POSITION,
+
+#if LIGHTING_AMBIENT || NUM_LIGHTS
+            out float4 oColour : COLOR0,
+    #if LIGHTING_AMBIENT
+            uniform float4 ambient,
+    #endif
+    #if NUM_LIGHTS
+            in float3 normal : NORMAL,
+            uniform float4 lightPosition[NUM_LIGHTS],
+        #if LIGHT_TYPE != DIRECTIONAL_LIGHT
+            uniform float4 lightAttenuation[NUM_LIGHTS],
+        #endif
+            uniform float4 diffuseColour[NUM_LIGHTS],
+        #if ENABLE_SPECULAR
+            uniform float4 specularColour[NUM_LIGHTS],
+            uniform float specularShininess,
+            uniform float4 cameraPos,
+        #endif
+    #endif
+#endif
+
+#if NUM_TEXCOORDS > 0
+    #if TEXCOORD_SOURCE == PROJECTION_TEXCOORD
+            uniform float4x4 textureViewProjectionMatrix,
+    #elif TEXCOORD_SOURCE == SINGLE_TEXCOORD
+            in float4 texcoord : TEXCOORD0,
+    #else
+            in float4 texcoords[NUM_TEXCOORDS] : TEXCOORD0,
+    #endif
+            out float4 oTexcoords[NUM_TEXCOORDS] : TEXCOORD0,
+#endif
+
+            uniform float4x4 viewProjectionMatrix,
+            uniform float3x4 worldMatrix3x4Array[MAX_WORLD_MATRICES])
+{
+    // transform to world space by indexed matrices
+    float3 blendPos = float3(0,0,0);
+#if NUM_LIGHTS
+    // transform normal to world space by indexed matrices
+    float3 blendNorm = float3(0,0,0);
+#endif
+
+#if USE_LAST_WEIGHT
+    // Use this to avoid weight by last component of blendWeights, which
+    // maybe wrong when number of weights equal four.
+    float lastWeight = 1;
+#if MAX_BLEND_WEIGHTS > 1
+    for (int i = 0; i < MAX_BLEND_WEIGHTS-1; ++i)
+    {
+        lastWeight -= blendWeight[i];
+        blendPos += mul(worldMatrix3x4Array[blendIndex[i]], position) * blendWeight[i];
+#if NUM_LIGHTS
+        blendNorm += mul((float3x3)worldMatrix3x4Array[blendIndex[i]], normal) * blendWeight[i];
+#endif
+    }
+#endif
+    blendPos += mul(worldMatrix3x4Array[blendIndex[MAX_BLEND_WEIGHTS-1]], position) * lastWeight;
+#if NUM_LIGHTS
+    blendNorm += mul((float3x3)worldMatrix3x4Array[blendIndex[MAX_BLEND_WEIGHTS-1]], normal) * lastWeight;
+#endif
+
+#else // !USE_LAST_WEIGHT
+
+    for (int i = 0; i < MAX_BLEND_WEIGHTS; ++i)
+    {
+        blendPos += mul(worldMatrix3x4Array[blendIndex[i]], position)
+#if MAX_BLEND_WEIGHTS > 1
+            * blendWeight[i]
+#endif
+            ;
+#if NUM_LIGHTS
+        blendNorm += mul((float3x3)worldMatrix3x4Array[blendIndex[i]], normal)
+#if MAX_BLEND_WEIGHTS > 1
+            * blendWeight[i]
+#endif
+            ;
+#endif
+    }
+#endif // USE_LAST_WEIGHT
+
+    // view / projection
+    oPosition = mul(viewProjectionMatrix, float4(blendPos, 1.0));
+
+#if NUM_TEXCOORDS > 0
+    // Calculate texcoords
+    for (int i = 0; i < NUM_TEXCOORDS; ++i)
+    {
+    #if TEXCOORD_SOURCE == PROJECTION_TEXCOORD
+        oTexcoords[i] = mul(textureViewProjectionMatrix, float4(blendPos, 1));
+    #elif TEXCOORD_SOURCE == SINGLE_TEXCOORD
+        oTexcoords[i] = texcoord;
+    #else
+        oTexcoords[i] = texcoords[i];
+    #endif
+    }
+#endif
+
+#if LIGHTING_AMBIENT
+    oColour = ambient;
+#endif
+
+#if NUM_LIGHTS
+    blendNorm = normalize(blendNorm);
+
+#if !LIGHTING_AMBIENT
+    oColour = float4(0, 0, 0, diffuseColour[0].a);
+#endif
+
+    for (int l = 0; l < NUM_LIGHTS; ++l)
+    {
+#if LIGHT_TYPE == DIRECTIONAL_LIGHT
+        // Lighting - support directional light only
+        float3 lightDir = lightPosition[l].xyz;
+#elif LIGHT_TYPE == POINT_LIGHT
+        // Lighting - support point light only
+        float3 lightDir = lightPosition[l].xyz - blendPos;
+#else
+        // Lighting - support point and directional light
+        float3 lightDir = lightPosition[l].xyz - (blendPos * lightPosition[l].w);
+#endif
+        float d = length(lightDir);
+        lightDir /= d;
+
+        float ndotl = dot(blendNorm, lightDir);
+
+#if ENABLE_SPECULAR
+        float3 halfVec = normalize(normalize(cameraPos.xyz - blendPos) + lightDir);
+        float ndoth = dot(blendNorm, halfVec);
+
+        float4 lighting = lit(ndotl, ndoth, specularShininess);
+        float3 colour = lighting.y * diffuseColour[l].rgb + lighting.z * specularColour[l].rgb;
+#else
+        float3 colour = max(ndotl, 0) * diffuseColour[l].rgb;
+#endif
+
+#if LIGHT_TYPE == DIRECTIONAL_LIGHT
+        float att = 1;
+#elif LIGHT_TYPE == POINT_LIGHT
+        float att = 1 / (lightAttenuation[l].y + d * (lightAttenuation[l].z + d * lightAttenuation[l].w));
+#else
+        float att = lerp(lightPosition[l].w, 1, 1 / dot(float3(1, d, d*d), lightAttenuation[l].yzw));
+#endif
+
+        oColour.rgb += att * colour;
+    }
+#endif
+}

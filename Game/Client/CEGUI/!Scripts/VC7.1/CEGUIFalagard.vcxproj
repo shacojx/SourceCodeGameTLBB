@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E1A62A24-FF2E-4B16-A128-862A8F655E06}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\_Scripts\VC7.1\Debug\CEGUIFalagard\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\_Scripts\VC7.1\Debug\CEGUIFalagard\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\_Scripts\VC7.1\Release\CEGUIFalagard\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\_Scripts\VC7.1\Release\CEGUIFalagard\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../CEGUI/include;../../CEGUI/WidgetSets/Falagard/include;..\..\..\..\OGRE\OgreMain\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;FALAGARDBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>..\..\..\..\_Scripts\VC7.1\Debug\UIFrame.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\_Scripts\VC7.1\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+    <Manifest>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../CEGUI/include;../../CEGUI/WidgetSets/Falagard/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;FALAGARDBASE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\_Scripts\VC7.1\Release\UIFrame.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\_Scripts\VC7.1\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+    <Manifest>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalButton.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalCheckbox.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalCombobox.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalComboDropList.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalEditbox.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalFrameWindow.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalListbox.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalListHeader.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalListHeaderProperties.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalListHeaderSegment.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalListHeaderSegmentProperties.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalMenuBar.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalMenuItem.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalModule.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalMultiColumnList.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalMultiLineEditbox.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalMultiLineEditboxProperties.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalPopupMenu.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalProgressBar.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalProgressBarProperties.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalRadioButton.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalScrollablePane.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalScrollbar.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalScrollbarProperties.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalSlider.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalSliderProperties.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalSpinner.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalStaticImage.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalStaticText.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalSystemButton.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalTabButton.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalTabControl.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalTabControlProperties.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalTabPane.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalThumb.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalTitlebar.cpp" />
+    <ClCompile Include="..\..\Cegui\WidgetSets\Falagard\src\FalTooltip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalButton.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalCheckbox.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalCombobox.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalComboDropList.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalEditbox.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalFrameWindow.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalListbox.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalListHeader.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalListHeaderProperties.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalListHeaderSegment.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalListHeaderSegmentProperties.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalMenuBar.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalMenuItem.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalModule.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalMultiColumnList.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalMultiLineEditbox.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalMultiLineEditboxProperties.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalPopupMenu.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalProgressBar.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalProgressBarProperties.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalRadioButton.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalScrollablePane.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalScrollbar.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalScrollbarProperties.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalSlider.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalSliderProperties.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalSpinner.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalStaticImage.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalStaticText.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalSystemButton.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalTabButton.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalTabControl.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalTabControlProperties.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalTabPane.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalThumb.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalTitlebar.h" />
+    <ClInclude Include="..\..\Cegui\WidgetSets\Falagard\include\FalTooltip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\_Scripts\VC7.1\OgreMain.vcxproj">
+      <Project>{35afbabb-df05-43de-91a7-bb828a874015}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CEGUIFalagardEx\CEGUIFalagardEx.vcxproj">
+      <Project>{311b69cf-7381-4d57-a540-778d24d95c60}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CEGUIBase.vcxproj">
+      <Project>{232b1f48-87c1-4ef9-98a2-cf675bac7a54}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

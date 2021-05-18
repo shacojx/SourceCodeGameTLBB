@@ -1,0 +1,252 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_GAME                ICON                    "Res\\Game.ico"
+IDI_SMALL               ICON                    "Res\\small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_GAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_GAME ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CHOOSE_USERID DIALOGEX 0, 0, 223, 183
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "武侠世界"
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,105,161,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,166,161,50,14
+    RTEXT           "输入用户ID:",IDC_STATIC,7,11,61,12
+    EDITTEXT        IDC_EDIT_USERID,74,7,142,14,ES_AUTOHSCROLL
+    CONTROL         "不再显示",IDC_CHECK_REMEMBER,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,7,166,73,9
+    COMBOBOX        IDC_COMBO_SERVER,73,98,143,62,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "全局泛光:",IDC_STATIC,7,120,61,12
+    COMBOBOX        IDC_COMBO_POSTFILTER,73,119,143,62,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "渲染器:",IDC_STATIC,7,143,61,12
+    COMBOBOX        IDC_COMBO_DEVICE,73,140,143,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,31,209,2
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,9,89,207,1
+    RTEXT           "性别:",IDC_STATIC_GENDER,7,44,61,16
+    COMBOBOX        IDC_COMBO_GENDER,73,42,143,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "初始场景:",IDC_STATIC_SCENE,7,67,61,16,WS_DISABLED
+    COMBOBOX        IDC_COMBO_SCENE,73,65,143,62,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "游戏服务器:",IDC_CHECK_GAMESERVER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,100,60,10
+END
+
+IDD_DIALOG_WXC_SML DIALOGEX 0, 0, 386, 76
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "请简单描述，您刚刚的操作！"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,329,55,50,14
+    EDITTEXT        IDC_EDIT_WXC_SML,7,20,372,29,ES_AUTOHSCROLL
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_NORMAL       CURSOR                  "Res\\Normal.cur"
+IDC_CURSOR_ATTACK       CURSOR                  "Res\\Attack.cur"
+IDC_CURSOR_AUTORUN      CURSOR                  "Res\\AutoRun.cur"
+IDC_CURSOR_UNREACHABLE  CURSOR                  "Res\\UnReachable.cur"
+IDC_CURSOR_PICKUP       CURSOR                  "Res\\PickUp.cur"
+IDC_CURSOR_MINE         CURSOR                  "Res\\Mine.CUR"
+IDC_CURSOR_HERBS        CURSOR                  "Res\\Herbs.CUR"
+IDC_CURSOR_INTERACT     CURSOR                  "Res\\Interact.CUR"
+IDC_CURSOR_SPEAK        CURSOR                  "Res\\Speak.CUR"
+IDC_CURSOR_REPAIR       CURSOR                  "Res\\Repair.CUR"
+IDC_CURSOR_HOVER        CURSOR                  "Res\\Hover.CUR"
+IDC_CURSOR_IDENFITY     CURSOR                  "Res\\Identify.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,0,0,4
+ PRODUCTVERSION 0,0,0,4
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "武侠世界"
+            VALUE "CompanyName", "红图互动"
+            VALUE "FileDescription", "Alpha_0.0.0004"
+            VALUE "FileVersion", "0, 0, 0, 4"
+            VALUE "InternalName", "WXSJ"
+            VALUE "LegalCopyright", "Copyright 红图互动(C) 2007"
+            VALUE "OriginalFilename", "WXClient.exe"
+            VALUE "ProductName", "武侠世界"
+            VALUE "ProductVersion", "0, 0, 0, 4"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_CHOOSE_USERID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_DIALOG_WXC_SML, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "Game"
+    IDC_GAME                "GAME"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

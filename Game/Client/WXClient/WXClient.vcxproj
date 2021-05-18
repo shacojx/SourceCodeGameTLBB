@@ -1,0 +1,974 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4F67BA5B-C49B-4C66-84BD-C1A339BC6C92}</ProjectGuid>
+    <RootNamespace>WXClient</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\_Scripts\VC7.1\Debug\WXClient\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\_Scripts\VC7.1\Debug\WXClient\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\_Scripts\VC7.1\Release\WXClient\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\_Scripts\VC7.1\Release\WXClient\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\..\_Scripts\VC7.1\Release\WXClient\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\..\_Scripts\VC7.1\Release\WXClient\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">false</GenerateManifest>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Common\;..\..\..\Common;..\..\..\Common\Packets;..\..\..\Common\DataBase;..\LuaPlus\Src\LuaPlus;..\..\..\Common\Combat;..\..\..\Common\Net;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;__WINDOWS__;GAME_CLIENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4078 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>..\..\_Scripts\VC7.1\Debug\WXClient.exe</OutputFile>
+      <AdditionalLibraryDirectories>../../Common;$(SolutionDir)\..\DirectX9\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\..\_Scripts\VC7.1\Debug\WXClient.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkErrorReporting>
+      </LinkErrorReporting>
+    </Link>
+    <PostBuildEvent>
+      <Command>for /r "$(ProjectDir)$(OutDir).." %%f in (*.exe *.dll) do @xcopy /Y "%%f" "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+explorer.exe "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+exit 0</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\Common\;..\..\..\Common;..\..\..\Common\Packets;..\..\..\Common\DataBase;..\LuaPlus\Src\LuaPlus;..\..\..\Common\Combat;..\..\..\Common\Net;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;__WINDOWS__;_FOX_CLIENT;_FOX_LOGIN;_FOX_SERVER;GAME_CLIENT;_DISABLE_TRACE__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4078 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>..\..\_Scripts\VC7.1\Release\WXClient.exe</OutputFile>
+      <AdditionalLibraryDirectories>../../Common;..\..\_Scripts\VC7.1\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\..\_Scripts\VC7.1\Release/$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>..\..\_Scripts\VC7.1\Release/WXClient.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkErrorReporting>
+      </LinkErrorReporting>
+    </Link>
+    <PostBuildEvent>
+      <Command>for /r "$(ProjectDir)$(OutDir).." %%f in (*.exe *.dll) do @xcopy /Y "%%f" "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+explorer.exe "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+exit 0</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\Common\;..\..\Common;..\..\Common\Packets;..\..\Common\DataBase;..\..\Common\Combat;..\LuaPlus\Src\LuaPlus;..\..\Common\Net;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;__WINDOWS__;_FOX_CLIENT;_FOX_LOGIN;_FOX_SERVER;GAME_CLIENT;_DISABLE_TRACE__;_FINAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4078 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>..\..\_Scripts\VC7.1\Release\WXClient.exe</OutputFile>
+      <AdditionalLibraryDirectories>../../Common;..\..\_Scripts\VC7.1\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>..\..\_Scripts\VC7.1\Release/$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>..\..\_Scripts\VC7.1\Release/WXClient.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkErrorReporting>
+      </LinkErrorReporting>
+    </Link>
+    <PostBuildEvent>
+      <Command>for /r "$(ProjectDir)$(OutDir).." %%f in (*.exe *.dll) do @xcopy /Y "%%f" "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+explorer.exe "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+exit 0</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>for /r "$(ProjectDir)$(OutDir).." %%f in (*.exe *.dll) do @xcopy /Y "%%f" "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+explorer.exe "$(SolutionDir)..\..\_Pre-Built\Client\Bin$(Configuration)"
+
+exit 0</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions>/ignore:4078 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="WXClient.cpp" />
+    <ClCompile Include="World\Scene.cpp" />
+    <ClCompile Include="World\WorldManager.cpp" />
+    <ClCompile Include="World\Zone.cpp" />
+    <ClCompile Include="World\Path.cpp" />
+    <ClCompile Include="World\Region.cpp" />
+    <ClCompile Include="World\BuildingCollisionMng.cpp" />
+    <ClCompile Include="Object\ActionSetMgr.cpp" />
+    <ClCompile Include="Object\BulletDataMgr.cpp" />
+    <ClCompile Include="Object\GMObjectLoadQueue.cpp" />
+    <ClCompile Include="Object\Obj_Building.cpp" />
+    <ClCompile Include="Object\Obj_Dynamic.cpp" />
+    <ClCompile Include="Object\Obj_Map.cpp" />
+    <ClCompile Include="Object\Obj_Phy.cpp" />
+    <ClCompile Include="Object\Obj_Static.cpp" />
+    <ClCompile Include="Object\Object.cpp" />
+    <ClCompile Include="Object\ObjectCommand.cpp" />
+    <ClCompile Include="Object\ObjectDef.cpp" />
+    <ClCompile Include="Object\ObjectManager.cpp">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="Object\Character\CharacterStruct.cpp" />
+    <ClCompile Include="Object\Character\Obj_Character.cpp" />
+    <ClCompile Include="Object\Character\Obj_Character_Logic.cpp" />
+    <ClCompile Include="Object\Character\Obj_PlayerMySelf.cpp" />
+    <ClCompile Include="Object\Character\Obj_PlayerNPC.cpp">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="Object\Character\Obj_PlayerOther.cpp" />
+    <ClCompile Include="Object\Character\Ai\GMAI_Base.cpp" />
+    <ClCompile Include="Object\Character\Ai\GMAI_MySelf.cpp" />
+    <ClCompile Include="Object\Surface\Obj_Bullet.cpp" />
+    <ClCompile Include="Object\Surface\Obj_Effect.cpp" />
+    <ClCompile Include="Object\Surface\Obj_SkillObj.cpp" />
+    <ClCompile Include="Object\Surface\Obj_Special.cpp" />
+    <ClCompile Include="Object\Surface\Obj_Surface.cpp" />
+    <ClCompile Include="Object\ProjTex\Obj_ProjTex.cpp" />
+    <ClCompile Include="Object\Item\Obj_Item.cpp" />
+    <ClCompile Include="Object\Item\Obj_Item_Equip.cpp" />
+    <ClCompile Include="Object\Item\Obj_Item_Gem.cpp" />
+    <ClCompile Include="Object\Item\Obj_Item_Medicine.cpp" />
+    <ClCompile Include="Object\Item\Obj_Item_StoreMap.cpp" />
+    <ClCompile Include="Object\TripperObj\GMTripperObj.cpp" />
+    <ClCompile Include="Object\TripperObj\GMTripperObj_ItemBox.cpp" />
+    <ClCompile Include="Object\TripperObj\GMTripperObj_Platform.cpp" />
+    <ClCompile Include="Object\TripperObj\GMTripperObj_Resource.cpp" />
+    <ClCompile Include="Object\TripperObj\GMTripperObj_Transport.cpp" />
+    <ClCompile Include="Input\GMInputSystem.cpp" />
+    <ClCompile Include="Dbc\GMDataBase.cpp" />
+    <ClCompile Include="Cursor\CursorMng.cpp" />
+    <ClCompile Include="DataPool\DetailAttrib_Base.cpp" />
+    <ClCompile Include="DataPool\DetailAttrib_Player.cpp" />
+    <ClCompile Include="DataPool\GMUIDataPool.cpp" />
+    <ClCompile Include="DataPool\TeamOrGroup.cpp" />
+    <ClCompile Include="DataPool\GMDataPool.cpp" />
+    <ClCompile Include="DataPool\GMDP_CharacterData.cpp" />
+    <ClCompile Include="DataPool\GMDP_Struct_Mail.cpp" />
+    <ClCompile Include="DataPool\GMDP_Struct_Quest.cpp" />
+    <ClCompile Include="DataPool\GMDP_Struct_Relation.cpp" />
+    <ClCompile Include="DataPool\GMDP_Struct_Skill.cpp" />
+    <ClCompile Include="Script\GMScriptSystm.cpp" />
+    <ClCompile Include="Action\GMActionSystem.cpp" />
+    <ClCompile Include="Action\GMActionSystem_ChatMood.cpp" />
+    <ClCompile Include="Action\GMActionSystem_Item.cpp" />
+    <ClCompile Include="Action\GMActionSystem_LifeAbility.cpp" />
+    <ClCompile Include="Action\GMActionSystem_MouseCmd.cpp" />
+    <ClCompile Include="Action\GMActionSystem_PetSkill.cpp" />
+    <ClCompile Include="Action\GMActionSystem_Skill.cpp" />
+    <ClCompile Include="Action\GMActionSystem_XinFa.cpp" />
+    <ClCompile Include="Interface\GMGameInterface.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_AbilityTeacher.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_Bank.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_Character.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_DataPool.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_Exchange.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_Friend.cpp" />
+    <ClCompile Include="Interface\GMGameinterface_Script_GameProduceLogin.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_LifeAbility.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_NpcShop.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_Package.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_Pet.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_PlayerMySelf.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_StallBbs.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_StallBuy.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_StallSale.cpp" />
+    <ClCompile Include="Interface\GMGameInterface_Script_TargetPet.cpp" />
+    <ClCompile Include="Interface\GMInterface_Script_Guild.cpp" />
+    <ClCompile Include="Interface\GMInterface_Script_MissionReply.cpp" />
+    <ClCompile Include="Interface\GMInterface_Script_PetInviteFriend.cpp" />
+    <ClCompile Include="Interface\GMInterface_Script_PlayerShop.cpp" />
+    <ClCompile Include="Interface\GMInterface_Script_SystemSetup.cpp" />
+    <ClCompile Include="Interface\GMInterface_Script_Talk.cpp" />
+    <ClCompile Include="Interface\GMInterface_Script_Tooltip.cpp" />
+    <ClCompile Include="Network\NetManager.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGSetMoodToHeadHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTestHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGCommandHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGConnectHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGExecuteScriptHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGHeartBeatHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGMinorPasswordHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskChangeSceneHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGEnterSceneHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGLeaveSceneHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGEnvRequestHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGApplyPrivateInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskPrivateInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharAllTitlesHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharAskBaseAttribHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharAskEquipmentHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharDefaultEventHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharSitHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharStopLogicHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharUpdateCurTitleHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGLockTargetHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGOtherEquipHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGCharIdleHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharJumpHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharMoveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharPositionWarpHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCharUseSkillHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGUseAbilityHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAttackHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGSkillHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\CGAskItemInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskLockObjHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGDiscardEquipHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGDiscardItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGGemCompoundHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGItemSynchHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGOpenItemBoxHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPackage_SwipItemHandle.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPackUpPacketHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPickBoxItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGRemoveGemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGSplitItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGUnEquipHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGUseEquipHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGUseGemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGUseItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskDetailAbilityInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskDetailAttribHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskDetailListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskDetailSkillListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskDetaiXinFaListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskMyBagListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGEventRequestHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerCallOfResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerDieResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGReqLevelUpHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGReqManualAttrHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGReqResetAttrHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGDispelBuffReqHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGDoEventHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGChannelCreateHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGChannelDismissHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGChannelInviteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGChannelKickHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGChatHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskMailHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGMailHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskTeamFollowHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskTeamInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskTeamMemberInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGReturnTeamFollowHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStopTeamFollowHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamAppointHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamDismissHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamInviteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamKickHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamLeaderRetInviteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamLeaveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamRetApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGTeamRetInviteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskMissionDescHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskMissionListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGMissionAbandonHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGMissionAcceptHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGMissionCheckHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGMissionContinueHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGMissionRefuseHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGMissionSubmitHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGShopBuyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGShopCloseHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGShopRepairHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGShopSellHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskJoinMenpaiHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskLeanAbilityHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskStudyXinfaHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBankAcquireListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBankAddItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBankCloseHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBankMoneyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBankRemoveItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBankSwapItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGExchangeCancelHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGExchangeSynchLockHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGExchangeApplyIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGExchangeReplyIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGExchangeSynchItemIIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGExchangeSynchMoneyIIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGExchangeOkIIIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGIssuePetPlacardHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGManipulatePetHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGSetPetAttribHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBBSApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGBBSSychMessagesHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallAddItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallBuyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallCloseHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallDefaultPageHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallEstablishHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallItemPriceHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallOpenHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallRemoveItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGStallShopNameHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGGuildApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGGuildHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGGuildJoinHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGRelationHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopAcquireItemListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopAcquireShopListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopAskForRecordHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopBuyItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopBuyShopHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopDescHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopEstablishHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopFavoriteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopMoneyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopNameHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopOnSaleHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopOpenStallHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopPartnerHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopSaleOutHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopSizeHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGPlayerShopTypeHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGCityAskAttrHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTestHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCWorldTimeHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGAskSettingHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CGModifySettingHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCConnectHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCMinorPasswordHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCRetSettingHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCScriptCommandHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCUICommandHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCEnterSceneHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCLeaveSceneHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCNotifyChangeSceneHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCRetChangeSceneHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDelObjectHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewItemBoxHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewMonster_DeathHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewMonster_MoveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewMonsterHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCNewPet_DeathHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewPet_MoveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewPetHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewPlatformHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewPlayer_DeathHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewPlayer_MoveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewPlayerHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCNewPortalHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNewSkillObjHandler.cpp">
+      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCNewSpecialHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMonsterRealMoveHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCNewItemHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCPlayerRealMoveHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCCharAllTitlesHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharBaseAttribHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharBUFFHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharDirectImpactHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharDoActionHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharEquipmentHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharFirstLoginHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharImpactListUpdateHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharStopActionHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDieHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCLevelUpHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCModifySpeedHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCObjTeleportHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPrivateInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTargetListAndHitFlagsHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMonsterSpeakHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCOtherEquipHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCCharIdleHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharJumpHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharMoveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharMoveResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCArriveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBankItemInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBoxItemListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDiscardEquipResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDiscardItemResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCItemInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCItemListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCItemSynchHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNotifyEquipHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPackage_SwipItemHandle.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPackUpPacketHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPickResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCRemoveGemResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCSplitItemResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCUnEquipResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCUseEquipResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCUseGemResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCUseItemResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAddCanPickMissionItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCanPickMissionItemListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailAbilityInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailAttribHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailBUFFHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailEquipListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailHealsAndDamagesHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailImpactListUpdateHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailSkillListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailXinFalListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCLevelUpResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCManualAttrResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMyBagListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNotifyGoodBadHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerCallOfHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerDieHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerReliveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCRemoveCanPickMissionItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCReqResetAttrResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAbandonAbilityHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAbilityActionHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAbilityExpHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAbilityLevelHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAbilityResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAbilitySuccHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharActionHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharModifyActionHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharSkill_CreateBulletHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharSkill_Gather_ModifyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharSkill_GatherHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharSkill_Lead_ModifyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharSkill_LeadHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharSkill_MissedHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCharSkill_SendHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCOperateResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPrescriptionHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAttackHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCErrorAttackHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCErrorSkillHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCOtherAttackHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCOtherSkillHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCSkillHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Network\PacketHandler\GCSkillPrepareHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCoolDownUpdateHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAskTeamFollowHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNotifyTeamInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCReturnTeamFollowHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamAskApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamAskInviteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamFollowErrHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamFollowListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamLeaderAskInviteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamMemberInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCTeamResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCChannelErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCChannelResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCChatHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCSystemMsgHandle.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMailHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCNotifyMailHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMissionAddHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMissionListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMissionModifyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMissionRemoveHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMissionResultHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCRetMissionDescHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCShopBuyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCShopMerchandiseListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCShopRepairHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCShopSellHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCShopSoldListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCShopUpdateMerchandiseListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCAbilityTeacherInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCJoinMenpaiHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCMenpaiInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStudyXinfaHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCXinfaStudyInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBankAcquireListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBankAddItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBankBeginHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBankMoneyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBankRemoveItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBankSwapItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeCancelHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeSynchLockHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeApplyIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeEstablishIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeSynchConfirmIIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeSynchIIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCExchangeSuccessIIIHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCDetailAttrib_PetHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCManipulatePetRetHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPetPlacardListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCRemovePetHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCBBSMessagesHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallAddItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallBuyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallCloseHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallEstablishHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallItemPriceHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallOpenHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCStallRemoveItemHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCGuildApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCGuildErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCGuildHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCGuildReturnHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCRelationHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCSpecialObj_ActNowHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCSpecialObj_FadeOutHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopAcquireShopListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopApplyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopBuyShopHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopEstablishHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopMoneyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopOnSaleHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopOpenStallHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopRecordListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopSaleOutHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopStallStatusHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopTypeHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopUpdateFavoriteHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCPlayerShopUpdatePartnersHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCityAttrHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCityErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GCCityNotifyHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GWCityApplyNewCityHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GWCityAskInitInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GWCityCloseHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GWCityCloseSuccessHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\GWCityOptHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\WGCityApplyNewCityHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\WGCityAttrHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\WGCityCloseHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\WGCityCloseSuccessHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\WGCityErrorHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\WGCityInitInfoHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\LCRetCharListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\LCRetCharLoginHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\LCRetConnectHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\LCRetCreateCharHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\LCRetDeleteCharHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\LCRetLoginHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\LCStatusHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CLAskCharListHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CLAskCharLoginHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CLAskCreateCharHander.cpp" />
+    <ClCompile Include="Network\PacketHandler\CLAskDeleteCharHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CLAskLoginHandler.cpp" />
+    <ClCompile Include="Network\PacketHandler\CLConnectHandler.cpp" />
+    <ClCompile Include="FakeObject\GMFakeObjSystem.cpp" />
+    <ClCompile Include="Event\GMEventSystem.cpp" />
+    <ClCompile Include="Sound\GMSoundBuffer.cpp" />
+    <ClCompile Include="Sound\GMSoundSource.cpp" />
+    <ClCompile Include="Sound\GMSoundSystem.cpp" />
+    <ClCompile Include="Procedure\GameProcedure.cpp" />
+    <ClCompile Include="Procedure\GamePro_Login.cpp" />
+    <ClCompile Include="Procedure\GamePro_CharSel.cpp" />
+    <ClCompile Include="Procedure\CharacterFaceMng.cpp" />
+    <ClCompile Include="Procedure\FaceModelMng.cpp" />
+    <ClCompile Include="Procedure\GamePro_CharCreate.cpp" />
+    <ClCompile Include="Procedure\HairModelMng.cpp" />
+    <ClCompile Include="Procedure\GamePro_Enter.cpp" />
+    <ClCompile Include="Procedure\GamePro_Main.cpp" />
+    <ClCompile Include="Procedure\GamePro_ChangeScene.cpp" />
+    <ClCompile Include="Helper\GMHelperSystem.cpp" />
+    <ClCompile Include="Variable\GMVariable.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameCommand.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="World\Scene.h" />
+    <ClInclude Include="World\WorldManager.h" />
+    <ClInclude Include="World\Zone.h" />
+    <ClInclude Include="World\Path.h" />
+    <ClInclude Include="World\Region.h" />
+    <ClInclude Include="World\BuildingCollisionMng.h" />
+    <ClInclude Include="Object\ActionSetMgr.h" />
+    <ClInclude Include="Object\BulletDataMgr.h" />
+    <ClInclude Include="Object\GMObjectLoadQueue.h" />
+    <ClInclude Include="Object\Obj_Building.h" />
+    <ClInclude Include="Object\Obj_Dynamic.h" />
+    <ClInclude Include="Object\Obj_Map.h" />
+    <ClInclude Include="Object\Obj_Phy.h" />
+    <ClInclude Include="Object\Obj_Static.h" />
+    <ClInclude Include="Object\Object.h" />
+    <ClInclude Include="Object\ObjectCommand.h" />
+    <ClInclude Include="Object\ObjectCommandDef.h" />
+    <ClInclude Include="Object\ObjectDef.h" />
+    <ClInclude Include="Object\ObjectManager.h" />
+    <ClInclude Include="Object\Character\CharacterStruct.h" />
+    <ClInclude Include="Object\Character\Obj_Character.h" />
+    <ClInclude Include="Object\Character\Obj_PlayerMySelf.h" />
+    <ClInclude Include="Object\Character\Obj_PlayerNPC.h" />
+    <ClInclude Include="Object\Character\Obj_PlayerOther.h" />
+    <ClInclude Include="Object\Character\Ai\GMAI_Base.h" />
+    <ClInclude Include="Object\Character\Ai\GMAI_MySelf.h" />
+    <ClInclude Include="Object\Character\Ai\GMAICommandDef.h" />
+    <ClInclude Include="Object\Surface\Obj_Bullet.h" />
+    <ClInclude Include="Object\Surface\Obj_Effect.h" />
+    <ClInclude Include="Object\Surface\Obj_SkillObj.h" />
+    <ClInclude Include="Object\Surface\Obj_Special.h" />
+    <ClInclude Include="Object\Surface\Obj_Surface.h" />
+    <ClInclude Include="Object\ProjTex\Obj_ProjTex.h" />
+    <ClInclude Include="Object\Item\Obj_Item.h" />
+    <ClInclude Include="Object\Item\Obj_Item_Equip.h" />
+    <ClInclude Include="Object\Item\Obj_Item_Gem.h" />
+    <ClInclude Include="Object\Item\Obj_Item_Medicine.h" />
+    <ClInclude Include="Object\Item\Obj_Item_StoreMap.h" />
+    <ClInclude Include="Object\TripperObj\GMTripperObj.h" />
+    <ClInclude Include="Object\TripperObj\GMTripperObj_ItemBox.h" />
+    <ClInclude Include="Object\TripperObj\GMTripperObj_Platform.h" />
+    <ClInclude Include="Object\TripperObj\GMTripperObj_Resource.h" />
+    <ClInclude Include="Object\TripperObj\GMTripperObj_Transport.h" />
+    <ClInclude Include="Input\GMInputSystem.h" />
+    <ClInclude Include="Dbc\GMDataBase.h" />
+    <ClInclude Include="Cursor\CursorMng.h" />
+    <ClInclude Include="DataPool\DataPoolCommandDef.h" />
+    <ClInclude Include="DataPool\DetailAttrib_Base.h" />
+    <ClInclude Include="DataPool\DetailAttrib_Player.h" />
+    <ClInclude Include="DataPool\GMUIDataPool.h" />
+    <ClInclude Include="DataPool\TeamOrGroup.h" />
+    <ClInclude Include="DataPool\GMDataPool.h" />
+    <ClInclude Include="DataPool\GMDP_CharacterData.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_CharacterData.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_Guild.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_Mail.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_Pet.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_PlayerShop.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_Quest.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_RecordList.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_Relation.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_Skill.h" />
+    <ClInclude Include="DataPool\GMDP_Struct_Title.h" />
+    <ClInclude Include="Script\GMScriptSystem.h" />
+    <ClInclude Include="Action\GMActionSystem.h" />
+    <ClInclude Include="Action\GMActionSystem_ChatMood.h" />
+    <ClInclude Include="Action\GMActionSystem_Item.h" />
+    <ClInclude Include="Action\GMActionSystem_LifeAbility.h" />
+    <ClInclude Include="Action\GMActionSystem_MouseCmd.h" />
+    <ClInclude Include="Action\GMActionSystem_PetSkill.h" />
+    <ClInclude Include="Action\GMActionSystem_Skill.h" />
+    <ClInclude Include="Action\GMActionSystem_XinFa.h" />
+    <ClInclude Include="Interface\GMGameInterface.h" />
+    <ClInclude Include="Interface\GMGameInterface_Script.h" />
+    <ClInclude Include="Interface\GMGameInterface_Script_Package.h" />
+    <ClInclude Include="Interface\GMInterface_Lua.h" />
+    <ClInclude Include="Interface\GMInterface_Script_Guild.h" />
+    <ClInclude Include="Interface\GMInterface_Script_PetInviteFriend.h" />
+    <ClInclude Include="Interface\GMInterface_Script_SystemSetup.h" />
+    <ClInclude Include="Interface\GMInterface_Script_Talk.h" />
+    <ClInclude Include="Interface\GMInterface_Script_Tooltip.h" />
+    <ClInclude Include="Network\NetManager.h" />
+    <ClInclude Include="FakeObject\GMFakeObjSystem.h" />
+    <ClInclude Include="Event\GMEventSystem.h" />
+    <ClInclude Include="..\Common\TDEventDefine.h" />
+    <ClInclude Include="Sound\GMSoundBuffer.h" />
+    <ClInclude Include="Sound\GMSoundSource.h" />
+    <ClInclude Include="Sound\GMSoundSystem.h" />
+    <ClInclude Include="Procedure\GameProcedure.h" />
+    <ClInclude Include="Procedure\GamePro_Login.h" />
+    <ClInclude Include="Procedure\LoginDataStructDef.h" />
+    <ClInclude Include="Procedure\GamePro_CharSel.h" />
+    <ClInclude Include="Procedure\CharacterFaceMng.h" />
+    <ClInclude Include="Procedure\FaceModelMng.h" />
+    <ClInclude Include="Procedure\GamePro_CharCreate.h" />
+    <ClInclude Include="Procedure\HairModelMng.h" />
+    <ClInclude Include="Procedure\GamePro_Enter.h" />
+    <ClInclude Include="Procedure\GamePro_Main.h" />
+    <ClInclude Include="Procedure\GamePro_ChangeScene.h" />
+    <ClInclude Include="Helper\GMHelperSystem.h" />
+    <ClInclude Include="Variable\GMVariable.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\Attack.cur" />
+    <None Include="Res\AutoRun.cur" />
+    <None Include="Res\Game.ico" />
+    <None Include="Res\Herbs.CUR" />
+    <None Include="Res\Hover.CUR" />
+    <None Include="Res\Identify.CUR" />
+    <None Include="Res\Interact.CUR" />
+    <None Include="Res\Mine.CUR" />
+    <None Include="Res\Normal.cur" />
+    <None Include="Res\PickUp.cur" />
+    <None Include="Res\Repair.CUR" />
+    <None Include="Res\small.ico" />
+    <None Include="Res\Speak.CUR" />
+    <None Include="Res\UnReachable.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CEGUISystem\CEGUISystem.vcxproj">
+      <Project>{52608c89-4b8f-44a6-a984-8877e8db8d03}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\CEGUI\!Scripts\VC7.1\CEGUIBase.vcxproj">
+      <Project>{232b1f48-87c1-4ef9-98a2-cf675bac7a54}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\CEGUI\!Scripts\VC7.1\CEGUIFalagard.vcxproj">
+      <Project>{e1a62a24-ff2e-4b16-a128-862a8f655e06}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\LuaPlus\!Scripts\VC7.1\LuaPlus.vcxproj">
+      <Project>{1658eb2f-8e9f-4d28-85ac-633f0f4c82d4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\WXEngine\WXEngine.vcxproj">
+      <Project>{a1b4bf17-94bc-4af8-8160-bf4d1d2be963}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\WXNetPackets\WXNetPackets.vcxproj">
+      <Project>{249b983a-3a90-4ea7-96bd-59ebc2fb94dc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\WXRender\WXRender.vcxproj">
+      <Project>{4a768006-eb60-4a38-b26b-912044640819}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Game.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

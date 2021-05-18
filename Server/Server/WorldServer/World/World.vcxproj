@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>WorldServer</ProjectName>
+    <ProjectGuid>{4D778274-0A92-4F5F-B8AB-A53168CE4A2B}</ProjectGuid>
+    <RootNamespace>World</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2020</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\Main\;.\Packets\;.\WorldData\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\Packets\;..\..\..\Common\DataBase\;..\..\..\Common\ServerBase\;..\..\GameServer\Server\SMU\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__WINDOWS__;_FOX_WORLD;_FOX_LOGIN;_FOX_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)World.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>.\;.\Main\;.\Packets\;.\WorldData\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\Packets\;..\..\..\Common\DataBase\;..\..\..\Common\ServerBase\;..\..\GameServer\Server\SMU\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;__WINDOWS__;_FOX_WORLD;_FOX_LOGIN;_FOX_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\Assertx.cpp" />
+    <ClCompile Include="..\..\..\Common\Chain.cpp" />
+    <ClCompile Include="..\..\..\Common\Combat\CampAndStand.cpp" />
+    <ClCompile Include="..\..\..\Common\DataBase\TLBB_DBC.cpp" />
+    <ClCompile Include="..\..\..\Common\DB_Struct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameDefine_Result.cpp" />
+    <ClCompile Include="..\..\..\Common\GameStruct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameStruct_Finger.cpp" />
+    <ClCompile Include="..\..\..\Common\GameStruct_Relation.cpp" />
+    <ClCompile Include="..\..\..\Common\GameUtil.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\FileAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Packet.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\ServerSocket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Socket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketInputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketOutputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\PacketFactoryManager.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWAskChangeScene.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWAskMail.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWAskSceneData.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWAskTeamInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWAskTeamMemberInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWAskUserData.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWBatchMail.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWCallOfHuman.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWChangeMenpai.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelCreate.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelDismiss.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelInvite.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWChannelKick.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWChat.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWCityApplyNewCity.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWCityAskInitInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWCityClose.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWCityCloseSuccess.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWCityOpt.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWCommand.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWEnterTeamFollow.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWFinger.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWGuild.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWHeartBeat.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWLevelUp.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWMail.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWNotifyUser.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWRelation.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWStopTeamFollow.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWSystemMsg.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamApply.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamAppoint.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamDismiss.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamInvite.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamKick.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamLeaderRetInvite.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamLeave.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamMemberEnterScene.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamRetApply.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWTeamRetInvite.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\GWUpdateTitle.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LWAskCharLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LWAskDeleteChar.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\SSConnect.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\SSScenePlayerCount.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGCallOfHuman.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGChannelError.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGChannelResult.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGChat.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGCityApplyNewCity.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGCityAttr.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGCityClose.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGCityCloseSuccess.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGCityError.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGCityInitInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGFinger.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGGuild.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGGuildError.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGGuildReturn.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGMail.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGNotifyMail.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGNotifyUser.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGRelation.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGRetChangeScene.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGRetSceneData.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGRetUserData.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGSystemMsg.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamAskApply.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamAskInvite.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamError.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamFollowList.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamLeaderAskInvite.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamList.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamMemberInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGTeamResult.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WGWorldTime.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WLRetCharLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WLRetDeleteChar.cpp" />
+    <ClCompile Include="..\..\..\Common\Rand.cpp" />
+    <ClCompile Include="..\..\..\Common\ScriptCommandStruct.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Config.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\File.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\IDTable.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Ini.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Log.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\StrTable.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Thread.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\TimeManager.cpp" />
+    <ClCompile Include="..\..\..\Common\ShareMemAPI.cpp" />
+    <ClCompile Include="..\..\GameServer\Server\SMU\ShareMemAO.cpp" />
+    <ClCompile Include="..\..\GameServer\Server\SMU\SMUManager.cpp" />
+    <ClCompile Include="Main\Player.cpp" />
+    <ClCompile Include="Main\PlayerManager.cpp" />
+    <ClCompile Include="Main\PlayerPool.cpp" />
+    <ClCompile Include="Main\ServerManager.cpp" />
+    <ClCompile Include="Main\ServerPlayer.cpp" />
+    <ClCompile Include="Main\ShareMemManager.cpp" />
+    <ClCompile Include="Main\World.cpp" />
+    <ClCompile Include="Main\WorldTable.cpp" />
+    <ClCompile Include="Packets\GWAskChangeSceneHandler.cpp" />
+    <ClCompile Include="Packets\GWAskMailHandler.cpp" />
+    <ClCompile Include="Packets\GWAskSceneDataHandler.cpp" />
+    <ClCompile Include="Packets\GWAskTeamInfoHandler.cpp" />
+    <ClCompile Include="Packets\GWAskTeamMemberInfoHandler.cpp" />
+    <ClCompile Include="Packets\GWAskUserDataHandler.cpp" />
+    <ClCompile Include="Packets\GWBatchMailHandler.cpp" />
+    <ClCompile Include="Packets\GWCallOfHumanHandler.cpp" />
+    <ClCompile Include="Packets\GWChangeMenpaiHandler.cpp" />
+    <ClCompile Include="Packets\GWChannelCreateHandler.cpp" />
+    <ClCompile Include="Packets\GWChannelDismissHandler.cpp" />
+    <ClCompile Include="Packets\GWChannelInviteHandler.cpp" />
+    <ClCompile Include="Packets\GWChannelKickHandler.cpp" />
+    <ClCompile Include="Packets\GWChatHandler.cpp" />
+    <ClCompile Include="Packets\GWCityApplyNewCityHandler.cpp" />
+    <ClCompile Include="Packets\GWCityAskInitInfoHandler.cpp" />
+    <ClCompile Include="Packets\GWCityCloseHandler.cpp" />
+    <ClCompile Include="Packets\GWCityCloseSuccessHandler.cpp" />
+    <ClCompile Include="Packets\GWCityOptHandler.cpp" />
+    <ClCompile Include="Packets\GWCommandHandler.cpp" />
+    <ClCompile Include="Packets\GWEnterTeamFollowHandler.cpp" />
+    <ClCompile Include="Packets\GWFingerHandler.cpp" />
+    <ClCompile Include="Packets\GWGuildHandler.cpp" />
+    <ClCompile Include="Packets\GWHeartBeatHandler.cpp" />
+    <ClCompile Include="Packets\GWLevelUpHandler.cpp" />
+    <ClCompile Include="Packets\GWMailHandler.cpp" />
+    <ClCompile Include="Packets\GWNotifyUserHandler.cpp" />
+    <ClCompile Include="Packets\GWRelationHandler.cpp" />
+    <ClCompile Include="Packets\GWStopTeamFollowHandler.cpp" />
+    <ClCompile Include="Packets\GWSystemMsgHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamApplyHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamAppointHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamDismissHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamInviteHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamKickHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamLeaderRetInviteHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamLeaveHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamMemberEnterSceneHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamRetApplyHandler.cpp" />
+    <ClCompile Include="Packets\GWTeamRetInviteHandler.cpp" />
+    <ClCompile Include="Packets\GWUpdateTitleHandler.cpp" />
+    <ClCompile Include="Packets\LWAskCharLoginHandler.cpp" />
+    <ClCompile Include="Packets\LWAskDeleteCharHandler.cpp" />
+    <ClCompile Include="Packets\SSConnectHandler.cpp" />
+    <ClCompile Include="Packets\SSScenePlayerCountHandler.cpp" />
+    <ClCompile Include="Packets\WGHandler.cpp" />
+    <ClCompile Include="Packets\WLHandler.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WorldData\AllUser.cpp" />
+    <ClCompile Include="WorldData\ChatCenter.cpp" />
+    <ClCompile Include="WorldData\City.cpp" />
+    <ClCompile Include="WorldData\CityManager.cpp" />
+    <ClCompile Include="WorldData\Guild.cpp" />
+    <ClCompile Include="WorldData\GuildManager.cpp" />
+    <ClCompile Include="WorldData\MailCenter.cpp" />
+    <ClCompile Include="WorldData\MailDefine.cpp" />
+    <ClCompile Include="WorldData\MailPool.cpp" />
+    <ClCompile Include="WorldData\OnlineUser.cpp" />
+    <ClCompile Include="WorldData\SceneInfo.cpp" />
+    <ClCompile Include="WorldData\Team.cpp" />
+    <ClCompile Include="WorldData\User.cpp" />
+    <ClCompile Include="WorldData\WorldTimeInfo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\Assertx.h" />
+    <ClInclude Include="..\..\..\Common\BaseType.h" />
+    <ClInclude Include="..\..\..\Common\Chain.h" />
+    <ClInclude Include="..\..\..\Common\Combat\CampAndStand.h" />
+    <ClInclude Include="..\..\..\Common\DataBase\TLBB_DBC.h" />
+    <ClInclude Include="..\..\..\Common\DB_Struct.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine2.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Attr.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_City.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Guild.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Item.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Result.h" />
+    <ClInclude Include="..\..\..\Common\GameDefine_Scene.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_City.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Finger.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Guild.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Item.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Relation.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct_Skill.h" />
+    <ClInclude Include="..\..\..\Common\GameUtil.h" />
+    <ClInclude Include="..\..\..\Common\Net\FileAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\Packet.h" />
+    <ClInclude Include="..\..\..\Common\Net\ServerSocket.h" />
+    <ClInclude Include="..\..\..\Common\Net\Socket.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketInputStream.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketOutputStream.h" />
+    <ClInclude Include="..\..\..\Common\OResultDef.h" />
+    <ClInclude Include="..\..\..\Common\PacketDefine.h" />
+    <ClInclude Include="..\..\..\Common\PacketFactory.h" />
+    <ClInclude Include="..\..\..\Common\PacketFactoryManager.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWAskChangeScene.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWAskMail.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWAskSceneData.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWAskTeamInfo.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWAskTeamMemberInfo.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWAskUserData.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWBatchMail.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWCallOfHuman.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWChangeMenpai.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelCreate.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelDismiss.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelInvite.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWChannelKick.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWChat.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWCityApplyNewCity.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWCityAskInitInfo.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWCityClose.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWCityCloseSuccess.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWCityOpt.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWCommand.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWEnterTeamFollow.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWFinger.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWGuild.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWHeartBeat.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWLevelUp.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWMail.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWNotifyUser.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWRelation.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWStopTeamFollow.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWSystemMsg.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamApply.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamAppoint.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamDismiss.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamInvite.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamKick.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamLeaderRetInvite.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamLeave.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamMemberEnterScene.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamRetApply.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWTeamRetInvite.h" />
+    <ClInclude Include="..\..\..\Common\Packets\GWUpdateTitle.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LWAskCharLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LWAskDeleteChar.h" />
+    <ClInclude Include="..\..\..\Common\Packets\SSConnect.h" />
+    <ClInclude Include="..\..\..\Common\Packets\SSScenePlayerCount.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGCallOfHuman.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGChannelError.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGChannelResult.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGChat.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGCityApplyNewCity.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGCityAttr.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGCityClose.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGCityCloseSuccess.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGCityError.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGCityInitInfo.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGFinger.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGGuild.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGGuildError.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGGuildReturn.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGMail.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGNotifyMail.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGNotifyUser.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGRelation.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGRetChangeScene.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGRetSceneData.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGRetUserData.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGSystemMsg.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamAskApply.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamAskInvite.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamError.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamFollowList.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamLeaderAskInvite.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamList.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamMemberInfo.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGTeamResult.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WGWorldTime.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WLRetCharLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WLRetDeleteChar.h" />
+    <ClInclude Include="..\..\..\Common\PlayerStatus.h" />
+    <ClInclude Include="..\..\..\Common\Rand.h" />
+    <ClInclude Include="..\..\..\Common\ScriptCommandStruct.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Config.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\File.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\FileDef.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\IDTable.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Ini.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Log.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\StrTable.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Thread.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\TimeManager.h" />
+    <ClInclude Include="..\..\..\Common\ShareMemAPI.h" />
+    <ClInclude Include="..\..\..\Common\Type.h" />
+    <ClInclude Include="..\..\GameServer\Server\SMU\ShareMemAO.h" />
+    <ClInclude Include="..\..\GameServer\Server\SMU\SMUManager.h" />
+    <ClInclude Include="Main\Player.h" />
+    <ClInclude Include="Main\PlayerManager.h" />
+    <ClInclude Include="Main\PlayerPool.h" />
+    <ClInclude Include="Main\ServerManager.h" />
+    <ClInclude Include="Main\ServerPlayer.h" />
+    <ClInclude Include="Main\ShareMemManager.h" />
+    <ClInclude Include="Main\World.h" />
+    <ClInclude Include="Main\WorldTable.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WorldData\AllUser.h" />
+    <ClInclude Include="WorldData\ChatCenter.h" />
+    <ClInclude Include="WorldData\City.h" />
+    <ClInclude Include="WorldData\CityManager.h" />
+    <ClInclude Include="WorldData\Guild.h" />
+    <ClInclude Include="WorldData\GuildManager.h" />
+    <ClInclude Include="WorldData\MailCenter.h" />
+    <ClInclude Include="WorldData\MailDefine.h" />
+    <ClInclude Include="WorldData\MailPool.h" />
+    <ClInclude Include="WorldData\OnlineUser.h" />
+    <ClInclude Include="WorldData\SceneInfo.h" />
+    <ClInclude Include="WorldData\Team.h" />
+    <ClInclude Include="WorldData\User.h" />
+    <ClInclude Include="WorldData\WorldTimeInfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WorldData\User.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

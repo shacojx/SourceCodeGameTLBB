@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>LoginServer</ProjectName>
+    <ProjectGuid>{A96B2780-955F-4528-8B0E-F6E33C78DD4B}</ProjectGuid>
+    <RootNamespace>Login</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2020</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\_Bin\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\_$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <TypeLibraryName>.\release/myTest.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>.\;.\DB\;.\Main\;.\Player\;.\Process\;.\ClientMain\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\Packets\;..\..\..\Common\ServerBase\;..\..\..\Common\DBSystem\DataBase\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;__WINDOWS__;_FOX_LOGIN;_FOX_WORLD;_FOX_CLIENT;_FOX_BILLING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AssemblerListingLocation>.\release/</AssemblerListingLocation>
+      <ObjectFileName>.\release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\lib_release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\release/myTest.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <TypeLibraryName>.\debug/myTest.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\DB\;.\Main\;.\Player\;.\Process\;.\ClientMain\;..\..\..\Common\;..\..\..\Common\Net\;..\..\..\Common\Packets\;..\..\..\Common\ServerBase\;..\..\..\Common\DBSystem\DataBase\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;__WINDOWS__;_FOX_LOGIN;_FOX_WORLD;_FOX_CLIENT;_FOX_BILLING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation />
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc70.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)Login.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\Assertx.cpp" />
+    <ClCompile Include="..\..\..\Common\DataBase\TLBB_DBC.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBAbilityList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCharFullData.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCharList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCoolDownInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBCreateCharOp.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBDeleteCharOp.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBEquipBaseList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBImpactList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBItemList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBManager.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBPetList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBPrivateInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBRelationList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBSkillList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBTaskList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBTitleInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBWebShopInfo.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\DBXinFaList.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\ODBCBase.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\ODBCInterface.cpp" />
+    <ClCompile Include="..\..\..\Common\DBSystem\DataBase\SqlTemplate.cpp" />
+    <ClCompile Include="..\..\..\Common\DB_Struct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameStruct.cpp" />
+    <ClCompile Include="..\..\..\Common\GameUtil.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\FileAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Packet.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\ServerSocket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\Socket.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketAPI.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketInputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\Net\SocketOutputStream.cpp" />
+    <ClCompile Include="..\..\..\Common\PacketFactoryManager.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\BLRetAuth.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\CLAskCharList.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\CLAskCharLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\CLAskCreateChar.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\CLAskDeleteChar.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\CLAskLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\CLConnect.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LBAskAuth.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LCRetCharList.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LCRetCharLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LCRetConnect.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LCRetCreateChar.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LCRetDeleteChar.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LCRetLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LCStatus.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LWAskCharLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\LWAskDeleteChar.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\SSConnect.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\SSScenePlayerCount.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WLRetCharLogin.cpp" />
+    <ClCompile Include="..\..\..\Common\Packets\WLRetDeleteChar.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Config.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Ini.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Log.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\Thread.cpp" />
+    <ClCompile Include="..\..\..\Common\ServerBase\TimeManager.cpp" />
+    <ClCompile Include="DB\CharConfig.cpp" />
+    <ClCompile Include="DB\DBLogicManager.cpp" />
+    <ClCompile Include="DB\DBThread.cpp" />
+    <ClCompile Include="DB\DBThreadManager.cpp" />
+    <ClCompile Include="DB\LoginDBManager.cpp" />
+    <ClCompile Include="Main\ConnectManager.cpp" />
+    <ClCompile Include="Main\Login.cpp" />
+    <ClCompile Include="Main\LoginMain.cpp" />
+    <ClCompile Include="Main\ServerManager.cpp" />
+    <ClCompile Include="Main\ServerThread.cpp" />
+    <ClCompile Include="Main\ThreadManager.cpp" />
+    <ClCompile Include="Packets\BLRetAuthHandler.cpp" />
+    <ClCompile Include="Packets\CLAskCharListHandler.cpp" />
+    <ClCompile Include="Packets\CLAskCharLoginHandler.cpp" />
+    <ClCompile Include="Packets\CLAskCreateCharHander.cpp" />
+    <ClCompile Include="Packets\CLAskDeleteCharHandler.cpp" />
+    <ClCompile Include="Packets\CLAskLoginHandler.cpp" />
+    <ClCompile Include="Packets\CLConnectHandler.cpp" />
+    <ClCompile Include="Packets\LBAskAuthHandler.cpp" />
+    <ClCompile Include="Packets\LCRetCharListHandler.cpp" />
+    <ClCompile Include="Packets\LCRetCharLoginHandler.cpp" />
+    <ClCompile Include="Packets\LCRetConnectHandler.cpp" />
+    <ClCompile Include="Packets\LCRetCreateCharHandler.cpp" />
+    <ClCompile Include="Packets\LCRetDeleteCharHandler.cpp" />
+    <ClCompile Include="Packets\LCRetLoginHandler.cpp" />
+    <ClCompile Include="Packets\LCStatusHandler.cpp" />
+    <ClCompile Include="Packets\LWAskCharLoginHandler.cpp" />
+    <ClCompile Include="Packets\LWAskDeleteCharHandler.cpp" />
+    <ClCompile Include="Packets\SSConnectHandler.cpp" />
+    <ClCompile Include="Packets\SSScenePlayerCountHandler.cpp" />
+    <ClCompile Include="Packets\WLRetCharLoginHandler.cpp" />
+    <ClCompile Include="Packets\WLRetDeleteCharHandler.cpp" />
+    <ClCompile Include="Player\LoginPlayer.cpp" />
+    <ClCompile Include="Player\LoginPlayerManager.cpp" />
+    <ClCompile Include="Player\Player.cpp" />
+    <ClCompile Include="Player\PlayerManager.cpp" />
+    <ClCompile Include="Player\PlayerPool.cpp" />
+    <ClCompile Include="Player\ServerPlayer.cpp" />
+    <ClCompile Include="Player\TurnPlayerQueue.cpp" />
+    <ClCompile Include="Process\ProcessManager.cpp" />
+    <ClCompile Include="Process\ProcessPlayerManager.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\Assertx.h" />
+    <ClInclude Include="..\..\..\Common\DataBase\TLBB_DBC.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBAbilityList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCharFullData.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCharList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCoolDownInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBCreateCharOp.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBDeleteCharOp.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBEquipBaseList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBImpactList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBItemList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBManager.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBPetList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBPrivateInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBRelationList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBSkillList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTaskList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTitleInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBTypes.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBWebShopInfo.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\DBXinFaList.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\ODBCBase.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\ODBCInterface.h" />
+    <ClInclude Include="..\..\..\Common\DBSystem\DataBase\SqlTemplate.h" />
+    <ClInclude Include="..\..\..\Common\DB_Struct.h" />
+    <ClInclude Include="..\..\..\Common\GameStruct.h" />
+    <ClInclude Include="..\..\..\Common\GameUtil.h" />
+    <ClInclude Include="..\..\..\Common\Net\FileAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\Packet.h" />
+    <ClInclude Include="..\..\..\Common\Net\ServerSocket.h" />
+    <ClInclude Include="..\..\..\Common\Net\Socket.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketAPI.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketInputStream.h" />
+    <ClInclude Include="..\..\..\Common\Net\SocketOutputStream.h" />
+    <ClInclude Include="..\..\..\Common\PacketDefine.h" />
+    <ClInclude Include="..\..\..\Common\PacketFactory.h" />
+    <ClInclude Include="..\..\..\Common\PacketFactoryManager.h" />
+    <ClInclude Include="..\..\..\Common\Packets\BLRetAuth.h" />
+    <ClInclude Include="..\..\..\Common\Packets\CLAskCharList.h" />
+    <ClInclude Include="..\..\..\Common\Packets\CLAskCharLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\CLAskCreateChar.h" />
+    <ClInclude Include="..\..\..\Common\Packets\CLAskDeleteChar.h" />
+    <ClInclude Include="..\..\..\Common\Packets\CLAskLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\CLConnect.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LBAskAuth.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LCRetCharList.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LCRetCharLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LCRetConnect.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LCRetCreateChar.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LCRetDeleteChar.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LCRetLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LCStatus.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LWAskCharLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\LWAskDeleteChar.h" />
+    <ClInclude Include="..\..\..\Common\Packets\SSConnect.h" />
+    <ClInclude Include="..\..\..\Common\Packets\SSScenePlayerCount.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WLRetCharLogin.h" />
+    <ClInclude Include="..\..\..\Common\Packets\WLRetDeleteChar.h" />
+    <ClInclude Include="..\..\..\Common\PlayerStatus.h" />
+    <ClInclude Include="..\..\..\Common\ResultDefine.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Config.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Ini.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Log.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\Thread.h" />
+    <ClInclude Include="..\..\..\Common\ServerBase\TimeManager.h" />
+    <ClInclude Include="..\..\..\Common\Type.h" />
+    <ClInclude Include="DB\CharConfig.h" />
+    <ClInclude Include="DB\DBLogicManager.h" />
+    <ClInclude Include="DB\DBThread.h" />
+    <ClInclude Include="DB\DBThreadManager.h" />
+    <ClInclude Include="DB\LoginDBManager.h" />
+    <ClInclude Include="Main\ConnectManager.h" />
+    <ClInclude Include="Main\Login.h" />
+    <ClInclude Include="Main\LoginMain.h" />
+    <ClInclude Include="Main\ServerManager.h" />
+    <ClInclude Include="Main\ServerThread.h" />
+    <ClInclude Include="Main\ThreadManager.h" />
+    <ClInclude Include="Player\LoginPlayer.h" />
+    <ClInclude Include="Player\LoginPlayerManager.h" />
+    <ClInclude Include="Player\Player.h" />
+    <ClInclude Include="Player\PlayerManager.h" />
+    <ClInclude Include="Player\PlayerPool.h" />
+    <ClInclude Include="Player\ServerPlayer.h" />
+    <ClInclude Include="Player\TurnPlayerQueue.h" />
+    <ClInclude Include="Process\ProcessManager.h" />
+    <ClInclude Include="Process\ProcessPlayerManager.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

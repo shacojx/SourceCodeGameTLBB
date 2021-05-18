@@ -1,0 +1,303 @@
+///////////////// 用于贴图带alpha通道的衣服模型 ////////////
+material PerPixelLightingWithAlphaTemplate
+{
+	// 最高的技术，需要ps_2_0, vs_1_1
+	technique HighTech
+	{
+		// 计算环境光与自发光的颜色，并输出纹理的alpha值用于alpha_rejection
+		pass Ambient
+		{	
+			ambient 1 1 1
+			diffuse 0 0 0
+			specualr 0 0 0
+			emissive 1 1 1
+			
+		    alpha_rejection greater 128           
+
+			vertex_program_ref HighTechWithAlphaAmbientPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix	
+				param_named_auto ambient ambient_light_colour	
+				
+				param_named ambientMat float4 1.0 1.0 1.0 1.0
+				param_named emissiveColor float4 0.275 0.275 0.275 1.0		
+			}
+			
+			fragment_program_ref HighTechWithAlphaAmbientPassFP
+			{								
+			}
+			
+			texture_unit origin
+			{
+				texture <baseTex.jpg>
+				texture_alias <baseTexture>
+			}		
+		}
+		
+		// 计算方向性光源的颜色，并输出纹理的alpha值用于alpha_rejection
+		pass DirectionalLighting
+		{
+			ambient 0 0 0
+			diffuse 1 1 1
+			specualr 1 1 1
+			emissive 0 0 0
+
+            alpha_rejection greater 128  
+                     
+			iteration once_per_light directional
+			max_lights 2
+					
+			scene_blend add
+			
+			vertex_program_ref HighTechWithAlphaDirectionalLightingPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix							
+				param_named_auto lightPosition light_position_object_space 0							
+				param_named_auto eyePosition camera_position_object_space				
+				param_named_auto diffuseColor light_diffuse_colour 0
+				
+				param_named diffuseMat float4 1.0 1.0 1.0 1.0						
+    		}
+			
+			fragment_program_ref HighTechWithAlphaDirectionalLightingPassFP
+			{				
+				param_named specularLuminance float4 1.0 1.0 1.0 10.5							
+			}
+
+			texture_unit normalCubeMap
+			{
+				cubic_texture nm.png combinedUVW
+
+				tex_address_mode clamp
+			}
+			
+			texture_unit
+			{
+				texture <baseTex.jpg>
+				texture_alias <baseTexture>
+			}			
+		}
+		
+		// 计算点光源的颜色，并输出纹理的alpha值用于alpha_rejection
+		pass PointLighting
+		{
+			ambient 0 0 0
+			diffuse 1 1 1
+			specualr 1 1 1
+			emissive 0 0 0
+
+            alpha_rejection greater 128 
+                      
+			iteration once_per_light point
+			max_lights 2
+		
+			scene_blend add
+			
+			vertex_program_ref HighTechWithAlphaPointLightingPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix							
+				param_named_auto lightPosition light_position_object_space 0							
+				param_named_auto eyePosition camera_position_object_space	
+				param_named_auto diffuseColor light_diffuse_colour 0
+				param_named_auto attenuation light_attenuation 0
+				
+				param_named diffuseMat float4 1.0 1.0 1.0 1.0				
+			}
+			
+			fragment_program_ref HighTechWithAlphaPointLightingPassFP
+			{
+				param_named specularLuminance float4 1.0 1.0 1.0 10.5							
+			}
+
+			texture_unit normalCubeMap
+			{
+				cubic_texture nm.png combinedUVW
+
+				tex_address_mode clamp
+			}
+			
+			texture_unit
+			{
+				texture <baseTex.jpg>
+				texture_alias <baseTexture>
+			}			
+		}
+		
+		// 计算纹理的颜色，并输出纹理的alpha值用于alpha_rejection
+		pass Decal
+		{	
+			lighting off
+			
+            alpha_rejection greater 128   
+              
+           	scene_blend dest_colour zero
+
+			// 这里如果用fixed function的话，在OpenGL模式下会出问题，
+			// 具体表现是当前pass与之前的pass之间会有depth fighting
+			vertex_program_ref HighTechWithAlphaDecalPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix	
+			}			
+			
+			texture_unit
+			{
+				texture <baseTex.jpg>
+				texture_alias <baseTexture>
+			}
+		}
+	}
+	
+	// fixed function pipeline
+	technique LowTech
+    {
+		pass
+		{
+		    alpha_rejection greater 128   
+
+			specular 1.0 1.0 1.0 10.5
+			emissive 0.5 0.5 0.5
+			
+			texture_unit
+			{
+				texture <baseTex>.jpg
+				texture_alias <baseTexture>
+			}
+		}
+    }	
+}
+
+////////////////// 用于普通贴图的衣服模型 ///////////////////////////
+material PerPixelLightingTemplate
+{
+	// 最高的技术，需要ps_2_0, vs_1_1
+	technique HighTech
+	{
+		// 计算环境光与自发光
+		pass Ambient
+		{	
+			ambient 1 1 1
+			diffuse 0 0 0
+			specualr 0 0 0
+			emissive 1 1 1
+
+			vertex_program_ref HighTechAmbientPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix	
+				param_named_auto ambient ambient_light_colour	
+				
+				param_named ambientMat float4 1.0 1.0 1.0 1.0
+				param_named emissiveColor float4 0.275 0.275 0.275 1.0		
+			}			
+		}
+		
+		// 计算方向性光源
+		pass DirectionalLighting
+		{
+			ambient 0 0 0
+			diffuse 1 1 1
+			specualr 1 1 1
+			emissive 0 0 0
+
+			iteration once_per_light directional
+			max_lights 2
+		
+			scene_blend add
+			
+			vertex_program_ref HighTechDirectionalLightingPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix							
+				param_named_auto lightPosition light_position_object_space 0							
+				param_named_auto eyePosition camera_position_object_space				
+				param_named_auto diffuseColor light_diffuse_colour 0
+				
+				param_named diffuseMat float4 1.0 1.0 1.0 1.0						
+    		}
+			
+			fragment_program_ref HighTechDirectionalLightingPassFP
+			{
+				param_named specularLuminance float4 1.0 1.0 1.0 10.5							
+			}
+
+			texture_unit normalCubeMap
+			{
+				cubic_texture nm.png combinedUVW
+
+				tex_address_mode clamp
+			}							
+		}
+		
+		// 计算点光源
+		pass PointLighting
+		{
+			ambient 0 0 0
+			diffuse 1 1 1
+			specualr 1 1 1
+			emissive 0 0 0
+
+			iteration once_per_light point
+			max_lights 2
+			
+			scene_blend add
+			
+			vertex_program_ref HighTechPointLightingPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix							
+				param_named_auto lightPosition light_position_object_space 0							
+				param_named_auto eyePosition camera_position_object_space	
+				param_named_auto diffuseColor light_diffuse_colour 0
+				param_named_auto attenuation light_attenuation 0
+				
+				param_named diffuseMat float4 1.0 1.0 1.0 1.0				
+			}
+			
+			fragment_program_ref HighTechPointLightingPassFP
+			{
+				param_named specularLuminance float4 1.0 1.0 1.0 10.5							
+			}
+
+			texture_unit normalCubeMap
+			{
+				cubic_texture nm.png combinedUVW
+
+				tex_address_mode clamp
+			}	
+		}
+		
+		// 计算纹理颜色
+		pass Decal
+		{	
+			lighting off
+
+			scene_blend dest_colour zero
+			
+			// 这里如果用fixed function的话，在OpenGL模式下会出问题，
+			// 具体表现是当前pass与之前的pass之间会有depth fighting
+			vertex_program_ref HighTechDecalPassVP
+			{	
+				param_named_auto worldViewProj worldviewproj_matrix	
+			}	
+			
+			texture_unit
+			{
+				texture <baseTex.jpg>
+				texture_alias <baseTexture>
+			}
+		}
+	}
+
+	// fixed function pipeline
+	technique LowTech
+    {
+		pass
+		{
+			specular 1.0 1.0 1.0 10.5
+			emissive 0.5 0.5 0.5
+			
+			texture_unit
+			{
+				texture <baseTex>.jpg
+				texture_alias <baseTexture>
+			}
+		}
+    } 
+}

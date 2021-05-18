@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{08e370e1-1ebf-4e32-8ea0-2ca46cce26de}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f89decef-fbcb-479a-89fa-8c2b40b0a51d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6c77438d-bb29-4850-ba74-b5a73124f456}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="PostFilter">
+      <UniqueIdentifier>{9b8ac381-f630-4b73-b59b-693a93db381d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostFilter\Filters">
+      <UniqueIdentifier>{596c2f07-b764-439c-9db6-3d0fd073046c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OgreExt">
+      <UniqueIdentifier>{fe884c0f-25a4-4273-a747-55b580964eaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{fa961ab8-0efe-44d9-b51e-1da56c177190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extra">
+      <UniqueIdentifier>{6d93ee6a-5c2b-4399-9a94-c05bf69fe44b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EffectSystem">
+      <UniqueIdentifier>{e9c5e0e6-685c-410f-a892-9e489c69e403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ResourceSystem">
+      <UniqueIdentifier>{21e661d9-98c6-4e24-adac-f68123a572eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\BasicRenderable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\FrameStatsListener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SceneNodeSwitcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SerializerUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Terrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TerrainData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TerrainDataSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TerrainTile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TerrainTileEditable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TerrainTileOptimized.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TerrainTileRenderable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\TerrainTypeInfos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\utf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXActor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXActorObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXEffectObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXEnviromentObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXExpatParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXLightObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXLogicModelObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXMaterialInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXMaterialScriptSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXModelObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXObjectFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXObjectFactoryManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXObjectProxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXParticleSystemObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXPlacementObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXPropertyHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXPropertyInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXResources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXResourceSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXResourceSolverHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXSceneInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXSceneSerializer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXSceneSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXSkyBoxObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXSkyDomeObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXSkyPlaneObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXStaticEntityObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXTerrainLiquid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXTerrainLiquidObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXTerrainProjector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXTerrainSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXTransparentor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXercesHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXercesParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXercesWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXMLAttributes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXMLHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXMLNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXMLParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXXMLWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXPostFilter.cpp">
+      <Filter>PostFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXPostFilterManager.cpp">
+      <Filter>PostFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXBloomPostFilter.cpp">
+      <Filter>PostFilter\Filters</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXFadePostFilter.cpp">
+      <Filter>PostFilter\Filters</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXFloodlightingPostFilter.cpp">
+      <Filter>PostFilter\Filters</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXHeatVisionPostFilter.cpp">
+      <Filter>PostFilter\Filters</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXMotionBlurPostFilter.cpp">
+      <Filter>PostFilter\Filters</Filter>
+    </ClCompile>
+    <ClCompile Include="PostFilter\WXPostFilters.cpp">
+      <Filter>PostFilter\Filters</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreAutoAnimationEntity.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreBillboardChain.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreMeshAnimationAffector.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreMeshParticleRenderer.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreMeshParticleVisualData.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreMeshRotationAffector.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreRibbonRenderer.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreRibbonSet.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreExt\OgreTexCoordBillboardParticleRenderer.cpp">
+      <Filter>OgreExt</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXCollisionModel.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXCollisionModelManager.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXMeshInformer.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXProjector.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\WXRayCollide.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\SkeletonMesh.cpp">
+      <Filter>Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\SkeletonMeshEditable.cpp">
+      <Filter>Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\SkeletonMeshUtil.cpp">
+      <Filter>Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\WXLogicModel.cpp">
+      <Filter>Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelSystem\WXLogicModelManager.cpp">
+      <Filter>Extra</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXAnimationEffectInfo.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXAnimationRibbon.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXAnimationSceneLightInfo.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXAnimationSound.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXBeamElement.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXBillboardSetElement.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXEffect.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXEffectBasic.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXEffectElement.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXEffectElementFactory.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXEffectManager.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXMainSceneLight.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXMeshElement.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXParticleElement.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXPointLightElement.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXProjectorElement.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSystem\WXSkill.cpp">
+      <Filter>EffectSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceSystem\WXPakFileSystem.cpp">
+      <Filter>ResourceSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\BasicRenderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FrameStatsListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ieee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\inttypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SceneNodeSwitcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SerializerUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Terrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TerrainData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TerrainTile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TerrainTileEditable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TerrainTileOptimized.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TerrainTileRenderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\TerrainTypeInfos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\utf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXActor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXActorObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXEffectObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXEnviromentObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXExpatParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXFlags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXLightObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXLogicModelObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXMaterialInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXMaterialScriptSolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXModelObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXObjectFactoryManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXObjectProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXParticleSystemObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXPlacementObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXPrerequisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXPropertyHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXPropertyInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXResourceCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXResources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXResourceSolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXResourceSolverHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXSceneInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXSceneSerializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXSceneSolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXSkyBoxObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXSkyDomeObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXSkyPlaneObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXStaticEntityObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXTerrainLiquid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXTerrainLiquidObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXTerrainProjector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXTerrainSolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXTransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXTransparentor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXVariant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXercesHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXercesParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXercesWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXMLAttributes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXMLHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXMLNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXMLParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXXMLWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PostFilter\WXPostFilter.h">
+      <Filter>PostFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="PostFilter\WXPostFilterFactory.h">
+      <Filter>PostFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="PostFilter\WXPostFilterManager.h">
+      <Filter>PostFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="PostFilter\WXPostFilterPrerequisites.h">
+      <Filter>PostFilter</Filter>
+    </ClInclude>
+    <ClInclude Include="PostFilter\WXPostFilters.h">
+      <Filter>PostFilter\Filters</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreAutoAnimationEntity.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreBillboardChain.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreMeshAnimationAffector.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreMeshAnimationAffectorFactory.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreMeshParticleRenderer.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreMeshParticleVisualData.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreMeshRotationAffector.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreMeshRotationAffectorFactory.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreRibbonRenderer.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreRibbonSet.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreExt\OgreTexCoordBillboardParticleRenderer.h">
+      <Filter>OgreExt</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXCollisionModel.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXCollisionModelManager.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXMeshInformer.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXOpcode.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXProjector.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WXRayCollide.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSystem\ModelTypes.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSystem\SkeletonMesh.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSystem\SkeletonMeshEditable.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSystem\SkeletonMeshUtil.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSystem\WXLogicModel.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelSystem\WXLogicModelManager.h">
+      <Filter>Extra</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXAnimationEffectInfo.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXAnimationRibbon.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXAnimationSceneLightInfo.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXAnimationSound.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXBeamElement.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXBillboardSetElement.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXEffect.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXEffectBasic.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXEffectElement.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXEffectElementFactory.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXEffectManager.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXMainSceneLight.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXMeshElement.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXParticleElement.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXPointLightElement.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXProjectorElement.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSystem\WXSkill.h">
+      <Filter>EffectSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceSystem\WXPakFileSystem.h">
+      <Filter>ResourceSystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

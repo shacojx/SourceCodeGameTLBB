@@ -1,0 +1,966 @@
+
+//==============================================================================
+
+material Scorpio/HardwareAnimation/Skinning/OneWeight_Solid
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_Unlit_hlsl
+			{
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_DirectionalLight_hlsl
+			{
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+material Scorpio/HardwareAnimation/Skinning/OneWeight_AlphaMasked
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_DirectionalLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+//==============================================================================
+
+material Scorpio/HardwareAnimation/Skinning/TwoWeight_Solid
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_Unlit_hlsl
+			{
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_DirectionalLight_hlsl
+			{
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+material Scorpio/HardwareAnimation/Skinning/TwoWeight_AlphaMasked
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_DirectionalLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+//==============================================================================
+
+material Scorpio/HardwareAnimation/Skinning/ThreeWeight_Solid
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_Unlit_hlsl
+			{
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_DirectionalLight_hlsl
+			{
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+material Scorpio/HardwareAnimation/Skinning/ThreeWeight_AlphaMasked
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_DirectionalLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+//==============================================================================
+
+material Scorpio/HardwareAnimation/Skinning/FourWeight_Solid
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_Unlit_hlsl
+			{
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_DirectionalLight_hlsl
+			{
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_NoTex_PointLight_hlsl
+			{
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+material Scorpio/HardwareAnimation/Skinning/FourWeight_AlphaMasked
+{
+	technique HLSL
+	{
+		pass Ambient
+		{
+			lighting off
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreDirectionalLight
+		{
+			iteration once_per_light directional
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_DirectionalLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PrePointLight
+		{
+			iteration once_per_light point
+			scene_blend add
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass PreSpotLight
+		{
+			iteration once_per_light spot
+			scene_blend add
+
+			// No spot light supports for now, use point light instead
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_PointLight_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+
+		pass Decal
+		{
+			lighting off
+			scene_blend modulate
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_Unlit_hlsl
+			{
+			}
+
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			alpha_rejection greater 128
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+//==============================================================================
+
+material Scorpio/HardwareAnimation/Skinning/OneWeight_Transparent
+{
+	technique HLSL
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			max_lights 3
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_ThreeLight_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/OneWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+material Scorpio/HardwareAnimation/Skinning/TwoWeight_Transparent
+{
+	technique HLSL
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			max_lights 3
+			
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_ThreeLight_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/TwoWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+material Scorpio/HardwareAnimation/Skinning/ThreeWeight_Transparent
+{
+	technique HLSL
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			max_lights 3
+			
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_ThreeLight_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/ThreeWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}
+
+material Scorpio/HardwareAnimation/Skinning/FourWeight_Transparent
+{
+	technique HLSL
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			max_lights 3
+
+			vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_ThreeLight_hlsl
+			{
+				param_named_auto ambient derived_scene_colour
+			}
+			shadow_caster_vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_AmbientOnly_hlsl
+			{
+				param_named_auto ambient ambient_light_colour
+			}
+			shadow_receiver_vertex_program_ref Scorpio/HardwareAnimation/Skinning/FourWeight_Unlit_hlsl
+			{
+			}
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+
+	technique Normal
+	{
+		pass
+		{
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture <diffuse>
+				texture_alias diffuse
+			}
+		}
+	}
+}

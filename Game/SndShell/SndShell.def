@@ -1,0 +1,8 @@
+LIBRARY	SndShell
+
+EXPORTS
+	SSInit
+	SSEnumSoundFile
+	SSPlaySoundFunc
+	SSStopSoundFunc
+    SSSetSoundVolume

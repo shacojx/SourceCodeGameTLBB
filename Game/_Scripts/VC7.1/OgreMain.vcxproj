@@ -1,0 +1,1316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{35AFBABB-DF05-43DE-91A7-BB828A874015}</ProjectGuid>
+    <RootNamespace>OgreMain</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./$(Configuration)</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">./Debug/$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./Release/$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">./Release/$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">$(BuildOut)/$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">$(OutDir)$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Main</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Main</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Main</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(WindowsSdkDir)..\v7.1A\include;../../OGRE/OgreMain/include;../../boost;..\..\OGRE\Dependencies\include;..\..\OGRE\PlugIns\ParticleFX\include;..\..\ParticleFX2\include;..\..\OGRE\PlugIns\OctreeSceneManager\include;..\..\OGRE\PlugIns\CgProgramManager\include;../../CG/include;..\..\Scorpio\include;..\..\OGRE\PlatformManagers\Win32\include;..\..\OGRE\RenderSystems\Direct3D9\include;../../DirectX9/include;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;OGRE_NONCLIENT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>OgreStableHeaders.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalOptions>/INCREMENTAL:NO %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>freetype221_D.lib;kernel32.lib;user32.lib;zziplibd.lib;zdll.lib;ILU.lib;DevIL.lib;ILUT.lib;cg.lib;d3d9.lib;d3dx9.lib;dxerr9.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./Debug;..\..\OGRE\Dependencies\lib\Debug;..\..\Cg\lib;..\..\DirectX9\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./Debug/$(ProjectName).pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>./Debug/Main.lib</ImportLibrary>
+    </Link>
+    <Manifest />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(WindowsSdkDir)..\v7.1A\include;../../OGRE/OgreMain/include;../../boost;..\..\OGRE\Dependencies\include;..\..\OGRE\PlugIns\ParticleFX\include;..\..\ParticleFX2\include;..\..\OGRE\PlugIns\OctreeSceneManager\include;..\..\OGRE\PlugIns\CgProgramManager\include;../../CG/include;..\..\Scorpio\include;..\..\OGRE\PlatformManagers\Win32\include;..\..\OGRE\RenderSystems\Direct3D9\include;../../DirectX9/include;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;OGRE_NONCLIENT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>OgreStableHeaders.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>freetype.lib;kernel32.lib;user32.lib;zziplib.lib;zdll.lib;ILU.lib;DevIL.lib;ILUT.lib;cg.lib;d3d9.lib;d3dx9.lib;dxerr9.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\OGRE\Dependencies\lib\Release;.\Release;..\..\Cg\lib;..\..\DirectX9\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./Release/Main.pdb</ProgramDatabaseFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>./Release/Main.lib</ImportLibrary>
+    </Link>
+    <Manifest />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(WindowsSdkDir)..\v7.1A\include;../../OGRE/OgreMain/include;../../boost;%(AdditionalIncludeDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;OGRE_NONCLIENT_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>OgreStableHeaders.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ErrorReporting>None</ErrorReporting>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+    <Manifest />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreAlignedAllocator.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimable.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimation.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimationState.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAnimationTrack.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreArchiveManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAutoParamDataSource.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreAxisAlignedBox.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBillboard.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreBillboardChain.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBillboardParticleRenderer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBillboardSet.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBitwise.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBone.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreBorderPanelOverlayElement.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCamera.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCodec.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreColourValue.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCommon.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreCompiler2Pass.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositionPass.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositionTargetPass.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositionTechnique.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositor.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorChain.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorInstance.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorManager.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreCompositorScriptCompiler.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCompositorSerializer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreConfigFile.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreConfigOptionMap.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreController.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreControllerManager.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreConvexBody.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreCursor.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDataStream.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDefaultHardwareBufferManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDefaultSceneQueries.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDynLib.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreDynLibManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEdgeListBuilder.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEntity.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEventDispatcher.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEventProcessor.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreEventQueue.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreException.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreExternalTextureSource.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreExternalTextureSourceManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFileSystem.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFont.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">../../freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFontManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreFrustum.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreGpuProgram.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreGpuProgramManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreGpuProgramUsage.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareBufferManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareIndexBuffer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareOcclusionQuery.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwarePixelBuffer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHardwareVertexBuffer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHighLevelGpuProgram.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreHighLevelGpuProgramManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreILCodecs.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreILImageCodec.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreILUtil.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreImage.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreInput.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreInputEvent.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreKeyEvent.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreKeyFrame.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreKeyTarget.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreLight.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreLog.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreLogManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreManualObject.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMaterial.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMaterialManager.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreMaterialScriptCompiler.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMaterialSerializer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMath.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMatrix3.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMatrix4.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMemoryManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMesh.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMeshManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMeshSerializer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMeshSerializerImpl.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMouseEvent.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMouseMotionTarget.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMouseTarget.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMovableObject.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreMovablePlane.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreNode.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreNumerics.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreOptimisedUtil.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreOptimisedUtilGeneral.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreOptimisedUtilSSE.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlay.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayContainer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayElement.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayElementCommands.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreOverlayManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePanelOverlayElement.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticle.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleEmitter.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleEmitterCommands.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleIterator.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleSystem.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreParticleSystemManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePass.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePatchMesh.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePatchSurface.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePixelFormat.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../lib/DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">../../../lib/DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../lib/DevIL/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePlane.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgrePlatformInformation.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePlatformManager.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgrePolygon.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgrePose.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePrecompiledHeaders.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgrePredefinedControllers.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreProfiler.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreProgressiveMesh.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreQuaternion.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">All</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRectangle2D.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderQueue.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreRenderQueueInvocation.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderQueueSortingGrouping.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderSystem.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderSystemCapabilities.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderTarget.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderTexture.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRenderWindow.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResource.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResourceBackgroundQueue.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResourceGroupManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreResourceManager.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreRibbonTrail.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRoot.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreRotationSpline.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneManagerEnumerator.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneNode.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSceneQuery.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSearchOps.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSerializer.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetup.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetupFocused.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetupLiSPSM.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreShadowCameraSetupPlaneOptimal.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreShadowCaster.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreShadowVolumeExtrudeProgram.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSimpleRenderable.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSimpleSpline.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSingleton.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeleton.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeletonInstance.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeletonManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSkeletonSerializer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStaticGeometry.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreString.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStringConverter.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStringInterface.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreStringVector.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSubEntity.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreSubMesh.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTagPoint.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTechnique.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTextAreaOverlayElement.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTexture.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTextureManager.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTextureUnitState.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreTimer.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreUserDefinedObject.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreVector2.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreVector3.cpp" />
+    <ClCompile Include="..\..\Ogre\OgreMain\src\OgreVector4.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreVertexIndexData.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreViewport.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreWireBoundingBox.cpp" />
+    <ClCompile Include="..\..\OGRE\OgreMain\src\OgreZip.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../zziplib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">../../zziplib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../zziplib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreAreaEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreBoxEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourFaderAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourFaderAffector2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourImageAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreColourInterpolatorAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreCylinderEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreDeflectorPlaneAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreDirectionRandomiserAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreEllipsoidEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreHollowEllipsoidEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreLinearForceAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreParticleFX.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgrePointEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreRingEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreRotationAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\ParticleFX\src\OgreScaleAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreColourFadingAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreMovementAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreParticleFX2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgrePolarEmitter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreRevolutionAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\ParticleFX2\src\OgreScaleInterpolatorAffector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreHeightmapTerrainPageSource.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctree.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeCamera.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeNode.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeSceneManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeSceneManagerDll.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreOctreeSceneQuery.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainPage.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainPageSource.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainRenderable.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainSceneManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\OctreeSceneManager\src\OgreTerrainVertexProgram.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\CgProgramManager\src\OgreCgProgram.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\CgProgramManager\src\OgreCgProgramFactory.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlugIns\CgProgramManager\src\OgreCgProgramManagerDll.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_BoxCollider.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_BucklingForceField.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_ClothModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_ColliderSet.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_DampingForceField.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_EulerIntegrator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_FabricSimulator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Force.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_GravityForceField.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Integrator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Mass.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Math.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Matrix3x3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Motion.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_MovableCollider.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_PlaneCollider.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK2Integrator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK4Integrator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Simulator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_SphereCollider.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_StretchingForceField.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_Vector3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\PhysicsSimulation\PS_VerletIntegrator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\Scorpio.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioCloth.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioCollision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioFabric.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Scorpio\src\ScorpioHardwareAnimation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32ConfigDialog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32ErrorDialog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32Input.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32Input8.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32PlatformDll.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\PlatformManagers\Win32\src\OgreWin32Timer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9Driver.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9DriverList.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9EngineDll.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9GpuProgram.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9GpuProgramManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareBufferManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareIndexBuffer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareOcclusionQuery.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwarePixelBuffer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HardwareVertexBuffer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HLSLProgram.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9HLSLProgramFactory.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9Mappings.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9MultiRenderTarget.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9RenderSystem.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9RenderWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9Texture.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9TextureManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9VertexDeclaration.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9VideoMode.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Ogre\RenderSystems\Direct3D9\src\OgreD3D9VideoModeList.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Ogre\OgreMain\src\OgreSIMDHelper.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\asm_math.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\Ogre.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreAlignedAllocator.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimable.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimation.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimationState.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAnimationTrack.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAny.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreArchive.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreArchiveFactory.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreArchiveManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAutoParamDataSource.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreAxisAlignedBox.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBillboard.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreBillboardChain.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBillboardParticleRenderer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBillboardSet.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBitwise.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBlendMode.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBone.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreBorderPanelOverlayElement.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCamera.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCodec.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreColourValue.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCommon.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreCompiler2Pass.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositionPass.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositionTargetPass.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositionTechnique.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositor.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorChain.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorInstance.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorManager.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreCompositorScriptCompiler.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCompositorSerializer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfig.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfigDialog.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfigFile.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreConfigOptionMap.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreController.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreControllerManager.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreConvexBody.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreCursor.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDataStream.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDefaultHardwareBufferManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDynLib.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreDynLibManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEdgeListBuilder.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEntity.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreErrorDialog.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventDispatcher.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventListeners.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventProcessor.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventQueue.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreEventTarget.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreException.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreExternalTextureSource.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreExternalTextureSourceManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFactoryObj.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFileSystem.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFont.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFontManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFrameListener.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreFrustum.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreGpuProgram.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreGpuProgramManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreGpuProgramUsage.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareBuffer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareBufferManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareIndexBuffer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareOcclusionQuery.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwarePixelBuffer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHardwareVertexBuffer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHighLevelGpuProgram.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreHighLevelGpuProgramManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreILCodecs.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreILImageCodec.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreILUtil.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreImage.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreImageCodec.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\src\OgreImageResampler.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreInput.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreInputEvent.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreIteratorWrappers.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreKeyEvent.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreKeyFrame.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreKeyTarget.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreLight.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreLog.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreLogManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreManualObject.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMaterial.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMaterialManager.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreMaterialScriptCompiler.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMaterialSerializer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMath.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMatrix3.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMatrix4.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMemoryMacros.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMemoryManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMesh.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshFileFormat.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshSerializer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMeshSerializerImpl.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMouseEvent.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMouseMotionTarget.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMouseTarget.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMovableObject.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreMovablePlane.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreNode.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreNoMemoryMacros.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreNumerics.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreOptimisedUtil.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlay.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayContainer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayElement.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayElementCommands.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayElementFactory.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreOverlayManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePanelOverlayElement.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticle.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleAffector.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleAffectorFactory.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleEmitter.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleEmitterCommands.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleEmitterFactory.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleIterator.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleSystem.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleSystemManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreParticleSystemRenderer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePass.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePatchMesh.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePatchSurface.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\src\OgrePixelConversions.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePixelFormat.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlane.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlaneBoundedVolume.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlatform.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePlatformInformation.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePlatformManager.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePolygon.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePoolAllocator.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgrePose.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePositionTarget.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePredefinedControllers.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgrePrerequisites.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreProfiler.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreProgressiveMesh.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreQuaternion.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRadixSort.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRay.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRectangle.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRectangle2D.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderable.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderOperation.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderQueue.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreRenderQueueInvocation.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderQueueListener.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderQueueSortingGrouping.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderSystem.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderSystemCapabilities.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderTarget.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderTargetListener.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderTexture.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRenderWindow.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResource.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResourceBackgroundQueue.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResourceGroupManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreResourceManager.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreRibbonTrail.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRoot.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreRotationalSpline.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneManagerEnumerator.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneNode.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSceneQuery.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreScriptLoader.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSearchOps.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSerializer.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetup.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetupFocused.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetupLiSPSM.h" />
+    <ClInclude Include="..\..\Ogre\OgreMain\include\OgreShadowCameraSetupPlaneOptimal.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreShadowCaster.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreShadowVolumeExtrudeProgram.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSharedPtr.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSimpleRenderable.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSimpleSpline.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSingleton.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeleton.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonFileFormat.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonInstance.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSkeletonSerializer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSphere.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSpotShadowFadePng.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStableHeaders.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStaticFaceGroup.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStaticGeometry.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStdHeaders.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreString.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStringConverter.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStringInterface.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreStringVector.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSubEntity.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreSubMesh.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTagPoint.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTargetManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTechnique.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTextAreaOverlayElement.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTexture.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTextureManager.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTextureUnitState.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreTimer.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreUserDefinedObject.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVector2.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVector3.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVector4.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVertexBoneAssignment.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreVertexIndexData.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreViewport.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreWireBoundingBox.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\OgreZip.h" />
+    <ClInclude Include="..\..\OGRE\OgreMain\include\stl_user_config.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreAreaEmitter.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreBoxEmitter.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreBoxEmitterFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffector2.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourFaderAffectorFactory2.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourImageAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourImageAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourInterpolatorAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreColourInterpolatorAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreCylinderEmitter.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreCylinderEmitterFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDeflectorPlaneAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDeflectorPlaneAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDirectionRandomiserAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreDirectionRandomiserAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreEllipsoidEmitter.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreEllipsoidEmitterFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreHollowEllipsoidEmitter.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreHollowEllipsoidEmitterFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreLinearForceAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreLinearForceAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreParticleFX.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreParticleFXPrerequisites.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgrePointEmitter.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgrePointEmitterFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRingEmitter.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRingEmitterFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRotationAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreRotationAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreScaleAffector.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\ParticleFX\include\OgreScaleAffectorFactory.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreColourFadingAffector.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreColourFadingAffectorFactory.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreMovementAffector.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreMovementAffectorFactory.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreParticleFX2.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreParticleFX2Prerequisites.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgrePolarEmitter.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgrePolarEmitterFactory.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreRevolutionAffector.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreRevolutionAffectorFactory.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreScaleInterpolatorAffector.h" />
+    <ClInclude Include="..\..\ParticleFX2\include\OgreScaleInterpolatorAffectorFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreHeightmapTerrainPageSource.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctree.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeCamera.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeNode.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeSceneManager.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeSceneManagerDll.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreOctreeSceneQuery.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainPage.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainPageSource.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainPrerequisites.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainRenderable.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainSceneManager.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\OctreeSceneManager\include\OgreTerrainVertexProgram.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgPrerequisites.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgProgram.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgProgramFactory.h" />
+    <ClInclude Include="..\..\Ogre\PlugIns\CgProgramManager\include\OgreCgProgramManagerDll.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_BoxCollider.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_BucklingForceField.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_ClothModel.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Collider.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_ColliderSet.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Common.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_DampingForceField.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_EulerIntegrator.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_FabricSimulator.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Force.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_ForceField.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_GravityForceField.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Integrator.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Mass.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Math.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Matrix3x3.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Motion.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_MovableCollider.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_PlaneCollider.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Prerequisites.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK2Integrator.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_RK4Integrator.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_SharedPtr.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Simulator.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_SphereCollider.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_StdHeaders.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_StretchingForceField.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_Vector3.h" />
+    <ClInclude Include="..\..\Scorpio\src\PhysicsSimulation\PS_VerletIntegrator.h" />
+    <ClInclude Include="..\..\Scorpio\include\Scorpio.h" />
+    <ClInclude Include="..\..\Scorpio\include\ScorpioCloth.h" />
+    <ClInclude Include="..\..\Scorpio\include\ScorpioCollision.h" />
+    <ClInclude Include="..\..\Scorpio\include\ScorpioFabric.h" />
+    <ClInclude Include="..\..\Scorpio\include\ScorpioPrerequisites.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32ConfigDialog.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32ErrorDialog.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Input.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Input8.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32PlatformDll.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Prerequisites.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\OgreWin32Timer.h" />
+    <ClInclude Include="..\..\Ogre\PlatformManagers\Win32\include\resource.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Driver.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9DriverList.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9EngineDll.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9GpuProgram.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9GpuProgramManager.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareBufferManager.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareIndexBuffer.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareOcclusionQuery.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwarePixelBuffer.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HardwareVertexBuffer.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HLSLProgram.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9HLSLProgramFactory.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Mappings.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9MultiRenderTarget.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Prerequisites.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9RenderSystem.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9RenderWindow.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9Texture.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9TextureManager.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9VertexDeclaration.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9VideoMode.h" />
+    <ClInclude Include="..\..\Ogre\RenderSystems\Direct3D9\include\OgreD3D9VideoModeList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Ogre\PlatformManagers\Win32\misc\ogre.ico" />
+    <None Include="..\..\Ogre\PlatformManagers\Win32\misc\ogrelogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\Ogre\PlatformManagers\Win32\misc\OgreWin32Resources.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="freetype.vcxproj">
+      <Project>{a7e3e7b6-fe48-47d1-bada-ebaf45763f54}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

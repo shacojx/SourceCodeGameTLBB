@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{f5959a2b-0c25-43bd-98cd-de403c7c6d4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packets">
+      <UniqueIdentifier>{d76a7ba2-eb7b-409c-aef6-1d63f97c80a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{aadf84bb-3773-497d-8ab5-d2d2e4f3dad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Packets">
+      <UniqueIdentifier>{fc0062fb-2282-42b9-9cc4-6eea36b38725}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\DataBase">
+      <UniqueIdentifier>{1f6f20ed-e016-479e-81b6-b1caa47e9ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Net">
+      <UniqueIdentifier>{4362cc5b-dec2-4cac-b850-b584657a5acc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StdAfx">
+      <UniqueIdentifier>{2ffc8afa-9db9-4004-917b-50667bf93ba5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\ServerBase\Config.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\File.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Ini.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Log.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\StrTable.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\Thread.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ServerBase\TimeManager.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\BLRetAuthHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\BWConnectHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\BWValidateUserHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\LBAskAuthHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\SSConnectHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\SSScenePlayerCountHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets\WBRetValidateUserHandler.cpp">
+      <Filter>Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\Billing.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\DBManager.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ODBCInterface.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\Player.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\PlayerManager.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\PlayerPool.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ServerManager.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\ServerPlayer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\WebPlayer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Assertx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Chain.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\DB_Struct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameDefine_Result.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameStruct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameStruct_Relation.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\GameUtil.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\PacketFactoryManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Rand.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\ScriptCommandStruct.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\BLRetAuth.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\BWConnect.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\BWValidateUser.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\LBAskAuth.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\SSConnect.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\SSScenePlayerCount.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Packets\WBRetValidateUser.cpp">
+      <Filter>Common\Packets</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\UserDBManager.cpp">
+      <Filter>Common\DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\FileAPI.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\Packet.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\ServerSocket.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\Socket.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketAPI.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketInputStream.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Common\Net\SocketOutputStream.cpp">
+      <Filter>Common\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>StdAfx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\ServerBase\Config.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\File.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Ini.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Log.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\StrTable.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\Thread.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ServerBase\TimeManager.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\Billing.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\DBManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\DBTypes.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ODBCInterface.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\Player.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\PlayerManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\PlayerPool.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ServerManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ServerPlayer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\WebPlayer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Assertx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\BaseType.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Chain.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\DB_Struct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine2.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Attr.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Guild.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Item.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Result.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameDefine_Scene.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Guild.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Item.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Relation.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameStruct_Skill.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\GameUtil.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\OResultDef.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PacketDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PacketFactory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PacketFactoryManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\PlayerStatus.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Rand.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\ScriptCommandStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Type.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\BLRetAuth.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\BWConnect.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\BWValidateUser.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\LBAskAuth.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\SSConnect.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\SSScenePlayerCount.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Packets\WBRetValidateUser.h">
+      <Filter>Common\Packets</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\UserDBManager.h">
+      <Filter>Common\DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\FileAPI.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\Packet.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\ServerSocket.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\Socket.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketAPI.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketInputStream.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Common\Net\SocketOutputStream.h">
+      <Filter>Common\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>StdAfx</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

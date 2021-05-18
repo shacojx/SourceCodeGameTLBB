@@ -1,0 +1,14 @@
+float4
+fade_fp(
+        in float2 texCoord: TEXCOORD0,
+        uniform float colour_amount = 0,
+        uniform float gray_amount = 1,
+        uniform sampler image
+        ) : COLOR
+{
+    static const float3 coefficients = float3(0.3, 0.59, 0.11);
+
+    float4 colour = tex2D(image, texCoord);
+    colour.rgb = dot(colour.rgb, coefficients) * gray_amount + colour.rgb * colour_amount;
+    return colour;
+}

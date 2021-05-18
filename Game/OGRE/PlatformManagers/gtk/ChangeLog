@@ -1,0 +1,16 @@
+2004-04-11  W.J. <wj@goliath.darktech.org>
+
+	* src/GTKTimer.cpp: Use the GLib abstraction of a timer instead
+        of the Unix gettimeofday call missing on some platforms.
+
+2004-04-04  W.J. <wj@goliath.darktech.org>
+
+	* License in all file headers changed to LGPL instead of GPL.
+
+        * src/GTKInput.cpp: Make using the mouse optional (useMouse flag on 
+        initialise is now used)
+
+        * src/GTKInput.cpp: Key listener is now added before all GTK listeners, 
+        so keys like Enter, TAB are processed too.
+
+        * This file added.

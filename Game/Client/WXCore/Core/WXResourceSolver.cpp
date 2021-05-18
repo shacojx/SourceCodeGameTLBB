@@ -1,0 +1,2 @@
+#include "WXResourceSolver.h"
+

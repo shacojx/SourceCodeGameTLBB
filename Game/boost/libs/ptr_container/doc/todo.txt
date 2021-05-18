@@ -1,0 +1,40 @@
+Hi,
+
+-------------------
+
+10) Specify difference between assignment from an input_iterator (basic exception safety guarantee)
+    and any other iterator (strong exception safety guarantee). Provide a iterator wrapper
+    which implement the input_iterator concept to achieve that particular performance characteristic:
+    vector.assign( fast_copy_iterator( other.begin() ), other.end() );
+
+20) Add two sources and a discussion on defaults: http://www.gotw.ca/gotw/054.htm, http://www.codeproject.com/vcpp/stl/vector_vs_deque.asp
+
+45) update all functions with correct exception specs
+
+46) add description to erase() which returns end in some circumstances
+
+47) Consider if list implemetation of multi-insert can benefit
+    from strong exception-safety.
+    
+74) consider simple static assert by nesting a typedef a la
+T::boost_indirect_container
+
+74.5) a new function in map: auto_type replace( key&, T* );? 
+
+75) toturial:
+
+ptr_map:
+
+add default constructor
+
+map[ "foo" ].set_data( "Bla bla", 6 );
+
+boost.assign -support:
+
+ptr_insert( ptr_map )( "foo", "bla bla", 3 )
+                     ( "bar", "foo", 3 );
+                     
+        
+
+76) use boost::get_pointer() to retrieve
+    the pointer withint dereferenceing.

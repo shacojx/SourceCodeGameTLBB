@@ -1,0 +1,1893 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fairy Editor\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-02-15 19:18+0800\n"
+"Last-Translator: \n"
+"Language-Team: Genva <genva@163.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=GB2312\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-Basepath: ../../src\n"
+"X-Poedit-SourceCharset: GB2312\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ui/ActorAnimationSettingDialog.cpp:200
+#: ui/res/ActorAnimationSetting_wdr.cpp:45
+#: ui/res/AddSkill_wdr.cpp:43
+msgid "Animation"
+msgstr "动作"
+
+#: ui/ActorAnimationSettingDialog.cpp:207
+#: ui/res/AddSkill_wdr.cpp:50
+msgid "Skill Name"
+msgstr "技能名称"
+
+#: ui/ActorAnimationSettingDialog.cpp:213
+#: ui/res/AddSkill_wdr.cpp:56
+#: ui/res/EraseTexDialog_wdr.cpp:50
+#: ui/res/SaveAsEffect_wdr.cpp:54
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:108
+#, fuzzy
+msgid "OK"
+msgstr "确认[&O]"
+
+#: ui/ActorAnimationSettingDialog.cpp:216
+#: ui/res/AddSkill_wdr.cpp:59
+#: ui/res/EraseTexDialog_wdr.cpp:53
+#: ui/res/SaveAsEffect_wdr.cpp:57
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:111
+#, fuzzy
+msgid "Cancel"
+msgstr "取消[&C]"
+
+#: ui/ActorAnimationSettingDialog.cpp:599
+#: ui/res/ActorAnimationSetting_wdr.cpp:85
+msgid "Add Skill"
+msgstr "添加新技能"
+
+#: ui/ActorAnimationSettingDialog.cpp:654
+msgid "Skill Setting"
+msgstr "技能设置"
+
+#: ui/BrushSelector.cpp:186
+#: ui/FairyEditorFrame.cpp:560
+msgid "Brushes"
+msgstr "画刷列表"
+
+#: ui/BrushSelector.cpp:576
+msgid "Texture Wrong"
+msgstr "纹理定义出错或找不到纹理图片"
+
+#: ui/BrushSelector.cpp:861
+#: ui/FairyEditorFrame.cpp:3567
+msgid "The operations before can not be undo,Do you want to continue the operation?"
+msgstr "这项操作不可以恢复，您确信要继续进行操作吗？"
+
+#: ui/BrushSelector.cpp:863
+#: ui/FairyEditorFrame.cpp:1271
+#: ui/FairyEditorFrame.cpp:3569
+#, fuzzy
+msgid "Warning"
+msgstr "警告"
+
+#: ui/ExceptionInfoDialog.cpp:100
+msgid "ExceptionHandle Dialog"
+msgstr "异常处理对话框"
+
+#: ui/ExceptionInfoDialog.cpp:152
+#, fuzzy
+msgid "Success deleting objects from scene:\n"
+msgstr "成功地把物体 %s 从场景中删除，请重新保存场景使该改动生效！"
+
+#: ui/FairyEditorApp.cpp:95
+#, fuzzy, c-format
+msgid "Can't found resource '%s' (%s) for '%s'."
+msgstr "子类 '%s' 在资源 '%s'中不存在, 无法子类化!"
+
+#: ui/FairyEditorApp.cpp:102
+#, fuzzy, c-format
+msgid "Can't found resource '%s' (%s) for '%s', use '%s' instead."
+msgstr "没找到条目"
+
+#: ui/FairyEditorApp.cpp:168
+#, fuzzy, c-format
+msgid "Parsing resource group: %s"
+msgstr "%s 不是位图资源."
+
+#: ui/FairyEditorApp.cpp:176
+#, c-format
+msgid "Parsing script: %s"
+msgstr "正在解析脚本文件：%s"
+
+#: ui/FairyEditorApp.cpp:285
+msgid "Fairy Editor"
+msgstr ""
+
+#: ui/FairyEditorApp.cpp:352
+msgid "&About\tF1"
+msgstr "[&A]关于"
+
+#: ui/FairyEditorApp.cpp:355
+msgid "&Help"
+msgstr "[&H]帮助"
+
+#: ui/FairyEditorApp.cpp:377
+msgid " Rendering Setup"
+msgstr "  渲染系统配置"
+
+#: ui/FairyEditorApp.cpp:416
+#, c-format
+msgid "Predefined material \"%s\" duplicated in file \"%s\", the application will exit."
+msgstr ""
+
+#: ui/FairyEditorApp.cpp:425
+#, c-format
+msgid "The material \"%s\" occuring in the file \"%s\" more than once, the application will exit."
+msgstr "材质 \"%s\" 在文件 \"%s\" 中重复，应用程序退出。"
+
+#: ui/FairyEditorApp.cpp:430
+#, c-format
+msgid "Duplicate material \"%s\" in files \"%s\" and \"%s\", the application will exit."
+msgstr "材质重复 \"%s\" 在文件中 \"%s\" 和 \"%s\"，应用程序退出。"
+
+#: ui/FairyEditorApp.cpp:436
+#, c-format
+msgid "%s Fatal"
+msgstr "%s 致命错误"
+
+#: ui/FairyEditorFrame.cpp:490
+msgid "SceneBrowser"
+msgstr "场景浏览器"
+
+#: ui/FairyEditorFrame.cpp:494
+#, fuzzy
+msgid "RegionEdit"
+msgstr "区域"
+
+#: ui/FairyEditorFrame.cpp:499
+msgid "MonsterEdit"
+msgstr "怪物编辑"
+
+#: ui/FairyEditorFrame.cpp:505
+msgid "GrowPointEdit"
+msgstr "生长点编辑"
+
+#: ui/FairyEditorFrame.cpp:514
+msgid "NpcpatrolEdit"
+msgstr "npc巡逻路线编辑"
+
+#: ui/FairyEditorFrame.cpp:520
+msgid "EventAreaEdit"
+msgstr "事件区域编辑"
+
+#: ui/FairyEditorFrame.cpp:526
+msgid "StallInfoEdit"
+msgstr "摊位信息编辑"
+
+#: ui/FairyEditorFrame.cpp:530
+msgid "Scene Objects"
+msgstr "场景物体列表"
+
+#: ui/FairyEditorFrame.cpp:539
+msgid "Object Properties"
+msgstr "物体属性"
+
+#: ui/FairyEditorFrame.cpp:554
+msgid "Models"
+msgstr "模型列表"
+
+#: ui/FairyEditorFrame.cpp:556
+msgid "Actors"
+msgstr "运动物体"
+
+#: ui/FairyEditorFrame.cpp:558
+msgid "ParticleSystems"
+msgstr "粒子系统"
+
+#: ui/FairyEditorFrame.cpp:563
+msgid "Selectors"
+msgstr "选择器"
+
+#: ui/FairyEditorFrame.cpp:572
+msgid "Navigation Picture"
+msgstr "导航图"
+
+#: ui/FairyEditorFrame.cpp:591
+msgid "Log Window"
+msgstr "日志窗口"
+
+#: ui/FairyEditorFrame.cpp:610
+#, c-format
+msgid "%s Startup"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:627
+#, c-format
+msgid "%s Shutdown"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:683
+msgid "&File"
+msgstr "[&F]文件"
+
+#: ui/FairyEditorFrame.cpp:691
+#, fuzzy
+msgid "Save &TerrainInfo\tCtrl-T"
+msgstr "[&F]全屏显示\tCtrl-Enter"
+
+#: ui/FairyEditorFrame.cpp:691
+#, fuzzy
+msgid "Save terrainInfo to file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:692
+#, fuzzy
+msgid "Load &TerrainInfo\tCtrl-R"
+msgstr "[&F]全屏显示\tCtrl-Enter"
+
+#: ui/FairyEditorFrame.cpp:692
+#, fuzzy
+msgid "Load terrainInfo from file"
+msgstr "不能从文件 '%s'中读取资源."
+
+#: ui/FairyEditorFrame.cpp:695
+#, fuzzy
+msgid "Save &ManipObjInfo\tCtrl-M"
+msgstr "[&F]全屏显示\tCtrl-Enter"
+
+#: ui/FairyEditorFrame.cpp:695
+#, fuzzy
+msgid "Save manipObjInfo to file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:696
+#, fuzzy
+msgid "Load &ManipObjInfo\tCtrl-I"
+msgstr "[&F]全屏显示\tCtrl-Enter"
+
+#: ui/FairyEditorFrame.cpp:696
+#, fuzzy
+msgid "Load manipObjInfo from file"
+msgstr "不能从文件 '%s'中读取资源."
+
+#: ui/FairyEditorFrame.cpp:700
+msgid "Save scene enviroment infomation"
+msgstr "保存场景环境信息"
+
+#: ui/FairyEditorFrame.cpp:701
+#: ui/FairyEditorFrame.cpp:703
+msgid "Save Save scene enviroment infomation to a file,incluing two main lights,enviroment light,fog."
+msgstr "把场景中的环境信息保存到文件中，包括两个主光源的信息，环境光的信息，雾的信息"
+
+#: ui/FairyEditorFrame.cpp:702
+msgid "Load scene enviroment infomation"
+msgstr "读取场景环境信息"
+
+#: ui/FairyEditorFrame.cpp:707
+#: ui/FairyEditorFrame.cpp:3151
+msgid "Scene Infomation"
+msgstr "场景信息"
+
+#: ui/FairyEditorFrame.cpp:708
+msgid "Open the scene infomation dialog."
+msgstr "打开场景信息对话框"
+
+#: ui/FairyEditorFrame.cpp:715
+msgid "&Edit"
+msgstr "[&E]编辑"
+
+#: ui/FairyEditorFrame.cpp:724
+msgid "&Delete All staticobject and actor"
+msgstr "删除所有静态物体（包括actor）"
+
+#: ui/FairyEditorFrame.cpp:725
+msgid "Delete All staticobject and actor"
+msgstr "删除所有静态物体（包括actor）"
+
+#: ui/FairyEditorFrame.cpp:727
+msgid "&Reshape the Terrain"
+msgstr "地形扩容"
+
+#: ui/FairyEditorFrame.cpp:728
+msgid "Reshape the Terrain "
+msgstr "地形扩容"
+
+#: ui/FairyEditorFrame.cpp:730
+msgid "Enable &32 bits textures"
+msgstr "启用32位纹理"
+
+#: ui/FairyEditorFrame.cpp:731
+msgid "Toggle 32 or 16 bits textures"
+msgstr "强制使用32或16位纹理"
+
+#: ui/FairyEditorFrame.cpp:733
+msgid "Reload all te&xtures"
+msgstr "刷新模型纹理"
+
+#: ui/FairyEditorFrame.cpp:734
+msgid "Unload and reload all textures"
+msgstr "重新刷新物体的纹理"
+
+#: ui/FairyEditorFrame.cpp:736
+msgid "&Unload useless resources"
+msgstr "卸载无用的资源"
+
+#: ui/FairyEditorFrame.cpp:737
+msgid "Unload all useless resources"
+msgstr "卸载所有无用的资源"
+
+#: ui/FairyEditorFrame.cpp:739
+msgid "Show all indicators"
+msgstr "显示所有指示器"
+
+#: ui/FairyEditorFrame.cpp:740
+msgid "Toggle showing all indicators"
+msgstr "显示所有指示器"
+
+#: ui/FairyEditorFrame.cpp:743
+msgid "&Tools"
+msgstr "[&T]工具"
+
+#: ui/FairyEditorFrame.cpp:746
+msgid "&Drag Height"
+msgstr "[&D]拖拉调整地形高度"
+
+#: ui/FairyEditorFrame.cpp:747
+msgid "Drag mouse to modify terrain height base on drag distance"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:749
+msgid "&Raise Height"
+msgstr "[&R]提升地形高度"
+
+#: ui/FairyEditorFrame.cpp:750
+msgid "Raise height of the terrain on the mouse drag area"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:752
+msgid "&Lower Height"
+msgstr "[&L]降低地形高度"
+
+#: ui/FairyEditorFrame.cpp:753
+msgid "Lower height of the terrain on the mouse drag area"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:755
+msgid "&Smooth Height"
+msgstr "[&S]平滑地形高度"
+
+#: ui/FairyEditorFrame.cpp:756
+msgid "Smooth height of the terrain on the mouse drag area"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:758
+msgid "Level &Off Height"
+msgstr "[&O]平整地形高度"
+
+#: ui/FairyEditorFrame.cpp:759
+msgid "Level off height of the terrain on the mouse drag area"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:761
+msgid "Set Terrain &Height"
+msgstr "[H]设置地形高度"
+
+#: ui/FairyEditorFrame.cpp:762
+msgid "set the height of the terrain based on the height setting"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:766
+msgid "&Erase the texture of layer one"
+msgstr "[&E]删除透明层贴图"
+
+#: ui/FairyEditorFrame.cpp:767
+msgid "Erase the texture of layer one on the mouse drag area"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:771
+msgid "&Manip Object"
+msgstr "[&M]摆放物体"
+
+#: ui/FairyEditorFrame.cpp:772
+msgid "Select, delete, placement objects"
+msgstr "选择、删除、摆放物体"
+
+#: ui/FairyEditorFrame.cpp:774
+msgid "&Flip Grid Diagonal"
+msgstr "[&F]反转对角线"
+
+#: ui/FairyEditorFrame.cpp:775
+msgid "Flip the diagonal of the selected grids"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:777
+msgid "Select &Terrain"
+msgstr "[&T]选择地形"
+
+#: ui/FairyEditorFrame.cpp:778
+msgid "Select the grids that you want to manipulate"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:782
+msgid "Erase Terrain Texture"
+msgstr "删除指定的地形纹理"
+
+#: ui/FairyEditorFrame.cpp:783
+msgid "Erase Terrain Texture By Texture Name"
+msgstr "删除所指定的纹理"
+
+#: ui/FairyEditorFrame.cpp:787
+msgid "Terr&ain shadowmap Option"
+msgstr "[&A]地形阴影图选项"
+
+#: ui/FairyEditorFrame.cpp:788
+msgid "Update, show, hide terrain shadowmap"
+msgstr "更新、显示或隐藏地形阴影图"
+
+#: ui/FairyEditorFrame.cpp:790
+msgid "Hide shadow&map"
+msgstr "[&M]不显示地形阴影图"
+
+#: ui/FairyEditorFrame.cpp:791
+msgid "Hide shadowmap"
+msgstr "不显示地形阴影图"
+
+#: ui/FairyEditorFrame.cpp:793
+msgid "Show lo&w quality shadowmap"
+msgstr "显示低精度地形阴影图"
+
+#: ui/FairyEditorFrame.cpp:794
+msgid "Show low quality shadowmap"
+msgstr "显示低精度地形阴影图"
+
+#: ui/FairyEditorFrame.cpp:796
+msgid "Show high &quality shadowmap"
+msgstr "显示高精度地形阴影图"
+
+#: ui/FairyEditorFrame.cpp:797
+msgid "Show high quality shadowmap"
+msgstr "显示高精度地形阴影图"
+
+#: ui/FairyEditorFrame.cpp:801
+#: ui/FairyEditorFrame.cpp:2333
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:41
+msgid "Terrain Surface Parameters"
+msgstr "地形材质参数"
+
+#: ui/FairyEditorFrame.cpp:802
+msgid "Setting the surface parameters of terrain"
+msgstr "设置地形材质参数"
+
+#: ui/FairyEditorFrame.cpp:806
+#: ui/FairyEditorFrame.cpp:807
+#: ui/res/MiniMapMaker_wdr.cpp:80
+msgid "Create Mini Map"
+msgstr "创建小地图"
+
+#: ui/FairyEditorFrame.cpp:811
+msgid "&Creator"
+msgstr "创建物体"
+
+#: ui/FairyEditorFrame.cpp:815
+msgid "Create &Liquid"
+msgstr "创建液体物体"
+
+#: ui/FairyEditorFrame.cpp:816
+msgid "Show the liquid creator dialog"
+msgstr "显示液体物体创建对话框"
+
+#: ui/FairyEditorFrame.cpp:820
+msgid "Create Light Object"
+msgstr "创建光源"
+
+#: ui/FairyEditorFrame.cpp:821
+msgid "Create a light object"
+msgstr "创建光源物体"
+
+#: ui/FairyEditorFrame.cpp:824
+msgid "&Options"
+msgstr "[&O]选项"
+
+#: ui/FairyEditorFrame.cpp:826
+msgid "&Configuration..."
+msgstr "[&C]配置..."
+
+#: ui/FairyEditorFrame.cpp:827
+msgid "Global sonfiguration"
+msgstr "选项配置"
+
+#: ui/FairyEditorFrame.cpp:829
+msgid "&Lock camera height"
+msgstr "[&L]锁定镜头高度"
+
+#: ui/FairyEditorFrame.cpp:830
+msgid "Lock the camera relative height to terrain when drag move"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:832
+msgid "Reset Camera"
+msgstr "重置摄像机"
+
+#: ui/FairyEditorFrame.cpp:833
+msgid "Reset Camera to default height and default angle."
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:836
+msgid "Gpu Program Parameter..."
+msgstr "Gpu参数编辑"
+
+#: ui/FairyEditorFrame.cpp:837
+msgid "Gpu Program Parameter"
+msgstr "Gpu参数编辑"
+
+#: ui/FairyEditorFrame.cpp:841
+msgid "Select all objects"
+msgstr "可以选择所有物体（在操作物体的状态下）"
+
+#: ui/FairyEditorFrame.cpp:842
+msgid "If you check this, the object Select action will select all objects, otherwise only select the objects that can not center selected."
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:846
+msgid "&Align to grid"
+msgstr "[&A]网格对齐"
+
+#: ui/FairyEditorFrame.cpp:847
+msgid "Align to terrain grid when move objects"
+msgstr "创建、移动物体时以地形网格为单位"
+
+#: ui/FairyEditorFrame.cpp:850
+msgid "&Show the standard model"
+msgstr "[&S]显示参考模型"
+
+#: ui/FairyEditorFrame.cpp:851
+msgid "Show the standard model when mouse move into the scene"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:854
+msgid "&Debug Panels"
+msgstr "调试面板"
+
+#: ui/FairyEditorFrame.cpp:856
+msgid "Show &statistics"
+msgstr "显示渲染统计"
+
+#: ui/FairyEditorFrame.cpp:857
+msgid "Show the renderer statistics on render window"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:859
+msgid "Show lo&go"
+msgstr "显示 Logo"
+
+#: ui/FairyEditorFrame.cpp:860
+msgid "Show the logo on render window"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:864
+msgid "&Select Brush"
+msgstr "选择画刷类型"
+
+#: ui/FairyEditorFrame.cpp:866
+msgid "Box Brush"
+msgstr "方形画刷"
+
+#: ui/FairyEditorFrame.cpp:867
+msgid "Select the box shape brush"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:869
+msgid "Ellipse Brush"
+msgstr "椭圆形画刷"
+
+#: ui/FairyEditorFrame.cpp:870
+msgid "Select the ellipse shape brush"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:873
+msgid "&Post Filter"
+msgstr "全屏后处理"
+
+#: ui/FairyEditorFrame.cpp:875
+msgid "&Heat Vision"
+msgstr "夜视镜效果"
+
+#: ui/FairyEditorFrame.cpp:876
+msgid "Use heat vision post filter"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:878
+msgid "&Bloom"
+msgstr "晕光效果"
+
+#: ui/FairyEditorFrame.cpp:879
+msgid "Use bloom post filter"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:881
+msgid "&Floodlighting"
+msgstr "全局泛光效果"
+
+#: ui/FairyEditorFrame.cpp:882
+msgid "Use floodlighting post filter"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:884
+msgid "F&ade"
+msgstr "死亡效果"
+
+#: ui/FairyEditorFrame.cpp:885
+msgid "Use fade post filter"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:888
+#, fuzzy
+msgid "&Window"
+msgstr "窗口[&W]"
+
+#: ui/FairyEditorFrame.cpp:890
+msgid "&Full screen\tCtrl-Enter"
+msgstr "[&F]全屏显示\tCtrl-Enter"
+
+#: ui/FairyEditorFrame.cpp:891
+msgid "Toggle full screen mode"
+msgstr "切换全屏显示模式"
+
+#: ui/FairyEditorFrame.cpp:902
+#: ui/FairyEditorFrame.cpp:903
+msgid "Lock brush size"
+msgstr "关联画刷大小"
+
+#: ui/FairyEditorFrame.cpp:912
+msgid "X Brush Size"
+msgstr "X方向画刷大小"
+
+#: ui/FairyEditorFrame.cpp:920
+msgid "Z Brush Size"
+msgstr "Z方向画刷大小"
+
+#: ui/FairyEditorFrame.cpp:928
+msgid "Set the terrain height when in SetTerrainHeight action"
+msgstr "设置地形的高度"
+
+#: ui/FairyEditorFrame.cpp:936
+msgid "Set the terrain height increment when in SetTerrainHeight action"
+msgstr "设置地形高度递增值"
+
+#: ui/FairyEditorFrame.cpp:947
+msgid "Height Action Additional Affect Range"
+msgstr "设置地形画刷的额外影响范围"
+
+#: ui/FairyEditorFrame.cpp:953
+msgid "Height Action Affect Exp Value"
+msgstr "设置地形画刷额外范围的Exp值（范围越远，影响越小）"
+
+#: ui/FairyEditorFrame.cpp:959
+msgid "Height Action Adjust Speed"
+msgstr "设置地形改变的速度"
+
+#: ui/FairyEditorFrame.cpp:1012
+msgid "goto"
+msgstr "跳转"
+
+#: ui/FairyEditorFrame.cpp:1024
+#: ui/FairyEditorFrame.cpp:1025
+#, fuzzy
+msgid "Use real camera"
+msgstr "使用真实游戏镜头"
+
+#: ui/FairyEditorFrame.cpp:1027
+#: ui/FairyEditorFrame.cpp:1028
+msgid "Use snap rotation"
+msgstr "使用整角度旋转"
+
+#: ui/FairyEditorFrame.cpp:1033
+msgid "Frame rate"
+msgstr "帧速率"
+
+#: ui/FairyEditorFrame.cpp:1151
+#: ui/FairyEditorFrame.cpp:1204
+msgid "It is not safe to save the scene when the active action is paint action!"
+msgstr "最好不要在画刷操作状态下进行场景的保存操作，请转到其他操作再保存场景！"
+
+#: ui/FairyEditorFrame.cpp:1210
+msgid "Save scene file"
+msgstr "保存场景"
+
+#: ui/FairyEditorFrame.cpp:1214
+#: ui/FairyEditorFrame.cpp:1661
+#, c-format
+msgid "Scene files (*.Scene)|*.Scene|Scene XML files (*.Scene.xml)|*.Scene.xml|All files (%s)|%s"
+msgstr "场景文件 (*.Scene)|*.Scene|场景 XML 文件 (*.Scene.xml)|*.Scene.xml|全部文件 (%s)|%s"
+
+#: ui/FairyEditorFrame.cpp:1265
+#: ui/FairyEditorFrame.cpp:1335
+#, fuzzy
+msgid "unnamed"
+msgstr "未命名"
+
+#: ui/FairyEditorFrame.cpp:1274
+#, fuzzy, c-format
+msgid "Do you want to save changes to document %s?"
+msgstr "你想保存对文档%s的修改?"
+
+#: ui/FairyEditorFrame.cpp:1339
+msgid "*"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:1341
+#, fuzzy
+msgid " - "
+msgstr " - "
+
+#: ui/FairyEditorFrame.cpp:1366
+msgid "New Scene"
+msgstr "新场景"
+
+#: ui/FairyEditorFrame.cpp:1384
+msgid "Creating new scene ..."
+msgstr "正在生成场景，请等待..."
+
+#: ui/FairyEditorFrame.cpp:1435
+msgid "Reshape Terrain"
+msgstr "地形扩容"
+
+#: ui/FairyEditorFrame.cpp:1470
+msgid "wrong input!"
+msgstr "错误的输入"
+
+#: ui/FairyEditorFrame.cpp:1486
+msgid "Reshaping terrain ..."
+msgstr "地形扩容"
+
+#: ui/FairyEditorFrame.cpp:1657
+msgid "Load scene file"
+msgstr "装载场景"
+
+#: ui/FairyEditorFrame.cpp:1673
+msgid "Loading scene ..."
+msgstr "正在装载场景，请等待..."
+
+#: ui/FairyEditorFrame.cpp:1680
+msgid "ExceptionInfo Dialog"
+msgstr "异常信息对话框"
+
+#: ui/FairyEditorFrame.cpp:1688
+msgid "Thera are still some wrongs in scene,remember to fix them!"
+msgstr "场景文件中仍存在一些错误，请修复！"
+
+#: ui/FairyEditorFrame.cpp:1692
+msgid "All wrongs in scene have been fixed,remember to save the scene!"
+msgstr "场景中的所有错误已修正，请重新保存场景使该改动生效！"
+
+#: ui/FairyEditorFrame.cpp:1784
+#, fuzzy
+msgid "Delete all staticobjects?"
+msgstr "不能删除键 '%s'"
+
+#: ui/FairyEditorFrame.cpp:1784
+#, fuzzy
+msgid "Confirm"
+msgstr "确认"
+
+#: ui/FairyEditorFrame.cpp:2193
+msgid "Show &all tool windows"
+msgstr "[&A]显示所有工具栏"
+
+#: ui/FairyEditorFrame.cpp:2193
+msgid "Hide &all tool windows"
+msgstr "[&A]隐藏所有工具栏"
+
+#: ui/FairyEditorFrame.cpp:2431
+msgid "Gpu Parameter Editor"
+msgstr "Gpu参数编辑器"
+
+#: ui/FairyEditorFrame.cpp:2560
+#, fuzzy
+msgid "Save a TerrainInfo file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:2560
+#: ui/FairyEditorFrame.cpp:2590
+#, fuzzy
+msgid "TERRAININFO files (*.terraininfo)|*.terraininfo"
+msgstr "所有文件 (%s)|%s"
+
+#: ui/FairyEditorFrame.cpp:2571
+#, fuzzy
+msgid "Success Save the TerrainInfo file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:2574
+#, fuzzy
+msgid "Failed to  Save the TerrainInfo file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:2590
+#, fuzzy
+msgid "Load a TerrainInfo file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:2606
+#, fuzzy
+msgid "Success Load the TerrainInfo file"
+msgstr "不能从文件 '%s'中读取资源."
+
+#: ui/FairyEditorFrame.cpp:2629
+#, fuzzy
+msgid "Save a ManipObjInfo file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:2629
+#: ui/FairyEditorFrame.cpp:2659
+#, fuzzy
+msgid "MANIPOBJINFO files (*.manipobjinfo)|*.manipobjinfo"
+msgstr "所有文件 (%s)|%s"
+
+#: ui/FairyEditorFrame.cpp:2640
+#, fuzzy
+msgid "Success Save the ManipObjInfo file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:2643
+#, fuzzy
+msgid "Failed to  Save the ManipObjInfo file"
+msgstr "把日志内容保存到文件"
+
+#: ui/FairyEditorFrame.cpp:2659
+#, fuzzy
+msgid "Load a ManipObjInfo file"
+msgstr "不能从文件 '%s'中读取资源."
+
+#: ui/FairyEditorFrame.cpp:2675
+#, fuzzy
+msgid "Success Load the ManipObjInfo file"
+msgstr "不能从文件 '%s'中读取资源."
+
+#: ui/FairyEditorFrame.cpp:2708
+#: ui/FairyEditorFrame.cpp:2819
+msgid "the name of enviroment object is wrong!\n"
+msgstr "环境物体的名称错误！\n"
+
+#: ui/FairyEditorFrame.cpp:2709
+#: ui/FairyEditorFrame.cpp:2820
+msgid "rename the enviroment object to #FairyEnviroment\n"
+msgstr "环境物体的名称应为#FairyEnviroment\n"
+
+#: ui/FairyEditorFrame.cpp:2735
+#: ui/FairyEditorFrame.cpp:2827
+msgid "the name of main light one object is wrong!\n"
+msgstr "第一个主光源的名称错误！\n"
+
+#: ui/FairyEditorFrame.cpp:2736
+#: ui/FairyEditorFrame.cpp:2828
+msgid "rename the main light one object to #FairyMainLightOne\n"
+msgstr "第一个主光源的名称应为#FairyMainLightOne\n"
+
+#: ui/FairyEditorFrame.cpp:2756
+#: ui/FairyEditorFrame.cpp:2835
+msgid "the name of main light two object is wrong!\n"
+msgstr "第二个主光源的名称错误！\n"
+
+#: ui/FairyEditorFrame.cpp:2757
+#: ui/FairyEditorFrame.cpp:2836
+msgid "rename the main light two object to #FairyMainLightTwo\n"
+msgstr "第儿个主光源的名称应为#FairyMainLightTwo\n"
+
+#: ui/FairyEditorFrame.cpp:2778
+#: ui/FairyEditorFrame.cpp:2845
+msgid "Enviroment infomation files (*.envinfo)|*.envinfo"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:2789
+msgid "Success Saving the enviroment infomation file"
+msgstr "保存环境信息成功"
+
+#: ui/FairyEditorFrame.cpp:2792
+msgid "Failed to  Save the enviroment infomation file"
+msgstr "保存环境信息失败"
+
+#: ui/FairyEditorFrame.cpp:2845
+msgid "Load a enviroment infomation file"
+msgstr "读取环境信息"
+
+#: ui/FairyEditorFrame.cpp:2859
+msgid "Success Load the enviroment infomation  file"
+msgstr "读取环境信息成功"
+
+#: ui/FairyEditorFrame.cpp:2986
+msgid "Liquid Creator"
+msgstr "创建液体物体"
+
+#: ui/FairyEditorFrame.cpp:3071
+#, c-format
+msgid ""
+"The display adaptor can't support post filter '%s'. Error description:\n"
+"%s"
+msgstr ""
+"当前显卡并支持此后处理 '%s'。错误描述 :\n"
+"%s"
+
+#: ui/FairyEditorFrame.cpp:3074
+msgid "Set post filter error"
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:3562
+msgid "Erase Texture Name"
+msgstr "要删除的纹理名称"
+
+#: ui/FairyEditorFrame.cpp:3586
+msgid "The Texture you selected was not painted in this terrain."
+msgstr ""
+
+#: ui/FairyEditorFrame.cpp:3993
+msgid "Mini Map Maker"
+msgstr "小地图制作器"
+
+#: ui/FairyEffectEditDialog.cpp:445
+msgid "Element Type"
+msgstr "特效元素类型"
+
+#: ui/FairyEffectEditDialog.cpp:578
+msgid "Save Effect"
+msgstr "保存特效"
+
+#: ui/FairyEffectEditDialog.cpp:597
+msgid "The Script File Name Is Wrong!"
+msgstr ""
+
+#: ui/FairyEffectEditDialog.cpp:669
+#: ui/FairyParticleEditorDialog.cpp:1402
+#: ui/FairySkillEditDialog.cpp:656
+msgid "Fairy Material Editor"
+msgstr "Fairy材质编辑器"
+
+#: ui/FairyMaterialEditorDialog.cpp:134
+msgid "Fairy Material Preview"
+msgstr "Fairy材质预览器"
+
+#: ui/FairyMaterialEditorDialog.cpp:570
+msgid "Please select the material in effect editor first!"
+msgstr "请先在特效编辑器中选择材质项"
+
+#: ui/FairyMaterialPreviewDialog.cpp:126
+#: ui/res/MaterialPreview_wdr.cpp:46
+msgid "text"
+msgstr ""
+
+#: ui/FairyMaterialPreviewDialog.cpp:129
+msgid "Use"
+msgstr ""
+
+#: ui/FairyParticleEditorDialog.cpp:1192
+msgid "Save Particle System"
+msgstr "保存粒子系统"
+
+#: ui/FairySceneCanvas.cpp:1028
+msgid "&Snap to grid"
+msgstr "[&S]对齐到网格"
+
+#: ui/FairySceneCanvas.cpp:1029
+msgid "Snap select objects to grid"
+msgstr "把选择的物体对齐到地形网格"
+
+#: ui/FairySceneCanvas.cpp:1032
+#, fuzzy
+msgid "&Move ByX"
+msgstr "下移"
+
+#: ui/FairySceneCanvas.cpp:1033
+msgid "Move by X axis"
+msgstr ""
+
+#: ui/FairySceneCanvas.cpp:1036
+#, fuzzy
+msgid "&Move ByY"
+msgstr "下移"
+
+#: ui/FairySceneCanvas.cpp:1037
+msgid "Move by Y axis"
+msgstr ""
+
+#: ui/FairySceneCanvas.cpp:1040
+#, fuzzy
+msgid "&Move ByZ"
+msgstr "下移"
+
+#: ui/FairySceneCanvas.cpp:1041
+msgid "Move by Z axis"
+msgstr ""
+
+#: ui/FairySceneCanvas.cpp:1044
+#, fuzzy
+msgid "&X Snap rotation "
+msgstr "对齐到网格"
+
+#: ui/FairySceneCanvas.cpp:1045
+#: ui/FairySceneCanvas.cpp:1049
+#: ui/FairySceneCanvas.cpp:1053
+#, fuzzy
+msgid "Snap select objects's rotation"
+msgstr "把选择的物体对齐到地形网格"
+
+#: ui/FairySceneCanvas.cpp:1048
+#, fuzzy
+msgid "&Y Snap rotation "
+msgstr "对齐到网格"
+
+#: ui/FairySceneCanvas.cpp:1052
+#, fuzzy
+msgid "&Z Snap rotation "
+msgstr "对齐到网格"
+
+#: ui/FairySceneCanvas.cpp:1070
+msgid "&Copy Terrain Height Infomation"
+msgstr "拷贝地形高度信息"
+
+#: ui/FairySceneCanvas.cpp:1071
+msgid "If you want to copy the terrain height infomation,check on this option"
+msgstr ""
+
+#: ui/FairySceneCanvas.cpp:1075
+msgid "&Copy Terrain Texture Infomation"
+msgstr "拷贝地形纹理信息"
+
+#: ui/FairySceneCanvas.cpp:1076
+msgid "If you want to copy the terrain texture infomation,check on this option"
+msgstr ""
+
+#: ui/FairySceneCanvas.cpp:1080
+msgid "&Copy Terrain Diagonal Infomation"
+msgstr "拷贝地形对角线信息"
+
+#: ui/FairySceneCanvas.cpp:1081
+msgid "If you want to copy the terrain diagonal infomation,check on this option"
+msgstr ""
+
+#: ui/FairySceneCanvas.cpp:1085
+#, fuzzy
+msgid "Rotate Terrain right angle"
+msgstr "旋转"
+
+#: ui/FairySceneCanvas.cpp:1086
+msgid "If you want to rotate the terrain right angle,hit this botton"
+msgstr ""
+
+#: ui/FairySceneCanvas.cpp:1111
+#, fuzzy
+msgid "MoveUpDown Setting"
+msgstr "镜头配置"
+
+#: ui/FairySceneCanvas.cpp:1294
+msgid "Please copy the terrain before rotation."
+msgstr "请先拷贝地形，然后再进行旋转操作"
+
+#: ui/FairySkillEditDialog.cpp:421
+#: ui/FairySkillEditDialog.cpp:440
+msgid "Wrong parameter!"
+msgstr ""
+
+#: ui/FairySkillEditDialog.cpp:748
+msgid "Animation Effect Info"
+msgstr "动作特效信息"
+
+#: ui/FairySkillEditDialog.cpp:898
+msgid "Animation Ribbon"
+msgstr "动作飘带"
+
+#: ui/GpuProgramParameterSettingDialog.cpp:87
+#, fuzzy
+msgid "Materials"
+msgstr "材质"
+
+#: ui/GpuProgramParameterSettingDialog.cpp:683
+msgid "Changed materials\n"
+msgstr "改变材质\n"
+
+#: ui/GpuProgramParameterSettingDialog.cpp:693
+msgid "Hit YES to save all changed materials,Hit NO to save the current material."
+msgstr "点 YES 保存所有改变过的材质，点 NO 只保存当前材质"
+
+#: ui/GpuProgramParameterSettingDialog.cpp:695
+msgid "Save materials"
+msgstr "保存材质"
+
+#: ui/MiniMapMakerDialog.cpp:109
+msgid "Creating mini map ..."
+msgstr "正在创建小地图..."
+
+#: ui/MiniMapMakerDialog.cpp:130
+msgid "Success Creating Mini Map!"
+msgstr "创建小地图成功！"
+
+#: ui/MonsterEditDlg.cpp:1207
+msgid "Change_Mosnter_Info"
+msgstr ""
+
+#: ui/ParticleSystemSelector.cpp:128
+#, fuzzy
+msgid "Refresh"
+msgstr "刷新"
+
+#: ui/ParticleSystemSelector.cpp:249
+msgid "Fairy Particle Editor"
+msgstr "Fairy粒子编辑器"
+
+#: ui/RenderSystemConfigDialog.cpp:126
+msgid "Please choose a rendering system."
+msgstr "请选择渲染系统"
+
+#: ui/SceneBrowser.cpp:239
+msgid "Scene"
+msgstr "场景"
+
+#: ui/SceneBrowser.cpp:353
+#, c-format
+msgid "Cannot rename %s: The name is reserved for auto naming object. Specify a different name."
+msgstr "无法重命名 %s：该名字是保留给自动命名物体的。请指定另一物体名。"
+
+#: ui/SceneBrowser.cpp:354
+#: ui/SceneBrowser.cpp:399
+msgid "Error Renaming Object"
+msgstr "重命名物体错误"
+
+#: ui/SceneBrowser.cpp:398
+#, c-format
+msgid "Cannot rename %s: An object with the name you specified already exists. Specify a different name."
+msgstr "无法重命名 %s：指定的物体与现有物体重名。请指定另一物体名。"
+
+#: ui/SceneBrowser.cpp:473
+msgid "ActorAnimationSetting Dialog"
+msgstr ""
+
+#: ui/SceneBrowser.cpp:499
+#, fuzzy
+msgid "Effect Setting"
+msgstr "镜头配置"
+
+#: ui/SceneInfoMapDialog.cpp:115
+msgid "&Fit to window"
+msgstr "缩放以适应窗口[&F]"
+
+#: ui/SceneInfoMapDialog.cpp:116
+msgid "&Actual size"
+msgstr "实际大小[&A]"
+
+#: ui/SceneInfoMapDialog.cpp:120
+msgid "&Height"
+msgstr "高度图"
+
+#: ui/SceneInfoMapDialog.cpp:121
+msgid "&Texture"
+msgstr "纹理图"
+
+#: ui/SceneInfoMapDialog.cpp:161
+msgid "Scale Pattern"
+msgstr "缩放模式"
+
+#: ui/SceneInfoMapDialog.cpp:163
+msgid "&HeightTexture"
+msgstr "显示模式"
+
+#: ui/SceneInfoMapDialog.cpp:948
+#, c-format
+msgid "Choose the display colour for %s"
+msgstr "请选择%s的显示颜色"
+
+#: ui/SettingDialogs.cpp:58
+msgid "Configuration"
+msgstr "选项配置"
+
+#: ui/SettingDialogs.cpp:65
+#, fuzzy
+msgid "Spinner Settings"
+msgstr "镜头配置"
+
+#: ui/SettingDialogs.cpp:66
+#, fuzzy
+msgid "Camera Settings"
+msgstr "镜头配置"
+
+#: ui/SettingDialogs.cpp:67
+#, fuzzy
+msgid "Rotation Snap Settings"
+msgstr "对齐到网格"
+
+#: ui/SettingDialogs.cpp:139
+msgid "Setting spinner's value(cm)"
+msgstr ""
+
+#: ui/SettingDialogs.cpp:169
+msgid "Camera Height(cm)"
+msgstr "镜头高度"
+
+#: ui/SettingDialogs.cpp:175
+msgid "Camera Angle(degree)"
+msgstr "镜头角度"
+
+#: ui/SettingDialogs.cpp:181
+msgid "Camera Far Clip Plane(cm)"
+msgstr "设置摄像机远裁减面（可以显示远处的物体）"
+
+#: ui/SettingDialogs.cpp:188
+msgid "Use the real camera height"
+msgstr "使用真实游戏摄像机高度"
+
+#: ui/SettingDialogs.cpp:191
+msgid "Use the real camera angle"
+msgstr "使用真实游戏摄像机角度"
+
+#: ui/SettingDialogs.cpp:196
+msgid "Camera Move Speed"
+msgstr "摄像机移动速度"
+
+#: ui/SettingDialogs.cpp:202
+msgid "Camera Rotate Speed"
+msgstr "摄像机旋转速度"
+
+#: ui/SettingDialogs.cpp:247
+msgid "Setting the segment by which divid a whole circle(360 degree)"
+msgstr ""
+
+#: ui/SettingDialogs.cpp:253
+#, fuzzy
+msgid "Input the snap degree"
+msgstr "镜头角度（单位：度）"
+
+#: ui/SettingDialogs.cpp:256
+msgid "45"
+msgstr ""
+
+#: ui/SettingDialogs.cpp:259
+#, fuzzy
+msgid "Active snap rotation"
+msgstr "对齐到网格"
+
+#: ui/TerrainLightmapOptionDialog.cpp:404
+msgid "Sorry, only available in OpenGL."
+msgstr "抱歉，暂时只能在OpenGL下更新阴影图"
+
+#: ui/TerrainLightmapOptionDialog.cpp:565
+msgid "The terrain shadowmap has been updated, sure to cancel it?"
+msgstr "地形阴影图曾经更新过，您确定要放弃本次更新吗?"
+
+#: ui/TerrainLightmapOptionDialog.cpp:565
+#: ui/TerrainLightmapOptionDialog.h:75
+msgid "Terrain Shadowmap"
+msgstr "地形阴影图"
+
+#: ui/TerrainLightmapOptionDialog.cpp:643
+#: ui/TerrainLightmapOptionDialog.cpp:842
+msgid "Terrain Shadowmap*"
+msgstr "地形阴影图(已修改)"
+
+#: ui/TerrainLightmapOptionDialog.cpp:644
+msgid "None of directional lights cast shadow!"
+msgstr "场景中没有任何一个方向光被设置为生成阴影。"
+
+#: ui/TerrainLightmapOptionDialog.cpp:644
+msgid "Update Terrain Shadowmap"
+msgstr "更新地形阴影图"
+
+#: ui/TerrainLightmapOptionDialog.cpp:850
+msgid "Cancel updating terrain shadowmap?"
+msgstr "正在更新地形阴影图，您确定要取消吗？"
+
+#: ui/TerrainLightmapOptionDialog.cpp:850
+msgid "Cancel update"
+msgstr "取消更新"
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:67
+msgid "Loop"
+msgstr ""
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:77
+msgid "All Skill"
+msgstr "所有技能"
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:88
+msgid "Delete Skill"
+msgstr "删除技能"
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:91
+msgid "Set Skill"
+msgstr "设置技能参数"
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:100
+msgid "LEFT HAND WEAPON"
+msgstr "左手武器"
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:103
+msgid "RIGHT HAND WEAPON"
+msgstr "右手武器"
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:106
+msgid "Hair"
+msgstr ""
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:112
+msgid "Cap"
+msgstr ""
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:118
+msgid "Body"
+msgstr ""
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:124
+msgid "Hand"
+msgstr ""
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:130
+msgid "Foot"
+msgstr ""
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:143
+msgid "Animation Rate"
+msgstr "动作速率"
+
+#: ui/res/ActorAnimationSetting_wdr.cpp:149
+msgid "Animation Fade_out Time"
+msgstr "动作混合时间"
+
+#: ui/res/BrushSelector_wdr.cpp:45
+msgid "&Refresh"
+msgstr "刷新"
+
+#: ui/res/BrushSelector_wdr.cpp:67
+msgid "Enable Preview"
+msgstr "使用预看"
+
+#: ui/res/BrushSelector_wdr.cpp:76
+#, fuzzy
+msgid "Orientation"
+msgstr "方向"
+
+#: ui/res/BrushSelector_wdr.cpp:79
+msgid "Horizontal flip"
+msgstr "水平翻转"
+
+#: ui/res/BrushSelector_wdr.cpp:82
+msgid "Vertical flip"
+msgstr "垂直翻转"
+
+#: ui/res/BrushSelector_wdr.cpp:85
+msgid "Rotate right angle"
+msgstr "旋转"
+
+#: ui/res/BrushSelector_wdr.cpp:88
+msgid "Mirror Texture Diagonal"
+msgstr "反转纹理对角线"
+
+#: ui/res/BrushSelector_wdr.cpp:91
+msgid "Random"
+msgstr "随机"
+
+#: ui/res/EraseTexDialog_wdr.cpp:43
+msgid "Texture Name"
+msgstr "基本贴图"
+
+#: ui/res/EventArea_wdr.cpp:43
+msgid "AREA_LIST:"
+msgstr ""
+
+#: ui/res/EventArea_wdr.cpp:51
+msgid "AREA_ID:  "
+msgstr ""
+
+#: ui/res/EventArea_wdr.cpp:57
+msgid "NEW_AREA_ID"
+msgstr ""
+
+#: ui/res/EventArea_wdr.cpp:64
+msgid "SCRIPT_ID:"
+msgstr ""
+
+#: ui/res/EventArea_wdr.cpp:70
+msgid "DEL_RECT"
+msgstr ""
+
+#: ui/res/EventArea_wdr.cpp:77
+msgid "SELECT"
+msgstr ""
+
+#: ui/res/EventArea_wdr.cpp:80
+msgid "DRAW"
+msgstr ""
+
+#: ui/res/EventArea_wdr.cpp:83
+msgid "MODIFY"
+msgstr ""
+
+#: ui/res/GpuProgramParameterEditor_wdr.cpp:60
+#, fuzzy
+msgid "Save Material"
+msgstr "材质"
+
+#: ui/res/GpuProgramParameterEditor_wdr.cpp:63
+msgid "Apply to other materials"
+msgstr ""
+
+#: ui/res/GrowPointEdit_wdr.cpp:43
+msgid "GrowPoint_list"
+msgstr ""
+
+#: ui/res/GrowPointEdit_wdr.cpp:53
+msgid "Added_GrowPoint"
+msgstr ""
+
+#: ui/res/LiquidCreator_wdr.cpp:43
+msgid "Tex Coord Scale"
+msgstr "纹理坐标缩放值"
+
+#: ui/res/LiquidCreator_wdr.cpp:49
+msgid "Subdivision"
+msgstr "物体表面细分值"
+
+#: ui/res/LiquidCreator_wdr.cpp:58
+#: ui/res/ParticleEditor_wdr.cpp:82
+msgid "Material"
+msgstr "材质"
+
+#: ui/res/LiquidCreator_wdr.cpp:70
+#: ui/res/NewScene_wdr.cpp:98
+#: ui/res/SceneEditor_wdr.cpp:76
+#: ui/res/TerrainLightmapOption_wdr.cpp:83
+#, fuzzy
+msgid "&OK"
+msgstr "确认[&O]"
+
+#: ui/res/LiquidCreator_wdr.cpp:74
+#: ui/res/NewScene_wdr.cpp:102
+#: ui/res/SceneEditor_wdr.cpp:80
+#: ui/res/TerrainLightmapOption_wdr.cpp:87
+#, fuzzy
+msgid "&Cancel"
+msgstr "取消[&C]"
+
+#: ui/res/MaterialSetting_wdr.cpp:47
+#, fuzzy
+msgid "Select"
+msgstr "选择器"
+
+#: ui/res/MaterialSetting_wdr.cpp:53
+msgid "Open"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:56
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:85
+msgid "Emissive"
+msgstr "自发光"
+
+#: ui/res/MaterialSetting_wdr.cpp:62
+#, fuzzy
+msgid "Duration"
+msgstr "选项配置"
+
+#: ui/res/MaterialSetting_wdr.cpp:68
+msgid "Draw Style"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:73
+msgid "Regular"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:74
+msgid "Translucent"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:75
+msgid "Darken"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:76
+msgid "AlphaBlend"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:77
+msgid "ColourBlend"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:78
+msgid "Modulate"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:83
+msgid "Stage Style"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:88
+msgid "Modulated"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:89
+msgid "TransModulate2X"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:90
+msgid "TransModulate4X"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:95
+msgid "Address Mode"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:100
+msgid "Wrap"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:101
+msgid "Clamp"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:102
+msgid "Mirror"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:107
+#, fuzzy
+msgid "Scale"
+msgstr "放大系数"
+
+#: ui/res/MaterialSetting_wdr.cpp:113
+msgid "Rotate_Anim"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:119
+msgid "Two Side"
+msgstr ""
+
+#: ui/res/MaterialSetting_wdr.cpp:122
+msgid "Save"
+msgstr ""
+
+#: ui/res/MiniMapMaker_wdr.cpp:41
+msgid "File Name"
+msgstr "输出文件名"
+
+#: ui/res/MiniMapMaker_wdr.cpp:47
+msgid "Tile Size"
+msgstr "分块大小"
+
+#: ui/res/MiniMapMaker_wdr.cpp:53
+msgid "Tile Tex Width"
+msgstr "中间小纹理宽度"
+
+#: ui/res/MiniMapMaker_wdr.cpp:59
+msgid "Tile Tex Height"
+msgstr "中间小纹理高度"
+
+#: ui/res/MiniMapMaker_wdr.cpp:65
+msgid "Texture Extension"
+msgstr "输出文件类型"
+
+#: ui/res/MiniMapMaker_wdr.cpp:70
+msgid "jpg"
+msgstr ""
+
+#: ui/res/MiniMapMaker_wdr.cpp:71
+msgid "png"
+msgstr ""
+
+#: ui/res/MiniMapMaker_wdr.cpp:76
+msgid "Delete Temp Textures"
+msgstr "删除中间小纹理"
+
+#: ui/res/MonsterEdit_wdr.cpp:46
+msgid "Monster-info"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:51
+msgid "typename "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:57
+msgid "grade "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:67
+msgid "move_speed "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:73
+msgid "experience "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:83
+msgid "fresh_time "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:89
+msgid "radius "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:99
+msgid "camp_ID "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:116
+msgid "baseAI_ID "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:130
+msgid "AI_file"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:144
+msgid "even_file"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:158
+msgid "group_ID"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:164
+msgid "team_ID  "
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:174
+msgid "instance_name"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:180
+msgid "GUID"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:190
+msgid "<-"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:193
+msgid "->"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:196
+msgid "direction"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:206
+msgid "PATROL"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:216
+msgid "TITLE"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:222
+msgid "modify"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:247
+msgid "SHOP1:"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:254
+msgid "SHOP2:"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:265
+msgid "SHOP3:"
+msgstr ""
+
+#: ui/res/MonsterEdit_wdr.cpp:272
+msgid "SHOP4:"
+msgstr ""
+
+#: ui/res/NewScene_wdr.cpp:43
+msgid "Tile size"
+msgstr "分块大小"
+
+#: ui/res/NewScene_wdr.cpp:49
+msgid "X size"
+msgstr "宽度"
+
+#: ui/res/NewScene_wdr.cpp:55
+msgid "Z size"
+msgstr "深度"
+
+#: ui/res/NewScene_wdr.cpp:61
+msgid "Seed"
+msgstr "随机种子"
+
+#: ui/res/NewScene_wdr.cpp:67
+msgid "scale"
+msgstr "放大系数"
+
+#: ui/res/NewScene_wdr.cpp:73
+msgid "Height scale"
+msgstr "高度系数"
+
+#: ui/res/NewScene_wdr.cpp:79
+msgid "Texture"
+msgstr "基本贴图"
+
+#: ui/res/NewScene_wdr.cpp:86
+msgid "Generate Terrain"
+msgstr "地形生成算法"
+
+#: ui/res/NpcPatrolEdit_wdr.cpp:41
+#: ui/res/RegionEdit_wdr.cpp:41
+msgid "Region"
+msgstr "区域"
+
+#: ui/res/NpcPatrolEdit_wdr.cpp:46
+#: ui/res/RegionEdit_wdr.cpp:46
+msgid "ListItem"
+msgstr ""
+
+#: ui/res/NpcPatrolEdit_wdr.cpp:51
+#: ui/res/RegionEdit_wdr.cpp:51
+msgid "point"
+msgstr "点列表"
+
+#: ui/res/NpcPatrolEdit_wdr.cpp:60
+#, fuzzy
+msgid "AddNewLine"
+msgstr "添加新区域"
+
+#: ui/res/NpcPatrolEdit_wdr.cpp:63
+#, fuzzy
+msgid "DelLine"
+msgstr "线"
+
+#: ui/res/NpcPatrolEdit_wdr.cpp:70
+#, fuzzy
+msgid "LineOk"
+msgstr "线"
+
+#: ui/res/NpcPatrolEdit_wdr.cpp:73
+#: ui/res/RegionEdit_wdr.cpp:73
+msgid "DelPoint"
+msgstr "删除一个点"
+
+#: ui/res/ParticleEditor_wdr.cpp:52
+msgid "R"
+msgstr ""
+
+#: ui/res/ParticleEditor_wdr.cpp:55
+msgid "S"
+msgstr ""
+
+#: ui/res/ParticleEditor_wdr.cpp:58
+msgid "AE"
+msgstr ""
+
+#: ui/res/ParticleEditor_wdr.cpp:65
+msgid "AF"
+msgstr ""
+
+#: ui/res/ParticleEditor_wdr.cpp:72
+msgid "Before"
+msgstr ""
+
+#: ui/res/ParticleEditor_wdr.cpp:79
+msgid "D"
+msgstr ""
+
+#: ui/res/RegionEdit_wdr.cpp:60
+msgid "AddNewRegion"
+msgstr "添加新区域"
+
+#: ui/res/RegionEdit_wdr.cpp:63
+msgid "DelRegion"
+msgstr "删除一个区域"
+
+#: ui/res/RegionEdit_wdr.cpp:70
+#, fuzzy
+msgid "RegionOk"
+msgstr "编辑可行走区域"
+
+#: ui/res/RegionEdit_wdr.cpp:78
+msgid "Line"
+msgstr "线"
+
+#: ui/res/RegionEdit_wdr.cpp:92
+msgid "ChoiceItem"
+msgstr ""
+
+#: ui/res/SaveAsEffect_wdr.cpp:41
+msgid "Script File"
+msgstr ""
+
+#: ui/res/SaveAsEffect_wdr.cpp:48
+#, fuzzy
+msgid "Template Name"
+msgstr "基本贴图"
+
+#: ui/res/SceneInfomation_wdr.cpp:41
+msgid "Terrain Size"
+msgstr "地形尺寸"
+
+#: ui/res/SceneInfomation_wdr.cpp:47
+msgid "Terrain Scale"
+msgstr "地形缩放值"
+
+#: ui/res/SceneInfomation_wdr.cpp:53
+msgid "Texture Count"
+msgstr "地形纹理个数"
+
+#: ui/res/SceneInfomation_wdr.cpp:59
+msgid "Object Count"
+msgstr "场景物体个数"
+
+#: ui/res/SceneInfo_wdr.cpp:46
+#, fuzzy
+msgid "Reflash"
+msgstr "刷新"
+
+#: ui/res/StallInfoDlg_wdr.cpp:43
+msgid "CanStall"
+msgstr ""
+
+#: ui/res/StallInfoDlg_wdr.cpp:53
+msgid "TradeTax"
+msgstr ""
+
+#: ui/res/StallInfoDlg_wdr.cpp:63
+msgid "PosTax"
+msgstr ""
+
+#: ui/res/StallInfoDlg_wdr.cpp:73
+msgid "ExtraInfo"
+msgstr ""
+
+#: ui/res/StallInfoDlg_wdr.cpp:83
+#: ui/res/StallInfoDlg_wdr.cpp:86
+#: ui/res/StallInfoDlg_wdr.cpp:89
+#, fuzzy
+msgid "Radio"
+msgstr "随机"
+
+#: ui/res/TerrainLightmapOption_wdr.cpp:42
+msgid "Preview"
+msgstr "预览"
+
+#: ui/res/TerrainLightmapOption_wdr.cpp:52
+msgid "&Update terrain shadowmap"
+msgstr "更新地形阴影图[&U]"
+
+#: ui/res/TerrainLightmapOption_wdr.cpp:61
+msgid "C&ancel"
+msgstr "取消[&A]"
+
+#: ui/res/TerrainLightmapOption_wdr.cpp:66
+msgid "Option"
+msgstr "选项"
+
+#: ui/res/TerrainLightmapOption_wdr.cpp:69
+msgid "&Hide terrain shadowmap"
+msgstr "不显示地形阴影图[&H]"
+
+#: ui/res/TerrainLightmapOption_wdr.cpp:73
+msgid "Show &low quality terrain shadowmap"
+msgstr "显示低精度地形阴影图[&L]"
+
+#: ui/res/TerrainLightmapOption_wdr.cpp:76
+msgid "Show hi&gh quality terrain shadowmap"
+msgstr "显示高精度地形阴影图[&G]"
+
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:46
+msgid "Ambient"
+msgstr "环境光反射率"
+
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:52
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:65
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:78
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:91
+msgid "Colour"
+msgstr ""
+
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:59
+msgid "Diffuse"
+msgstr "散射光反射率"
+
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:72
+msgid "Specular"
+msgstr "镜面光反射率"
+
+#: ui/res/TerrainSurfaceParameters_wdr.cpp:98
+msgid "Shininess"
+msgstr "镜面光shininess参数"
+
